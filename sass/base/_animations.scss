@@ -1,0 +1,37 @@
+@keyframes anim {
+    0% {
+        opacity: 0;
+        transform: translateY(-100vh);
+    }
+
+    80% {
+        opacity: 0.7;
+        transform: translateY(10vh);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes animName {
+    0% {
+        opacity: 0;
+        transform: translateY(-50vh) rotateY(180deg);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translateY(-25vh) rotateY(70deg);
+    }
+
+    75% {
+        opacity: 0.75;
+        transform: scaleX(1.5) rotate(-8deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) rotate(8deg);
+    }
+}
