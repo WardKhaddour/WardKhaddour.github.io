@@ -1,0 +1,30 @@
+@keyframes drawLine {
+  0% {
+    width: 0%;
+    border-bottom: none;
+  }
+
+  100% {
+    width: 100%;
+    border-bottom: var(--line);
+  }
+}
+
+@keyframes displayImg {
+  0% {
+    transform: translateY(-300%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

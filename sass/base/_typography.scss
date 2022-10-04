@@ -7,6 +7,31 @@ body {
 }
 
 .heading-primary {
-    color: wheat;
+    display: block;
+    font-size: 6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: "Josefin Sans", sans-serif;
+    color: var(--color-white);
     line-height: 1;
+}
+
+.heading-secondary {
+    font-size: 2.5rem;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--color-white);
+}
+
+.heading-tertiary {
+    display: block;
+    font-size: 2rem;
+    font-style: italic;
+    color: var(--color-primary-light-1);
+}
+
+.paragraph {
+    font-size: 1.6rem;
+    color: var(--color-white);
+    margin: 3rem 0;
 }

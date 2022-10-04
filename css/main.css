@@ -36,9 +36,62 @@ ORDER: Base + Typography > general layout + grid > page layout > components
   --color-white: rgb(247, 240, 240);
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
   --shadow-light: 0rem 2rem 5rem rgba(0, 0, 0, 0.6);
-  --line: 1px solid var(--color-grey-light-2);
+  --line: 2px solid var(--color-grey-light-2);
 }
 
+@-webkit-keyframes drawLine {
+  0% {
+    width: 0%;
+    border-bottom: none;
+  }
+  100% {
+    width: 100%;
+    border-bottom: var(--line);
+  }
+}
+
+@keyframes drawLine {
+  0% {
+    width: 0%;
+    border-bottom: none;
+  }
+  100% {
+    width: 100%;
+    border-bottom: var(--line);
+  }
+}
+@-webkit-keyframes displayImg {
+  0% {
+    transform: translateY(-300%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes displayImg {
+  0% {
+    transform: translateY(-300%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -53,6 +106,8 @@ ORDER: Base + Typography > general layout + grid > page layout > components
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  font-family: "Nunito", sans-serif;
+  line-height: 1;
 }
 @media only screen and (max-width: 68.15em) {
   html {
@@ -68,11 +123,36 @@ body {
 }
 
 .heading-primary {
-  color: wheat;
+  display: block;
+  font-size: 6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
+  color: var(--color-white);
   line-height: 1;
 }
 
-.link {
+.heading-secondary {
+  font-size: 2.5rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--color-white);
+}
+
+.heading-tertiary {
+  display: block;
+  font-size: 2rem;
+  font-style: italic;
+  color: var(--color-primary-light-1);
+}
+
+.paragraph {
+  font-size: 1.6rem;
+  color: var(--color-white);
+  margin: 3rem 0;
+}
+
+.link:link, .link:visited {
   font-size: 2rem;
   font-weight: 700;
   text-decoration: none;
@@ -80,54 +160,53 @@ body {
   color: var(--color-primary);
   border: 2px solid var(--color-white);
   padding: 0.5rem 1.5rem;
+  background-image: linear-gradient(150deg, transparent 0%, transparent 50%, var(--color-white) 50%);
+  background-size: 250%;
+  transition: all 0.4s;
+}
+.link:hover, .link:active, .link:focus {
+  outline: none;
+  background-position: 100%;
+  color: var(--color-primary-light-1);
+  transform: translateX(1rem);
+}
+.link:active {
+  transform: translateX(1rem) translateY(0.5rem);
 }
 
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-center;
+  align-items: flex-start;
   padding: 10rem;
   background-color: var(--color-secondary);
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
 }
 .header > * {
-  margin-top: 5vh;
+  margin-top: -5vh;
+  opacity: 1;
 }
 .header__about {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-}
-.header__about--name {
-  display: block;
-  font-size: 6rem;
-  font-weight: 300;
-  text-align: center;
+  transition: all 0.5s;
+  -webkit-animation: fadeIn 2s;
+          animation: fadeIn 2s;
 }
 .header__about--job {
+  letter-spacing: 1rem;
+  transition: all 0.5s;
+}
+.header__about--job::after {
+  content: "";
   display: block;
-  font-size: 2rem;
-  text-align: center;
-  color: var(--color-primary-light-1);
+  -webkit-animation: drawLine 1s forwards;
+          animation: drawLine 1s forwards;
 }
-.header__about--paragraph {
-  font-size: 1.6rem;
-  color: var(--color-white);
-  margin: 3rem 0;
-}
-.header__about--link:link, .header__about--link:visited {
-  background-image: linear-gradient(150deg, transparent 0%, transparent 50%, var(--color-white) 50%);
-  background-size: 250%;
-  transition: all 0.4s;
-}
-.header__about--link:hover, .header__about--link:active {
-  background-position: 100%;
-  color: var(--color-primary);
-  transform: translateX(1rem);
-}
-.header__about--link:active {
-  transform: translateX(1rem) translateY(0.5rem);
+.header__img {
+  margin-bottom: 2rem;
 }
 .header__img-container {
   -webkit-clip-path: circle(40% at 50% 50%);
@@ -135,9 +214,12 @@ body {
   shape-outside: circle(40% at 50% 50%);
   width: 40rem;
   height: 30rem;
+  transform: translateY(-300%);
   transition: all 0.2s;
+  -webkit-animation: displayImg 1s forwards;
+          animation: displayImg 1s forwards;
 }
-.header__img {
+.header__img-img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
