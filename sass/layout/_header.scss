@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: flex-start;
   padding: 10rem;
-  background-color: var(--color-secondary);
+  background-color: $color-secondary;
 
   clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
 
@@ -32,7 +32,7 @@
   }
   &__img {
     margin-bottom: 2rem;
-    // filter: drop-shadow(2rem 0 3rem var(--color-primary-light-1));
+    // filter: drop-shadow(2rem 0 3rem $color-primary-light-1));
     &-container {
       clip-path: circle(40% at 50% 50%);
       shape-outside: circle(40% at 50% 50%);

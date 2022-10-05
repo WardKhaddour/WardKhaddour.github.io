@@ -23,9 +23,6 @@ ORDER: Base + Typography > general layout + grid > page layout > components
   --color-secondary: #231d22;
   --color-secondary-light: #2d1d22;
   --color-secondary-dark: #2f1d22;
-  --color-accent: #92100f;
-  --color-accent-light: #c2100f;
-  --color-accent-dark: #62100f;
   --color-grey-light-1: #faf9f9;
   --color-grey-light-2: #f4f2f2;
   --color-grey-light-3: #f0eeee;
@@ -46,7 +43,7 @@ ORDER: Base + Typography > general layout + grid > page layout > components
   }
   100% {
     width: 100%;
-    border-bottom: var(--line);
+    border-bottom: 2px solid var(--color-grey-light-2);
   }
 }
 
@@ -57,7 +54,7 @@ ORDER: Base + Typography > general layout + grid > page layout > components
   }
   100% {
     width: 100%;
-    border-bottom: var(--line);
+    border-bottom: 2px solid var(--color-grey-light-2);
   }
 }
 @-webkit-keyframes displayImg {

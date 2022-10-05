@@ -1,0 +1,31 @@
+// .nav {
+//   background-color: $color-secondary;
+//   border-bottom: 2px solid $color-white;
+//   &__list {
+//     display: flex;
+//     justify-content: space-around;
+//     list-style: none;
+
+//     &-item {
+//       transition: all 0.2s;
+//       font-size: 1.6rem;
+//       color: $color-white;
+//       text-transform: uppercase;
+//       text-decoration: none;
+//       a {
+//         display: block;
+//         padding: 1.2rem;
+//         font-size: inherit;
+//         color: inherit;
+//         text-transform: inherit;
+//         text-decoration: inherit;
+//       }
+
+//       &:hover {
+//         transform: translateY(-2px);
+//         background-color: $color-white;
+//         color: $color-secondary;
+//       }
+//     }
+//   }
+// }
