@@ -12,7 +12,7 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     font-family: "Josefin Sans", sans-serif;
-    color: $color-white;
+    color: $color-tertiary;
     line-height: 1;
 }
 
@@ -20,7 +20,7 @@ body {
     font-size: 2.5rem;
     font-weight: 300;
     font-style: italic;
-    color: $color-white;
+    color: $color-tertiary;
 }
 
 .heading-tertiary {
@@ -32,6 +32,6 @@ body {
 
 .paragraph {
     font-size: 1.6rem;
-    color: $color-white;
+    color: $color-tertiary;
     margin: 3rem 0;
 }

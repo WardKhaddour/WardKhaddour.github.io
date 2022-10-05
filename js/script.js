@@ -1,9 +1,14 @@
+import { initTheme } from './themeSelector.js';
+
+initTheme();
+
 import header from './header.js';
-import nav from './nav.js';
+
+// import nav from './nav.js';
 import about from './data/about.js';
 
-// const body = document.querySelector('body');
 const container = document.querySelector('.container');
+const themeSelector = document.querySelector('.color-theme__selector');
 
 // container.insertAdjacentHTML('beforebegin', nav);
 container.innerHTML += header(

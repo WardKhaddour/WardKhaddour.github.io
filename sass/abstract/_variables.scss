@@ -6,9 +6,15 @@
   --color-primary-dark-1: #ba2529;
   --color-primary-dark-2: #aa2529;
 
+  --color-primary-2: #00258b;
+  --color-primary-2-light: #0633af;
+  --color-primary-2-dark: #021958;
+
   --color-secondary: #231d22;
   --color-secondary-light: #2d1d22;
   --color-secondary-dark: #2f1d22;
+
+  --color-tertiary: #e2dbdb;
 
   --color-grey-light-1: #faf9f9;
   --color-grey-light-2: #f4f2f2;
@@ -19,11 +25,9 @@
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #999;
 
-  --color-white: rgb(247, 240, 240);
-
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
   --shadow-light: 0rem 2rem 5rem rgba(0, 0, 0, 0.6);
-  --line: 2px solid var(--color-grey-light-2);
+  --line: 2px solid var(--color-tertiary);
 }
 
 $color-primary: var(--color-primary);
@@ -32,6 +36,10 @@ $color-primary-light-2: var(--color-primary-light-2);
 
 $color-primary-dark-1: var(--color-primary-dark-1);
 $color-primary-dark-2: var(--color-primary-dark-2);
+
+$color-primary-2: var(--color-primary-2);
+$color-primary-2-light: var(--color-primary-2-light);
+$color-primary-2-dark: var(--color-primary-2-dark);
 
 $color-secondary: var(--color-secondary);
 $color-secondary-light: var(--color-secondary-light);
@@ -46,7 +54,11 @@ $color-grey-dark-1: var(--color-grey-dark-1);
 $color-grey-dark-2: var(--color-grey-dark-2);
 $color-grey-dark-3: var(--color-grey-dark-3);
 
-$color-white: var(--color-white);
+$color-tertiary: var(--color-tertiary);
+
+$shadow-dark: var(--shadow-dark);
+$shadow-light: var(--shadow-light);
+$line: var(--line);
 
 $bp-largest: 75em; //1200px
 $bp-large: 68.15em; //1100px

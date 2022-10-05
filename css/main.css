@@ -20,9 +20,13 @@ ORDER: Base + Typography > general layout + grid > page layout > components
   --color-primary-light-2: #ea2529;
   --color-primary-dark-1: #ba2529;
   --color-primary-dark-2: #aa2529;
+  --color-primary-2: #00258b;
+  --color-primary-2-light: #0633af;
+  --color-primary-2-dark: #021958;
   --color-secondary: #231d22;
   --color-secondary-light: #2d1d22;
   --color-secondary-dark: #2f1d22;
+  --color-tertiary: #e2dbdb;
   --color-grey-light-1: #faf9f9;
   --color-grey-light-2: #f4f2f2;
   --color-grey-light-3: #f0eeee;
@@ -30,10 +34,9 @@ ORDER: Base + Typography > general layout + grid > page layout > components
   --color-grey-dark-1: #333;
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #999;
-  --color-white: rgb(247, 240, 240);
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
   --shadow-light: 0rem 2rem 5rem rgba(0, 0, 0, 0.6);
-  --line: 2px solid var(--color-grey-light-2);
+  --line: 2px solid var(--color-tertiary);
 }
 
 @-webkit-keyframes drawLine {
@@ -43,7 +46,7 @@ ORDER: Base + Typography > general layout + grid > page layout > components
   }
   100% {
     width: 100%;
-    border-bottom: 2px solid var(--color-grey-light-2);
+    border-bottom: var(--line);
   }
 }
 
@@ -54,7 +57,7 @@ ORDER: Base + Typography > general layout + grid > page layout > components
   }
   100% {
     width: 100%;
-    border-bottom: 2px solid var(--color-grey-light-2);
+    border-bottom: var(--line);
   }
 }
 @-webkit-keyframes displayImg {
@@ -125,7 +128,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   font-family: "Josefin Sans", sans-serif;
-  color: var(--color-white);
+  color: var(--color-tertiary);
   line-height: 1;
 }
 
@@ -133,7 +136,7 @@ body {
   font-size: 2.5rem;
   font-weight: 300;
   font-style: italic;
-  color: var(--color-white);
+  color: var(--color-tertiary);
 }
 
 .heading-tertiary {
@@ -145,7 +148,7 @@ body {
 
 .paragraph {
   font-size: 1.6rem;
-  color: var(--color-white);
+  color: var(--color-tertiary);
   margin: 3rem 0;
 }
 
@@ -155,9 +158,9 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   color: var(--color-primary);
-  border: 2px solid var(--color-white);
+  border: 2px solid var(--color-tertiary);
   padding: 0.5rem 1.5rem;
-  background-image: linear-gradient(150deg, transparent 0%, transparent 50%, var(--color-white) 50%);
+  background-image: linear-gradient(150deg, transparent 0%, transparent 50%, var(--color-tertiary) 50%);
   background-size: 250%;
   transition: all 0.4s;
 }
@@ -169,6 +172,22 @@ body {
 }
 .link:active {
   transform: translateX(1rem) translateY(0.5rem);
+}
+
+.color-theme__selector {
+  position: absolute;
+  top: 10rem;
+  right: 3rem;
+  font-size: 4rem;
+  border-radius: 50%;
+  padding: 0.5rem;
+  color: var(--color-tertiary);
+  z-index: 1000;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.color-theme__selector:hover, .color-theme__selector:focus {
+  font-size: 5rem;
 }
 
 .header {
