@@ -6,7 +6,7 @@ import header from './header.js';
 
 import nav from './nav.js';
 import about from './data/about.js';
-import { observer, colorNavItem } from './observer.js';
+import { observer, handleColorAndTitle } from './observer.js';
 const container = document.querySelector('.container');
 const mainContent = document.querySelector('.main');
 // const themeSelector = document.querySelector('.color-theme__selector');
@@ -30,7 +30,7 @@ navList.addEventListener('click', e => {
 });
 
 function navScroll(el) {
-  colorNavItem(el);
+  handleColorAndTitle(el);
   document
     .getElementById(`#${el.href.split('#')[1]}`)
     .scrollIntoView({ behavior: 'smooth' });

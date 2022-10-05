@@ -276,7 +276,6 @@ body {
 }
 .nav__link-active {
   color: var(--color-primary) !important;
-  font-weight: 700;
 }
 .nav__link:active {
   transform: translateY(1px);
