@@ -286,5 +286,4 @@ body {
   display: grid;
   grid-template-rows: minmax(-webkit-min-content, 80vh);
   grid-template-rows: minmax(min-content, 80vh);
-  height: 200vh;
 }
