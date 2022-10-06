@@ -1,0 +1,15 @@
+export default [
+  { skill: 'HTML', percentage: '90' },
+  { skill: 'CSS', percentage: '85' },
+  { skill: 'Javascript', percentage: '80' },
+  { skill: 'Typescript', percentage: '70' },
+  { skill: 'Vue.js', percentage: '80' },
+  { skill: 'Vuex', percentage: '85' },
+  { skill: 'Quasar', percentage: '75' },
+  { skill: 'Tailwind CSS', percentage: '60' },
+  { skill: 'Node.js', percentage: '80' },
+  { skill: 'Express', percentage: '70' },
+  { skill: 'MongoDB', percentage: '60' },
+  { skill: 'Mongoose', percentage: '60' },
+  { skill: 'Git', percentage: '70' },
+];
