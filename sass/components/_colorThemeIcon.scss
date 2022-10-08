@@ -13,6 +13,8 @@
 
   &:hover,
   &:focus {
-    font-size: 5rem;
+    background-color: $color-tertiary;
+    fill: $color-secondary;
+    padding: 1rem;
   }
 }
