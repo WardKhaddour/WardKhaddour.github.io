@@ -2,9 +2,7 @@ export const observer = new IntersectionObserver(
   entries => {
     entries.forEach(entry => {
       const { id } = entry.target;
-      console.log(id);
       if (entry.isIntersecting) {
-        console.log('ddd');
         handleColorAndTitle(document.querySelectorAll(`a[href='${id}']`)[0]);
         location.href = id;
       }

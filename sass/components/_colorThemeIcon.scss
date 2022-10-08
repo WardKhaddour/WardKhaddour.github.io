@@ -1,13 +1,13 @@
 .color-theme__selector {
+  fill: $color-tertiary;
   position: fixed;
   top: 10rem;
   right: 3rem;
-  font-size: 4rem;
+  height: 5rem;
+  width: 5rem;
   border-radius: 50%;
   padding: 0.5rem;
-  color: $color-tertiary;
   z-index: 1000;
-  // color: $color-secondary;
   cursor: pointer;
   transition: all 0.2s;
 

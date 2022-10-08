@@ -36,7 +36,10 @@ export function initTheme() {
     rootEl.style.setProperty('--color-grey-dark-2', colorGreyL2);
     rootEl.style.setProperty('--color-tertiary', colorSecondary);
     rootEl.style.setProperty('--color-secondary', colorTertiary);
-    themeSelector.textContent = 'light_mode';
+    themeSelector.children[0].setAttribute(
+      'xlink:href',
+      '/assets/icons/sprite.svg#icon-Light'
+    );
   } else {
     rootEl.style.setProperty('--color-grey-light-1', colorGreyL1);
     rootEl.style.setProperty('--color-grey-light-2', colorGreyL2);
@@ -44,7 +47,10 @@ export function initTheme() {
     rootEl.style.setProperty('--color-grey-dark-2', colorGreyD2);
     rootEl.style.setProperty('--color-secondary', colorSecondary);
     rootEl.style.setProperty('--color-tertiary', colorTertiary);
-    themeSelector.textContent = 'dark_mode';
+    themeSelector.children[0].setAttribute(
+      'xlink:href',
+      '/assets/icons/sprite.svg#icon-Dark'
+    );
   }
 }
 

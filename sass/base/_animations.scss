@@ -34,3 +34,16 @@
     width: 0;
   }
 }
+
+@keyframes viewNotification {
+  from {
+    opacity: 0;
+    transform: translateX(150%);
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    visibility: visible;
+  }
+}

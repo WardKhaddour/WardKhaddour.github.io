@@ -10,11 +10,6 @@
   padding: 2rem 10rem;
 
   &__title {
-    &::after {
-      content: "";
-      display: block;
-      animation: drawLine 1s forwards;
-    }
   }
 
   &__list {
@@ -51,5 +46,16 @@
         border-radius: inherit;
       }
     }
+  }
+}
+
+.section-contact {
+  margin: 10rem;
+
+  .contact {
+    padding: 4rem;
+    background-image: linear-gradient(80deg, $color-secondary 0%, $color-secondary 50%, rgba(0, 0, 0, 0.2) 50%);
+    display: flex;
+    flex-direction: row;
   }
 }
