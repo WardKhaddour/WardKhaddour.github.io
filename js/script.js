@@ -1,38 +1,36 @@
+//Init the website
+
 import { initTheme } from './themeSelector.js';
+
 emailjs.init('sKpMTvWB51yA23Cto');
 
 initTheme();
 
+//IMPORTS
+import about from './about.js';
 import header from './header.js';
-
-import nav from './nav.js';
-import about from './data/about.js';
 import skills from './skills.js';
+import contact from './contact.js';
 import { observer, handleColorAndTitle } from './mainObserver.js';
 import skillsObserver from './skillsObserver.js';
-import contact from './contact.js';
-const container = document.querySelector('.container');
-
 import notify from './notify.js';
-container.insertAdjacentHTML('beforebegin', nav);
-const navList = document.querySelector('.nav__list');
 
-container.innerHTML = `${header(
-  "Hello, I'm",
-  about.name,
-  about.job,
-  about.summary,
-  about.img
-)} ${container.innerHTML}`;
-
+//ELEMENTS
+const container = document.querySelector('.container');
 const mainContent = document.querySelector('.main');
 
+//INSERT ELEMENTS
+container.insertAdjacentHTML('beforebegin', header);
+mainContent.innerHTML += about;
 mainContent.innerHTML += skills;
 mainContent.innerHTML += contact;
 
-const headerItem = document.querySelector('.header');
+//SELECT ELEMENTS
+const navList = document.querySelector('.header__nav-list');
 const contactForm = document.querySelector('.form');
+const skillsElement = document.querySelectorAll('.skills__item-percentage');
 
+//EVENT LISTENERS
 contactForm.addEventListener('submit', submitHandler);
 
 navList.addEventListener('click', e => {
@@ -40,6 +38,16 @@ navList.addEventListener('click', e => {
   navScroll(e.target);
 });
 
+//OBSERVERS
+[...mainContent.children].forEach(child => {
+  observer.observe(child);
+});
+
+[...skillsElement].forEach(child => {
+  skillsObserver.observe(child);
+});
+
+//FUNCTIONS
 function navScroll(el) {
   handleColorAndTitle(el);
   document
@@ -73,12 +81,3 @@ function submitHandler(e) {
       }
     );
 }
-
-[...mainContent.children, headerItem].forEach(child => {
-  observer.observe(child);
-});
-
-const skillsElement = document.querySelectorAll('.skills__item-percentage');
-[...skillsElement].forEach(child => {
-  skillsObserver.observe(child);
-});

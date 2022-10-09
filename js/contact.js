@@ -45,6 +45,7 @@ export default /*html*/ `
                   type="content"
                   class="form__input form__input--content"
                   required
+                  rows="3"
                   placeholder="Content"
                 ></textarea>
                 <label class="form__label" for="content">Content</label>

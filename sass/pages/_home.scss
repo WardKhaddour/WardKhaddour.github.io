@@ -4,48 +4,18 @@
   // grid-template-rows: minmax(min-content, 80vh);
 }
 
-.skills {
-  background-color: $color-grey-dark-1;
-  line-height: 1.1;
-  padding: 2rem 10rem;
+.section-about {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 15rem 10rem 10rem 10rem;
+  background-color: $color-secondary;
 
-  &__title {
-  }
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
 
-  &__list {
-    list-style: none;
-    color: $color-tertiary;
-    font-size: 2.4rem;
-  }
-
-  &__item {
-    margin: 4rem auto;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    justify-content: space-between;
-    transition: all 0.2s;
-    &-skill {
-      color: $color-tertiary;
-    }
-
-    &-percentage {
-      border-radius: 200px;
-      background-color: $color-secondary;
-      position: relative;
-    }
-
-    &-percentage.vis {
-      &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: block;
-        height: 100%;
-        background-image: linear-gradient($color-primary, $color-secondary);
-        border-radius: inherit;
-      }
-    }
+  & > * {
+    margin-top: -5vh;
+    opacity: 1;
   }
 }
 

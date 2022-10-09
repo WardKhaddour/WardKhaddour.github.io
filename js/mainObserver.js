@@ -18,7 +18,7 @@ export function handleColorAndTitle(el) {
     `${document.title.split('|')[0]} | ${el.textContent}` ||
     'Ward Khaddour | Front-End developer';
   document
-    .querySelectorAll('.nav__link')
-    .forEach(el => el.classList.remove('nav__link-active'));
-  el.classList.add('nav__link-active');
+    .querySelectorAll('.header__nav-link')
+    .forEach(el => el.classList.remove('header__nav-link--active'));
+  el.classList.add('header__nav-link--active');
 }
