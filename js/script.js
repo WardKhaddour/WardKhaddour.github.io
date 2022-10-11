@@ -10,12 +10,20 @@ initTheme();
 import about from './about.js';
 import header from './header.js';
 import skills from './skills.js';
+import {
+  projectsHtml,
+  fullScreenImgs,
+  closePopup,
+  changeImage,
+} from './projects.js';
 import contact from './contact.js';
+import footer from './footer.js';
 import { observer, handleColorAndTitle } from './mainObserver.js';
 import skillsObserver from './skillsObserver.js';
 import notify from './notify.js';
 
 //ELEMENTS
+const body = document.querySelector('body');
 const container = document.querySelector('.container');
 const mainContent = document.querySelector('.main');
 
@@ -23,12 +31,24 @@ const mainContent = document.querySelector('.main');
 container.insertAdjacentHTML('beforebegin', header);
 mainContent.innerHTML += about;
 mainContent.innerHTML += skills;
+mainContent.innerHTML += projectsHtml;
 mainContent.innerHTML += contact;
 
+container.insertAdjacentHTML('afterend', footer);
 //SELECT ELEMENTS
 const navList = document.querySelector('.header__nav-list');
 const contactForm = document.querySelector('.form');
 const skillsElement = document.querySelectorAll('.skills__item-percentage');
+
+const projectsEl = document.querySelector('.projects');
+const popup = document.querySelector('.project__popup');
+const popupContent = document.querySelector('.project__popup-content');
+const closePopupBtn = document.querySelector('.project__popup--close');
+
+popup.addEventListener('click', closePopup);
+popupContent.addEventListener('click', changeImage);
+closePopupBtn.addEventListener('click', closePopup);
+projectsEl.addEventListener('click', fullScreenImgs);
 
 //EVENT LISTENERS
 contactForm.addEventListener('submit', submitHandler);

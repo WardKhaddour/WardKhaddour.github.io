@@ -10,23 +10,28 @@
   --color-primary-2-light: #0633af;
   --color-primary-2-dark: #021958;
 
-  --color-secondary: #231d22;
+  --color-secondary: 35, 29, 34;
   --color-secondary-light: #2d1d22;
   --color-secondary-dark: #2f1d22;
 
-  --color-tertiary: #e2dbdb;
+  --color-tertiary: 226, 219, 219;
 
   // --color-grey-light-1: #faf9f9;
   // --color-grey-light-2: #f4f2f2;
-  --color-grey-light-1: #d3c5c8;
-  --color-grey-light-2: #d6cdcd;
+  // --color-grey-light-1: #d3c5c8;
+  // --color-grey-light-2: #d6cdcd;
 
-  --color-grey-dark-1: #2c2929;
-  --color-grey-dark-2: #777;
+  // --color-grey-dark-1: #2c2929;
+  // --color-grey-dark-2: #777;
+  --color-grey-light-1: 211, 197, 200;
+  --color-grey-light-2: 214, 205, 205;
+
+  --color-grey-dark-1: 44, 41, 41;
+  --color-grey-dark-2: 119, 119, 119;
 
   --shadow-light: 0rem 2rem 6rem rgba(0, 0, 0, 0.6);
   --shadow-dark: 0rem 1rem 6rem rgba(194, 168, 168, 0.4);
-  --line: 2px solid var(--color-tertiary);
+  --line: 2px solid rgb(var(--color-tertiary));
 }
 
 $color-primary: var(--color-primary);
@@ -40,20 +45,17 @@ $color-primary-2: var(--color-primary-2);
 $color-primary-2-light: var(--color-primary-2-light);
 $color-primary-2-dark: var(--color-primary-2-dark);
 
-$color-secondary: var(--color-secondary);
+$color-secondary: rgb(var(--color-secondary));
 $color-secondary-light: var(--color-secondary-light);
 $color-secondary-dark: var(--color-secondary-dark);
 
-$color-grey-light-1: var(--color-grey-light-1);
-$color-grey-light-2: var(--color-grey-light-2);
-$color-grey-light-3: var(--color-grey-light-3);
-$color-grey-light-4: var(--color-grey-light-4);
+$color-grey-light-1: rgb(var(--color-grey-light-1));
+$color-grey-light-2: rgb(var(--color-grey-light-2));
 
-$color-grey-dark-1: var(--color-grey-dark-1);
-$color-grey-dark-2: var(--color-grey-dark-2);
-$color-grey-dark-3: var(--color-grey-dark-3);
+$color-grey-dark-1: rgb(var(--color-grey-dark-1));
+$color-grey-dark-2: rgb(var(--color-grey-dark-2));
 
-$color-tertiary: var(--color-tertiary);
+$color-tertiary: rgb(var(--color-tertiary));
 
 $shadow-dark: var(--shadow-dark);
 $shadow-light: var(--shadow-light);
