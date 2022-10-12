@@ -1,0 +1,48 @@
+.education {
+  &__header {
+    width: fit-content;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+
+    &--details {
+      padding: 0 2rem;
+    }
+    &--title {
+      font-size: 3.5rem;
+    }
+    &--subtitle {
+      margin-bottom: 1rem;
+    }
+    &--date {
+      font-size: 2rem;
+    }
+
+    &--timeline {
+      margin-top: -4rem;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      &--icon {
+        fill: $color-primary;
+        width: 4rem;
+        height: 4rem;
+        display: block;
+      }
+      &--line {
+        display: block;
+        width: 2px;
+        height: 105%;
+        background-color: $color-primary;
+      }
+    }
+  }
+}

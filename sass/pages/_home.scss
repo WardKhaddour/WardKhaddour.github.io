@@ -23,7 +23,16 @@
   padding: 10rem;
   color: $color-tertiary;
   background-color: $color-secondary;
-  align-items: flex-start;
+}
+
+.section-education {
+  padding: 10rem;
+  color: $color-tertiary;
+  background-color: $color-secondary;
+  display: flex;
+  flex-direction: column;
+
+  // position: relative;
 }
 
 .section-contact {

@@ -220,6 +220,10 @@ body {
   margin-bottom: 6rem;
 }
 
+.mb-xl {
+  margin-bottom: 8rem;
+}
+
 .about {
   display: flex;
   flex-direction: column;
@@ -690,6 +694,51 @@ body {
           animation: viewNotification 1s ease-in-out forwards;
 }
 
+.education__header {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.education__item {
+  display: flex;
+  flex-direction: row;
+}
+.education__item:not(:last-child) {
+  margin-bottom: 4rem;
+}
+.education__item--details {
+  padding: 0 2rem;
+}
+.education__item--title {
+  font-size: 3.5rem;
+}
+.education__item--subtitle {
+  margin-bottom: 1rem;
+}
+.education__item--date {
+  font-size: 2rem;
+}
+.education__item--timeline {
+  margin-top: -4rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.education__item--timeline--icon {
+  fill: var(--color-primary);
+  width: 4rem;
+  height: 4rem;
+  display: block;
+}
+.education__item--timeline--line {
+  display: block;
+  width: 2px;
+  height: 105%;
+  background-color: var(--color-primary);
+}
+
 .header {
   position: -webkit-sticky;
   position: sticky;
@@ -762,7 +811,14 @@ body {
   padding: 10rem;
   color: rgb(var(--color-tertiary));
   background-color: rgb(var(--color-secondary));
-  align-items: flex-start;
+}
+
+.section-education {
+  padding: 10rem;
+  color: rgb(var(--color-tertiary));
+  background-color: rgb(var(--color-secondary));
+  display: flex;
+  flex-direction: column;
 }
 
 .section-contact {

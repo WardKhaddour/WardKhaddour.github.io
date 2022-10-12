@@ -10,12 +10,15 @@ initTheme();
 import about from './about.js';
 import header from './header.js';
 import skills from './skills.js';
+
 import {
   projectsHtml,
   fullScreenImgs,
   closePopup,
   changeImage,
 } from './projects.js';
+
+import education from './education.js';
 import contact from './contact.js';
 import footer from './footer.js';
 import { observer, handleColorAndTitle } from './mainObserver.js';
@@ -33,6 +36,7 @@ container.insertAdjacentHTML('beforebegin', header);
 mainContent.innerHTML += about;
 mainContent.innerHTML += skills;
 mainContent.innerHTML += projectsHtml;
+mainContent.innerHTML += education;
 mainContent.innerHTML += contact;
 
 container.insertAdjacentHTML('afterend', footer);
