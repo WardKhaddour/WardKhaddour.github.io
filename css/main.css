@@ -200,7 +200,8 @@ body {
 .heading-linear:hover {
   transform: scale(1.1) skew(20deg);
 }
-.heading-linear::after {
+
+.underline::after {
   content: "";
   display: block;
   -webkit-animation: drawLine 1s forwards;
@@ -307,7 +308,7 @@ body {
 
 .skills {
   background-color: rgb(var(--color-grey-dark-1));
-  line-height: 1.1;
+  line-height: 1;
   padding: 2rem 10rem;
 }
 .skills__list {
@@ -326,7 +327,7 @@ body {
   color: rgb(var(--color-tertiary));
 }
 .skills__item-percentage {
-  border-radius: 200px;
+  border-radius: 10px;
   background-color: rgb(var(--color-secondary));
   position: relative;
 }
@@ -499,6 +500,7 @@ body {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  border-radius: 3px;
   width: 100%;
   height: 100%;
 }

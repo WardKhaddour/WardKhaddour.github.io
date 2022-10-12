@@ -1,6 +1,6 @@
 .skills {
   background-color: $color-grey-dark-1;
-  line-height: 1.1;
+  line-height: 1;
   padding: 2rem 10rem;
 
   &__title {
@@ -23,7 +23,7 @@
     }
 
     &-percentage {
-      border-radius: 200px;
+      border-radius: 10px;
       background-color: $color-secondary;
       position: relative;
     }

@@ -19,6 +19,7 @@ import {
 import contact from './contact.js';
 import footer from './footer.js';
 import { observer, handleColorAndTitle } from './mainObserver.js';
+import underlineObserver from './underlineObserver.js';
 import skillsObserver from './skillsObserver.js';
 import notify from './notify.js';
 
@@ -61,6 +62,7 @@ navList.addEventListener('click', e => {
 //OBSERVERS
 [...mainContent.children].forEach(child => {
   observer.observe(child);
+  underlineObserver.observe(child);
 });
 
 [...skillsElement].forEach(child => {
