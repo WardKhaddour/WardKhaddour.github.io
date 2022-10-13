@@ -18,6 +18,7 @@ import {
   changeImage,
 } from './projects.js';
 
+import experience from './experience.js';
 import education from './education.js';
 import contact from './contact.js';
 import footer from './footer.js';
@@ -36,6 +37,7 @@ container.insertAdjacentHTML('beforebegin', header);
 mainContent.innerHTML += about;
 mainContent.innerHTML += skills;
 mainContent.innerHTML += projectsHtml;
+mainContent.innerHTML += experience;
 mainContent.innerHTML += education;
 mainContent.innerHTML += contact;
 
