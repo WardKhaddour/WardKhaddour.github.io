@@ -642,6 +642,8 @@ body {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  border-bottom: 2px solid transparent;
+  padding: 0.5rem 0;
 }
 .other-contact__list-item:first-child {
   margin-top: 6rem;
@@ -660,14 +662,8 @@ body {
   margin-right: 3rem;
 }
 .other-contact__list-item:hover {
-  background-color: rgb(var(--color-tertiary));
-  color: rgb(var(--color-secondary));
-  border-radius: 3px;
-  padding: 0 3px;
-  transform: translateY(-2px);
-}
-.other-contact__list-item:hover .other-contact__list-item--icon {
-  fill: rgb(var(--color-secondary));
+  transform: translateX(1rem);
+  border-bottom: 2px solid currentColor;
 }
 .other-contact__list-item:active {
   transform: translateY(1px);
