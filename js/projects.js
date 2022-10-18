@@ -65,17 +65,27 @@ export function closePopup(e) {
   }
 }
 
-export function changeImage(e) {
-  if (e.target.tagName !== 'BUTTON') {
+export function changeImage(e, dir) {
+  if (e.target.tagName !== 'BUTTON' && !dir) {
     return;
   }
-  if (e.target.classList.contains('project__popup--left')) {
+  if (e.target.classList.contains('project__popup--left') || dir === 'left') {
     curImg === 0 ? (curImg = imgsLength - 1) : curImg--;
-    const popupImg = document.querySelector('.project__popup--image');
-    popupImg.src = projectImgs[curImg];
-  } else if (e.target.classList.contains('project__popup--right')) {
+    setImage(curImg);
+  } else if (
+    e.target.classList.contains('project__popup--right') ||
+    dir === 'right'
+  ) {
     curImg + 1 === imgsLength ? (curImg = 0) : curImg++;
-    const popupImg = document.querySelector('.project__popup--image');
-    popupImg.src = projectImgs[curImg];
+    setImage(curImg);
   }
+}
+
+function setImage(curImg) {
+  const popupImg = document.querySelector('.project__popup--image');
+  popupImg.style.opacity = 0;
+  setTimeout(() => {
+    popupImg.src = projectImgs[curImg];
+    popupImg.style.opacity = 1;
+  }, 300);
 }

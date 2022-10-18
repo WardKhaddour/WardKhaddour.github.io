@@ -123,6 +123,28 @@ ORDER: Base + Typography > general layout + grid > page layout > components
     visibility: visible;
   }
 }
+@-webkit-keyframes moveRight {
+  0% {
+    transform: translateX(-100rem);
+  }
+  80% {
+    transform: translateX(10rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes moveRight {
+  0% {
+    transform: translateX(-100rem);
+  }
+  80% {
+    transform: translateX(10rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -195,12 +217,12 @@ body {
   -webkit-background-clip: text;
   color: transparent;
   letter-spacing: 0.2rem;
-  transition: all 0.2s;
+  transition: all 1s;
+  transform: translateX(-100rem);
 }
-.heading-linear:hover {
-  transform: scale(1.1) skew(20deg);
+.underline {
+  transform: translateX(0);
 }
-
 .underline::after {
   content: "";
   display: block;
@@ -319,21 +341,27 @@ body {
   list-style: none;
   color: rgb(var(--color-tertiary));
   font-size: 2.4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7rem;
+  margin: 7rem 0;
 }
 .skills__item {
-  margin: 4rem auto;
-  display: grid;
-  grid-template-columns: 1fr 3fr;
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
   transition: all 0.2s;
 }
 .skills__item-skill {
   color: rgb(var(--color-tertiary));
+  margin-bottom: 2rem;
 }
 .skills__item-percentage {
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: rgb(var(--color-secondary));
   position: relative;
+  height: 10px;
+  height: 2rem;
 }
 .skills__item-percentage.vis::after {
   content: "";
@@ -358,8 +386,9 @@ body {
 
 .project__card {
   position: relative;
-  width: 35%;
+  width: 30%;
   height: 52rem;
+  margin-bottom: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -507,6 +536,11 @@ body {
   border-radius: 3px;
   width: 100%;
   height: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  transition: all 0.4s;
 }
 .project__popup--close {
   position: absolute;
@@ -553,6 +587,7 @@ body {
   font-size: 3rem;
   color: rgb(var(--color-secondary));
   background-color: rgb(var(--color-tertiary));
+  padding: 2.5rem;
 }
 
 .form {
@@ -737,29 +772,14 @@ body {
 
 .experience-list {
   list-style: none;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .experience-list__item {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 1rem;
-}
-.experience-list__item:not(:last-child) {
-  margin-right: 15rem;
-}
-.experience-list__item:nth-child(2n) {
-  flex-direction: column-reverse;
-  margin-top: 10rem;
-}
-.experience-list__item:nth-child(2n) .experience-list__item--line {
-  top: 10%;
-}
-.experience-list__item:nth-child(2n) .experience-list__item--job {
-  margin-bottom: 0;
-}
-.experience-list__item:nth-child(2n) .experience-list__item--details {
-  margin-top: 2rem;
+  margin-bottom: 5rem;
 }
 .experience-list__item--company {
   width: 100%;

@@ -50,14 +50,33 @@ const skillsElement = document.querySelectorAll('.skills__item-percentage');
 const projectsEl = document.querySelector('.projects');
 const popup = document.querySelector('.project__popup');
 const popupContent = document.querySelector('.project__popup-content');
+const popupImg = document.querySelector('.project__popup--image');
 const closePopupBtn = document.querySelector('.project__popup--close');
 
-popup.addEventListener('click', closePopup);
+//EVENT LISTENERS
+let x;
+let y;
+let isSwapping = false;
+popup.addEventListener('click', !isSwapping ? closePopup : '');
+
+popupImg.addEventListener('mousedown', e => {
+  e.preventDefault();
+  x = e.offsetX;
+  y = e.offsetY;
+  isSwapping = true;
+  popup.addEventListener('mousemove', handleSwapping);
+});
+
+popup.addEventListener('mouseup', e => {
+  e.preventDefault();
+
+  isSwapping = false;
+  x = y = undefined;
+});
+
 popupContent.addEventListener('click', changeImage);
 closePopupBtn.addEventListener('click', closePopup);
 projectsEl.addEventListener('click', fullScreenImgs);
-
-//EVENT LISTENERS
 contactForm.addEventListener('submit', submitHandler);
 
 navList.addEventListener('click', e => {
@@ -76,6 +95,17 @@ navList.addEventListener('click', e => {
 });
 
 //FUNCTIONS
+function handleSwapping(e) {
+  e.preventDefault();
+  if (!isSwapping) return;
+  if (e.offsetX < x) {
+    changeImage(e, 'right');
+  } else if (e.offsetX > x) {
+    changeImage(e, 'left');
+  }
+  popup.removeEventListener('mousemove', handleSwapping);
+}
+
 function navScroll(el) {
   handleColorAndTitle(el);
   document
