@@ -1,6 +1,8 @@
 .other-contact {
   padding: 0 5rem;
-
+  @include respond(md) {
+    padding: 0;
+  }
   &__title {
     @include respond(md) {
       margin: 4rem 1rem 3rem 1rem;
