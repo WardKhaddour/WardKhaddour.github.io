@@ -1,19 +1,3 @@
-/*
-
-000 - 600px:   Phone
-600 - 900px:   Tablet portrait
-900 - 1200px:  Tablet landscape
-1200 - 1800px: Normal styles
-1800px + :     Big desktop
-
-$breakpoint argument choices
-- phone
-- tab-port
-- tab-land
-- desktop
-
-ORDER: Base + Typography > general layout + grid > page layout > components
-*/
 :root {
   --color-primary: #ca2529;
   --color-primary-light-1: #e22a2d;
@@ -162,9 +146,14 @@ html {
   font-family: "Nunito", sans-serif;
   line-height: 1;
 }
-@media only screen and (max-width: 68.15em) {
+@media only screen and (max-width: 62.5em) {
   html {
     font-size: 50%;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  html {
+    font-size: 45%;
   }
 }
 
@@ -267,6 +256,11 @@ body {
 .about__img {
   margin-bottom: 2rem;
 }
+@media only screen and (max-width: 62.5em) {
+  .about__img {
+    display: none;
+  }
+}
 .about__img-container {
   -webkit-clip-path: circle(40% at 50% 50%);
           clip-path: circle(40% at 50% 50%);
@@ -285,7 +279,12 @@ body {
      object-fit: cover;
   display: block;
 }
-
+.about__paragraph {
+  display: inline-block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
 .btn {
   all: unset;
 }
@@ -337,6 +336,16 @@ body {
   line-height: 1;
   padding: 2rem 10rem;
 }
+@media only screen and (max-width: 62.5em) {
+  .skills {
+    padding: 1rem 7rem;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  .skills {
+    padding: 1rem 5rem;
+  }
+}
 .skills__list {
   list-style: none;
   color: rgb(var(--color-tertiary));
@@ -345,6 +354,11 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 7rem;
   margin: 7rem 0;
+}
+@media only screen and (max-width: 43.75em) {
+  .skills__list {
+    grid-template-columns: 1fr;
+  }
 }
 .skills__item {
   display: flex;
@@ -383,6 +397,11 @@ body {
   background-color: rgb(var(--color-secondary));
   margin-top: 4rem;
 }
+@media only screen and (max-width: 62.5em) {
+  .projects {
+    justify-content: center;
+  }
+}
 
 .project__card {
   position: relative;
@@ -395,6 +414,21 @@ body {
   align-items: flex-start;
   border-radius: 2px;
   background-image: linear-gradient(to right bottom, rgba(var(--color-grey-dark-1), 0.3), rgba(var(--color-grey-dark-2), 0.3));
+}
+@media only screen and (max-width: 62.5em) {
+  .project__card {
+    width: 45%;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  .project__card {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 38.125em) {
+  .project__card {
+    width: 70%;
+  }
 }
 .project__img {
   position: absolute;
@@ -593,6 +627,11 @@ body {
 .form {
   width: 50%;
 }
+@media only screen and (max-width: 62.5em) {
+  .form {
+    width: 100%;
+  }
+}
 .form__group:not(:last-child) {
   margin-bottom: 2rem;
   display: flex;
@@ -664,11 +703,32 @@ body {
 .other-contact {
   padding: 0 5rem;
 }
+@media only screen and (max-width: 62.5em) {
+  .other-contact__title {
+    margin: 4rem 1rem 3rem 1rem;
+  }
+}
 .other-contact__list {
   list-style: none;
   color: rgb(var(--color-tertiary));
   text-decoration: none;
   font-size: 1.6rem;
+}
+@media only screen and (max-width: 62.5em) {
+  .other-contact__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+  }
+}
+@media only screen and (max-width: 38.125em) {
+  .other-contact__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: end;
+  }
 }
 .other-contact__list-item {
   margin: 2rem;
@@ -680,8 +740,18 @@ body {
   border-bottom: 2px solid transparent;
   padding: 0.5rem 0;
 }
+@media only screen and (max-width: 62.5em) {
+  .other-contact__list-item {
+    margin: 1rem;
+  }
+}
 .other-contact__list-item:first-child {
   margin-top: 6rem;
+}
+@media only screen and (max-width: 62.5em) {
+  .other-contact__list-item:first-child {
+    margin-top: 2rem;
+  }
 }
 .other-contact__list-item--link, .other-contact__list-item--link:link, .other-contact__list-item--link:visited {
   color: inherit;
@@ -775,6 +845,11 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
+@media only screen and (max-width: 38.125em) {
+  .experience-list {
+    grid-template-columns: 1fr;
+  }
+}
 .experience-list__item {
   display: flex;
   flex-direction: column;
@@ -858,16 +933,99 @@ body {
   left: 0;
   z-index: 1000;
 }
+.header__toggle {
+  display: none;
+  opacity: 0;
+}
+.header__toggle--checkbox {
+  display: none;
+}
+@media only screen and (max-width: 43.75em) {
+  .header__toggle {
+    display: block;
+    opacity: 1;
+    position: fixed;
+    top: 1rem;
+    right: 3rem;
+    left: auto;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    padding: 0.5rem;
+    z-index: 1000;
+    transition: all 0.2s;
+  }
+  .header__toggle--button {
+    cursor: pointer;
+  }
+  .header__toggle--icon {
+    position: relative;
+    margin-top: 3.5rem;
+  }
+  .header__toggle--icon, .header__toggle--icon::before, .header__toggle--icon::after {
+    width: 3rem;
+    height: 2px;
+    background-color: rgb(var(--color-tertiary));
+    display: inline-block;
+  }
+  .header__toggle--icon::before, .header__toggle--icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all 0.2s;
+  }
+  .header__toggle--icon::before {
+    top: -0.8rem;
+  }
+  .header__toggle--icon::after {
+    top: 0.8rem;
+  }
+  .header__toggle--checkbox:checked + .header__toggle--button .header__toggle--icon {
+    background-color: transparent;
+  }
+  .header__toggle--checkbox:checked + .header__toggle--button .header__toggle--icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+  .header__toggle--checkbox:checked + .header__toggle--button .header__toggle--icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+}
 .header__nav {
   background-color: rgb(var(--color-secondary));
   border-bottom: 2px solid rgb(var(--color-tertiary));
   width: 100%;
   display: block;
 }
+@media only screen and (max-width: 43.75em) {
+  .header__nav {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -10000;
+    opacity: 0;
+    transform: translateY(-100%) scale(0);
+    transition: all 0.2s;
+  }
+  .header__nav--open {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    z-index: 999;
+  }
+}
 .header__nav-list {
   display: flex;
   justify-content: space-around;
   list-style: none;
+}
+@media only screen and (max-width: 43.75em) {
+  .header__nav-list {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .header__nav-link:link, .header__nav-link:visited {
   outline: none;
@@ -918,11 +1076,47 @@ body {
   margin-top: -5vh;
   opacity: 1;
 }
+@media only screen and (max-width: 62.5em) {
+  .section-about {
+    flex-direction: column-reverse;
+    background-image: linear-gradient(to right bottom, rgba(var(--color-secondary), 0.9), rgba(var(--color-secondary), 0.9)), url(/assets/img/Ward_Khaddour\'s_photo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 10rem 5rem 5rem 5rem;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  .section-about {
+    padding: 6rem 4rem 4rem 4rem;
+  }
+}
+@media only screen and (max-width: 38.125em) {
+  .section-about {
+    padding: 20rem 1rem 10rem 3rem;
+  }
+}
 
 .section-projects {
   padding: 10rem;
   color: rgb(var(--color-tertiary));
   background-color: rgb(var(--color-secondary));
+}
+@media only screen and (max-width: 62.5em) {
+  .section-projects {
+    padding: 5rem;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  .section-projects {
+    padding: 2rem;
+  }
+}
+@media only screen and (max-width: 38.125em) {
+  .section-projects {
+    padding: 1rem;
+    width: 100vw;
+  }
 }
 
 .section-education {
@@ -931,20 +1125,85 @@ body {
   background-color: rgb(var(--color-secondary));
   display: flex;
   flex-direction: column;
+  width: 100vw;
+}
+@media only screen and (max-width: 62.5em) {
+  .section-education {
+    padding: 5rem;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  .section-education {
+    padding: 2rem;
+  }
+}
+@media only screen and (max-width: 38.125em) {
+  .section-education {
+    padding: 1rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
 }
 
 .section-experience {
   padding: 3rem 10rem;
 }
+@media only screen and (max-width: 62.5em) {
+  .section-experience {
+    padding: 2rem 5rem;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  .section-experience {
+    padding: 2rem 3rem;
+  }
+}
+@media only screen and (max-width: 38.125em) {
+  .section-experience {
+    padding: 1rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+}
 
 .section-contact {
   margin: 10rem;
+}
+@media only screen and (max-width: 62.5em) {
+  .section-contact {
+    margin: 5rem;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  .section-contact {
+    margin: 2rem;
+  }
+}
+@media only screen and (max-width: 38.125em) {
+  .section-contact {
+    margin: 0rem;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    margin-left: 1rem;
+  }
 }
 .section-contact .contact {
   padding: 4rem;
   background-image: linear-gradient(80deg, rgb(var(--color-secondary)) 0%, rgb(var(--color-secondary)) 50%, rgba(0, 0, 0, 0.2) 50%);
   display: flex;
   flex-direction: row;
+}
+@media only screen and (max-width: 62.5em) {
+  .section-contact .contact {
+    flex-direction: column;
+    background-image: linear-gradient(-185deg, rgb(var(--color-secondary)) 0%, rgb(var(--color-secondary)) 60%, rgba(0, 0, 0, 0.2) 60%);
+  }
+}
+@media only screen and (max-width: 38.125em) {
+  .section-contact .contact {
+    flex-direction: column;
+    background-image: linear-gradient(-185deg, rgb(var(--color-secondary)) 0%, rgb(var(--color-secondary)) 53%, rgba(0, 0, 0, 0.2) 53%);
+  }
 }
 
 .percent-1::after {

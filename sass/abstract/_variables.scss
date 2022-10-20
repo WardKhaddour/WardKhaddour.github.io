@@ -61,8 +61,7 @@ $shadow-dark: var(--shadow-dark);
 $shadow-light: var(--shadow-light);
 $line: var(--line);
 
-$bp-largest: 75em; //1200px
-$bp-large: 68.15em; //1100px
-$bp-medium: 56.25em; //900px
-$bp-small: 37.5em; //600px
-$bp-smallest: 31.25em; //500px
+$bp-lg: 75em;
+$bp-md: 62.5em;
+$bp-sm: 43.75em;
+$bp-xs: 38.125em;

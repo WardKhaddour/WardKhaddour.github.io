@@ -30,7 +30,7 @@ export default /*html*/ `
       </div>
     </form>
     <div class="other-contact">
-      <h1 class="heading-secondary">OR</h1>
+      <h1 class="heading-secondary other-contact__title">OR</h1>
       <ul class="other-contact__list">
         ${other}
       </ul>

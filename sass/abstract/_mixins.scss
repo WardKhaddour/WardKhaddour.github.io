@@ -18,44 +18,33 @@
     transform: translate(-50%, -50%);
 }
 
-//MEDIA QUERY MANAGER
-/*
-
-000 - 600px:   Phone
-600 - 900px:   Tablet portrait
-900 - 1200px:  Tablet landscape
-1200 - 1800px: Normal styles
-1800px + :     Big desktop
-
-$breakpoint argument choices
-- phone
-- tab-port
-- tab-land
-- desktop
-
-ORDER: Base + Typography > general layout + grid > page layout > components
-*/
-
 @mixin respond($breakpoint) {
-    @if $breakpoint == phone {
-        @media only screen and (max-width: 37.5em) {
-            //600px
+    @if $breakpoint == xs {
+        @media only screen and (max-width: 38.125em) {
+            //610px
             @content;
         }
     }
-    @if $breakpoint == tab-port {
-        @media only screen and (max-width: 56.25em) {
-            //900px
+
+    @if $breakpoint == sm {
+        @media only screen and (max-width: 43.75em) {
+            //700px
             @content;
         }
     }
-    @if $breakpoint == tab-land {
+    @if $breakpoint == md {
+        @media only screen and (max-width: 62.5em) {
+            //1000px
+            @content;
+        }
+    }
+    @if $breakpoint == lg {
         @media only screen and (max-width: 75em) {
             //1200px
             @content;
         }
     }
-    @if $breakpoint == big-desktop {
+    @if $breakpoint == xl {
         @media only screen and (min-width: 112.5em) {
             //1800px
             @content;

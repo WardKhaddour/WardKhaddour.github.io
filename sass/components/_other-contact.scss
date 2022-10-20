@@ -1,10 +1,29 @@
 .other-contact {
   padding: 0 5rem;
+
+  &__title {
+    @include respond(md) {
+      margin: 4rem 1rem 3rem 1rem;
+      // margin-bottom: 3rem;
+    }
+  }
+
   &__list {
     list-style: none;
     color: $color-tertiary;
     text-decoration: none;
     font-size: 1.6rem;
+    @include respond(md) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: end;
+      column-gap: 2rem;
+    }
+    @include respond(xs) {
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: end;
+    }
     &-item {
       margin: 2rem;
       transition: all 0.2s;
@@ -12,9 +31,14 @@
       width: fit-content;
       border-bottom: 2px solid transparent;
       padding: 0.5rem 0;
-
+      @include respond(md) {
+        margin: 1rem;
+      }
       &:first-child {
         margin-top: 6rem;
+        @include respond(md) {
+          margin-top: 2rem;
+        }
       }
 
       &--link,

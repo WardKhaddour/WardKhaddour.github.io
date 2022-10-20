@@ -16,6 +16,9 @@
     }
   }
   &__img {
+    @include respond(md) {
+      display: none;
+    }
     margin-bottom: 2rem;
     // filter: drop-shadow(2rem 0 3rem $color-primary-light-1));
     &-container {
@@ -32,6 +35,12 @@
       height: 100%;
       object-fit: cover;
       display: block;
+    }
+  }
+  &__paragraph {
+    display: inline-block;
+    width: fit-content;
+    @include respond(xs) {
     }
   }
 }

@@ -17,12 +17,40 @@
     margin-top: -5vh;
     opacity: 1;
   }
+  @include respond(md) {
+    flex-direction: column-reverse;
+    background-image: linear-gradient(to right bottom, rgba(var(--color-secondary),.9), rgba(var(--color-secondary),.9)), url(/assets/img/Ward_Khaddour\'s_photo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    padding: 10rem 5rem 5rem 5rem;
+  }
+
+  @include respond(sm) {
+    padding: 6rem 4rem 4rem 4rem;
+  }
+  @include respond(xs) {
+    padding: 20rem 1rem 10rem 3rem;
+  }
 }
 
 .section-projects {
   padding: 10rem;
   color: $color-tertiary;
   background-color: $color-secondary;
+
+  @include respond(md) {
+    padding: 5rem;
+  }
+
+  @include respond(sm) {
+    padding: 2rem;
+  }
+  @include respond(xs) {
+    padding: 1rem;
+    width: 100vw;
+  }
 }
 
 .section-education {
@@ -31,21 +59,69 @@
   background-color: $color-secondary;
   display: flex;
   flex-direction: column;
-
+  width: 100vw;
+  @include respond(md) {
+    padding: 5rem;
+  }
+  @include respond(sm) {
+    padding: 2rem;
+  }
+  @include respond(xs) {
+    padding: 1rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
   // position: relative;
 }
 
 .section-experience {
   padding: 3rem 10rem;
+  @include respond(md) {
+    padding: 2rem 5rem;
+  }
+
+  @include respond(sm) {
+    padding: 2rem 3rem;
+  }
+  @include respond(xs) {
+    padding: 1rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
 }
 
 .section-contact {
   margin: 10rem;
+  @include respond(md) {
+    margin: 5rem;
+  }
+
+  @include respond(sm) {
+    margin: 2rem;
+  }
+  @include respond(xs) {
+    margin: 0rem;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    margin-left: 1rem;
+    // width: 99vw;
+  }
 
   .contact {
     padding: 4rem;
     background-image: linear-gradient(80deg, $color-secondary 0%, $color-secondary 50%, rgba(0, 0, 0, 0.2) 50%);
     display: flex;
     flex-direction: row;
+
+    @include respond(md) {
+      flex-direction: column;
+      background-image: linear-gradient(-185deg, $color-secondary 0%, $color-secondary 60%, rgba(0, 0, 0, 0.2) 60%);
+    }
+
+    @include respond(xs) {
+      flex-direction: column;
+
+      background-image: linear-gradient(-185deg, $color-secondary 0%, $color-secondary 53%, rgba(0, 0, 0, 0.2) 53%);
+    }
   }
 }

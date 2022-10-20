@@ -52,6 +52,7 @@ const popup = document.querySelector('.project__popup');
 const popupContent = document.querySelector('.project__popup-content');
 const popupImg = document.querySelector('.project__popup--image');
 const closePopupBtn = document.querySelector('.project__popup--close');
+const toggleNavBtn = document.querySelector('.header__toggle--button');
 
 //EVENT LISTENERS
 let x;
@@ -84,6 +85,8 @@ navList.addEventListener('click', e => {
   navScroll(e.target);
 });
 
+toggleNavBtn.addEventListener('click', toggleNav);
+
 //OBSERVERS
 [...mainContent.children].forEach(child => {
   observer.observe(child);
@@ -95,6 +98,11 @@ navList.addEventListener('click', e => {
 });
 
 //FUNCTIONS
+function toggleNav(e) {
+  const nav = document.querySelector('.header__nav');
+  nav.classList.toggle('header__nav--open');
+}
+
 function handleSwapping(e) {
   e.preventDefault();
   if (!isSwapping) return;

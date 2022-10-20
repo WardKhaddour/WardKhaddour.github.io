@@ -3,19 +3,108 @@
   top: 0;
   left: 0;
   z-index: 1000;
+
+  &__toggle {
+    display: none;
+    opacity: 0;
+
+    &--checkbox {
+      display: none;
+    }
+    @include respond(sm) {
+      display: block;
+      opacity: 1;
+      position: fixed;
+      top: 1rem;
+      right: 3rem;
+      left: auto;
+      height: 5rem;
+      width: 5rem;
+      border-radius: 50%;
+      padding: 0.5rem;
+      z-index: 1000;
+
+      transition: all 0.2s;
+
+      &--button {
+        cursor: pointer;
+      }
+
+      &--icon {
+        position: relative;
+        margin-top: 3.5rem;
+        &,
+        &::before,
+        &::after {
+          width: 3rem;
+          height: 2px;
+          background-color: $color-tertiary;
+          display: inline-block;
+        }
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          transition: all 0.2s;
+        }
+
+        &::before {
+          top: -0.8rem;
+        }
+        &::after {
+          top: 0.8rem;
+        }
+      }
+
+      &--checkbox:checked + &--button &--icon {
+        background-color: transparent;
+      }
+      &--checkbox:checked + &--button &--icon::before {
+        top: 0;
+        transform: rotate(135deg);
+      }
+      &--checkbox:checked + &--button &--icon::after {
+        top: 0;
+        transform: rotate(-135deg);
+      }
+    }
+  }
   &__nav {
     background-color: $color-secondary;
     border-bottom: 2px solid $color-tertiary;
     width: 100%;
     display: block;
 
+    @include respond(sm) {
+      // display: none;
+      visibility: hidden;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -10000;
+      opacity: 0;
+      transform: translateY(-100%) scale(0);
+      transition: all 0.2s;
+
+      &--open {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        z-index: 999;
+      }
+    }
+
     &-list {
       display: flex;
       justify-content: space-around;
       list-style: none;
-    }
 
-    &-item {
+      @include respond(sm) {
+        flex-direction: column;
+        // justify-content: center;
+        align-items: center;
+      }
     }
 
     &-link {

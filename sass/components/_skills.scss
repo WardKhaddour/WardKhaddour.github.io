@@ -3,6 +3,14 @@
   line-height: 1;
   padding: 2rem 10rem;
 
+  @include respond(md) {
+    padding: 1rem 7rem;
+  }
+
+  @include respond(sm) {
+    padding: 1rem 5rem;
+  }
+
   &__title {
   }
 
@@ -14,6 +22,10 @@
     grid-template-columns: 1fr 1fr;
     gap: 7rem;
     margin: 7rem 0;
+
+    @include respond(sm) {
+      grid-template-columns: 1fr;
+    }
     // justify-content: left;
     // align-items: stretch;
   }
