@@ -15,26 +15,27 @@
     />
 
     <link
-      href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i"
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i,700,700i"
       rel="stylesheet"
     />
 
     <link rel="stylesheet" href="css/main.css" />
     <title>Ward Khaddour | Front-End developer</title>
-  </head>
-  <body>
-    <svg class="color-theme__selector">
-      <use xlink:href="/assets/icons/sprite.svg#icon-Dark"></use>
-    </svg>
-
-    <div class="container">
-      <main class="main"></main>
-    </div>
-
+    <script src="./js/splash.js" defer></script>
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
     ></script>
     <script src="./js/script.js" type="module"></script>
+  </head>
+  <body>
+    <div class="splash-screen"></div>
+    <svg class="color-theme__selector">
+      <use xlink:href="/assets/icons/sprite.svg#icon-Dark"></use>
+    </svg>
+
+    <div class="container hidden">
+      <main class="main"></main>
+    </div>
   </body>
 </html>

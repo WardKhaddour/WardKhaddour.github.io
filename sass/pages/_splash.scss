@@ -1,0 +1,59 @@
+.splash-screen {
+  background-image: linear-gradient(to right bottom, $color-secondary, $color-grey-dark-1);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999999999;
+
+  &__svg {
+    width: auto;
+    height: auto;
+    overflow: visible;
+  }
+
+  &__path {
+    fill: transparent;
+    stroke: transparent;
+    stroke-width: 1px;
+  }
+
+  &__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    background-image: linear-gradient(to right bottom, rgba(black, 0.2), rgba(black, 0.7)),
+      url("/assets/img/Ward_Khaddour's_photo.jpg");
+    background-position: center;
+    background-size: cover;
+    &--container {
+      // width: "300px";
+      // height: "300px";
+      width: 282px;
+      height: 282px;
+      border-radius: 8px;
+      background-size: contain;
+      border: 5px solid $color-primary;
+      display: inline-block;
+    }
+  }
+  &__text {
+    text-transform: uppercase;
+    font-family: "Nunito", sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: 0.5rem;
+    font-style: italic;
+    font-weight: 700;
+    fill: $color-tertiary;
+
+    &--span {
+      fill: $color-primary;
+    }
+  }
+}

@@ -11,3 +11,11 @@
 .mb-xl {
   margin-bottom: 8rem;
 }
+
+.hidden-animated {
+  // display: none !important;
+  animation: hideEl 2s forwards;
+}
+.hidden {
+  display: none !important;
+}

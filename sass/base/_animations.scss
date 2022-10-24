@@ -59,3 +59,18 @@
     transform: translateX(0);
   }
 }
+
+@keyframes hideEl {
+  from {
+    opacity: 1;
+    transform: scale(1);
+    clip-path: circle(50% at 50% 50%);
+  }
+  to {
+    border-radius: 50000000px;
+    opacity: 0;
+    display: none !important;
+    transform: scale(0);
+    clip-path: circle(50% at 50% 50%);
+  }
+}

@@ -1,7 +1,5 @@
 //Init the website
-
 import { initTheme } from './themeSelector.js';
-
 emailjs.init('sKpMTvWB51yA23Cto');
 
 initTheme();
@@ -26,6 +24,7 @@ import { observer, handleColorAndTitle } from './mainObserver.js';
 import underlineObserver from './underlineObserver.js';
 import skillsObserver from './skillsObserver.js';
 import notify from './notify.js';
+import html from './otherContact.js';
 
 //ELEMENTS
 const body = document.querySelector('body');

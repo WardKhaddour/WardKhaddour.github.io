@@ -129,6 +129,38 @@
     transform: translateX(0);
   }
 }
+@-webkit-keyframes hideEl {
+  from {
+    opacity: 1;
+    transform: scale(1);
+    -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+  }
+  to {
+    border-radius: 50000000px;
+    opacity: 0;
+    display: none !important;
+    transform: scale(0);
+    -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+  }
+}
+@keyframes hideEl {
+  from {
+    opacity: 1;
+    transform: scale(1);
+    -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+  }
+  to {
+    border-radius: 50000000px;
+    opacity: 0;
+    display: none !important;
+    transform: scale(0);
+    -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -233,6 +265,15 @@ body {
 
 .mb-xl {
   margin-bottom: 8rem;
+}
+
+.hidden-animated {
+  -webkit-animation: hideEl 2s forwards;
+          animation: hideEl 2s forwards;
+}
+
+.hidden {
+  display: none !important;
 }
 
 .about {
@@ -1209,6 +1250,61 @@ body {
     flex-direction: column;
     background-image: linear-gradient(-185deg, rgb(var(--color-secondary)) 0%, rgb(var(--color-secondary)) 53%, rgba(0, 0, 0, 0.2) 53%);
   }
+}
+
+.splash-screen {
+  background-image: linear-gradient(to right bottom, rgb(var(--color-secondary)), rgb(var(--color-grey-dark-1)));
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999999999;
+}
+.splash-screen__svg {
+  width: auto;
+  height: auto;
+  overflow: visible;
+}
+.splash-screen__path {
+  fill: transparent;
+  stroke: transparent;
+  stroke-width: 1px;
+}
+.splash-screen__image {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url("/assets/img/Ward_Khaddour's_photo.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.splash-screen__image--container {
+  width: 282px;
+  height: 282px;
+  border-radius: 8px;
+  background-size: contain;
+  border: 5px solid var(--color-primary);
+  display: inline-block;
+}
+.splash-screen__text {
+  text-transform: uppercase;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.5rem;
+  font-style: italic;
+  font-weight: 700;
+  fill: rgb(var(--color-tertiary));
+}
+.splash-screen__text--span {
+  fill: var(--color-primary);
 }
 
 .percent-1::after {
