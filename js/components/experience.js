@@ -1,5 +1,5 @@
 import experienceItem from './experienceItem.js';
-import experienceData from './data/experience.js';
+import experienceData from '../data/experience.js';
 
 const html = experienceData
   .map(el => experienceItem(el.companyName, el.companyLink, el.job, el.date))

@@ -9,7 +9,7 @@ const generateElement = (name, link, icon) => /*html*/ `
  </li>
 `;
 
-import contactData from './data/contact.js';
+import contactData from '../data/contact.js';
 
 const html = contactData
   .map(el => generateElement(el.name, el.link, el.icon))

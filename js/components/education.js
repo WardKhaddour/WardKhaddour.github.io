@@ -1,5 +1,5 @@
 import educationItem from './educationItem.js';
-import educationData from './data/education.js';
+import educationData from '../data/education.js';
 
 const html = educationData
   .map(el => educationItem(el.study, el.university, el.date))

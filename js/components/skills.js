@@ -1,5 +1,5 @@
 import skillElement from './skillElement.js';
-import skills from './data/skills.js';
+import skills from '../data/skills.js';
 
 const skillsEls = skills.map(el => skillElement(el.skill, el.percentage));
 

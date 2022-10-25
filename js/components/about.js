@@ -1,4 +1,4 @@
-import data from './data/about.js';
+import data from '../data/about.js';
 
 export default /*html*/ `
 <section class="section-about" id="#about">

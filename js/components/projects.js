@@ -1,4 +1,4 @@
-import projectsData from './data/projects.js';
+import projectsData from '../data/projects.js';
 import projectCard from './projectCard.js';
 
 const html = projectsData

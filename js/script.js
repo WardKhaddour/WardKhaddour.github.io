@@ -1,30 +1,28 @@
 //Init the website
-import { initTheme } from './themeSelector.js';
-emailjs.init('sKpMTvWB51yA23Cto');
-
+import { initTheme } from './components/themeSelector.js';
+import submitHandler from './helpers/emailjs.js';
 initTheme();
 
 //IMPORTS
-import about from './about.js';
-import header from './header.js';
-import skills from './skills.js';
+import about from './components/about.js';
+import header from './components/header.js';
+import skills from './components/skills.js';
 
 import {
   projectsHtml,
   fullScreenImgs,
   closePopup,
   changeImage,
-} from './projects.js';
+} from './components/projects.js';
 
-import experience from './experience.js';
-import education from './education.js';
-import contact from './contact.js';
-import footer from './footer.js';
-import { observer, handleColorAndTitle } from './mainObserver.js';
-import underlineObserver from './underlineObserver.js';
-import skillsObserver from './skillsObserver.js';
-import notify from './notify.js';
-import html from './otherContact.js';
+import experience from './components/experience.js';
+import education from './components/education.js';
+import contact from './components/contact.js';
+import footer from './components/footer.js';
+import { observer, handleColorAndTitle } from './observers/mainObserver.js';
+
+import underlineObserver from './observers/underlineObserver.js';
+import skillsObserver from './observers/skillsObserver.js';
 
 //ELEMENTS
 const body = document.querySelector('body');
@@ -32,6 +30,7 @@ const container = document.querySelector('.container');
 const mainContent = document.querySelector('.main');
 
 //INSERT ELEMENTS
+
 container.insertAdjacentHTML('beforebegin', header);
 mainContent.innerHTML += about;
 mainContent.innerHTML += skills;
@@ -41,6 +40,7 @@ mainContent.innerHTML += education;
 mainContent.innerHTML += contact;
 
 container.insertAdjacentHTML('afterend', footer);
+
 //SELECT ELEMENTS
 const navList = document.querySelector('.header__nav-list');
 const contactForm = document.querySelector('.form');
@@ -118,45 +118,4 @@ function navScroll(el) {
   document
     .getElementById(`#${el.href.split('#')[1]}`)
     .scrollIntoView({ behavior: 'smooth' });
-}
-
-function submitHandler(e) {
-  e.preventDefault();
-
-  const clearForm = (name, email, subject, content, btn) => {
-    name.value = '';
-    email.value = '';
-    subject.value = '';
-    content.value = '';
-    btn.textContent = 'send';
-  };
-
-  const name = document.querySelector('.form__input--name');
-  const email = document.querySelector('.form__input--email');
-  const subject = document.querySelector('.form__input--subject');
-  const content = document.querySelector('.form__input--content');
-
-  const contactFormBtn = contactForm.querySelector('.form__input--btn');
-
-  contactFormBtn.textContent = 'Sending..';
-
-  emailjs
-    .send('service_3sd8mti', 'template_8pf877b', {
-      name: name.value,
-      email: email.value,
-      subject: subject.value,
-      content: content.value,
-    })
-    .then(
-      response => {
-        notify('Message sent successfully');
-        console.log('SUCCESS!', response.status, response.text);
-        clearForm(name, email, subject, content, contactFormBtn);
-      },
-      error => {
-        notify('Sending message failed');
-        console.log('FAILED...', error);
-        clearForm(name, email, subject, content, contactFormBtn);
-      }
-    );
 }
