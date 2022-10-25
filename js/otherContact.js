@@ -2,7 +2,7 @@ const generateElement = (name, link, icon) => /*html*/ `
  <li class="other-contact__list-item">
    <a href="${link}" target="_blank" class="other-contact__list-item--link">
      <svg class="other-contact__list-item--icon">
-       <use xlink:href="/assets/icons/sprite.svg#icon-${icon}"></use>
+       <use href="../assets/icons/sprite.svg#icon-${icon}"></use>
      </svg>
      <p>${name}</p>
    </a>

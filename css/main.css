@@ -1125,7 +1125,7 @@ body {
 @media only screen and (max-width: 62.5em) {
   .section-about {
     flex-direction: column-reverse;
-    background-image: linear-gradient(to right bottom, rgba(var(--color-secondary), 0.9), rgba(var(--color-secondary), 0.9)), url(/assets/img/Ward_Khaddour\'s_photo.jpg);
+    background-image: linear-gradient(to right bottom, rgba(var(--color-secondary), 0.9), rgba(var(--color-secondary), 0.9)), url(../assets/img/Ward_Khaddour\'s_photo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -1282,7 +1282,7 @@ body {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url("/assets/img/Ward_Khaddour's_photo.jpg");
+  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url("../assets/img/Ward_Khaddour's_photo.jpg");
   background-position: center;
   background-size: cover;
 }

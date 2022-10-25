@@ -19,7 +19,7 @@
   }
   @include respond(md) {
     flex-direction: column-reverse;
-    background-image: linear-gradient(to right bottom, rgba(var(--color-secondary),.9), rgba(var(--color-secondary),.9)), url(/assets/img/Ward_Khaddour\'s_photo.jpg);
+    background-image: linear-gradient(to right bottom, rgba(var(--color-secondary),.9), rgba(var(--color-secondary),.9)), url(../assets/img/Ward_Khaddour\'s_photo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
