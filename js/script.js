@@ -10,6 +10,7 @@ import skills from './components/skills.js';
 
 import {
   projectsHtml,
+  handleNavigation,
   fullScreenImgs,
   closePopup,
   changeImage,
@@ -42,6 +43,7 @@ mainContent.innerHTML += contact;
 container.insertAdjacentHTML('afterend', footer);
 
 //SELECT ELEMENTS
+const projectsSection = document.querySelector('.section-projects');
 const navList = document.querySelector('.header__nav-list');
 const contactForm = document.querySelector('.form');
 const skillsElement = document.querySelectorAll('.skills__item-percentage');
@@ -85,6 +87,7 @@ navList.addEventListener('click', e => {
 });
 
 toggleNavBtn.addEventListener('click', toggleNav);
+projectsSection.addEventListener('click', handleNavigation);
 
 //OBSERVERS
 [...mainContent.children].forEach(child => {

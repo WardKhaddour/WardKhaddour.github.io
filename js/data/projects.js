@@ -4,54 +4,54 @@ export default [
     imgs: [
       `https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80`,
     ],
-    name: 'Natours',
+    name: 'Natours1',
     description:
       'sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss',
     liveLink: '#',
     codeLink: '#',
   },
   {
-    id: 1,
+    id: 2,
     imgs: [
       `https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80`,
     ],
-    name: 'Natours',
+    name: 'Natours2',
     description:
       'sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss',
     liveLink: '#',
     codeLink: '#',
   },
   {
-    id: 1,
+    id: 3,
     imgs: [
       `https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80`,
     ],
-    name: 'Natours',
+    name: 'Natours3',
     description:
       'sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss',
     liveLink: '#',
     codeLink: '#',
   },
   {
-    id: 1,
+    id: 4,
     imgs: [
       `https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80`,
     ],
-    name: 'Natours',
+    name: 'Natours4',
     description:
       'sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss',
     liveLink: '#',
     codeLink: '#',
   },
-  {
-    id: 1,
-    imgs: [
-      `https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80`,
-    ],
-    name: 'Natours',
-    description:
-      'sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss',
-    liveLink: '#',
-    codeLink: '#',
-  },
+  // {
+  //   id: 5,
+  //   imgs: [
+  //     `https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80`,
+  //   ],
+  //   name: 'Natours',
+  //   description:
+  //     'sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss',
+  //   liveLink: '#',
+  //   codeLink: '#',
+  // },
 ];

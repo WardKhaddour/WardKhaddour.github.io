@@ -1,8 +1,9 @@
 .projects {
+  position: relative;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  // flex-direction: row;
+  // // flex-wrap: wrap;
+  justify-content: center;
   color: $color-tertiary;
   background-color: $color-secondary;
   margin-top: 4rem;
@@ -10,16 +11,81 @@
   @include respond(md) {
     justify-content: center;
   }
+  &__navigation {
+    all: unset;
+    // border-radius: 100%;
+    z-index: 100;
+    background-image: linear-gradient(
+      to right bottom,
+      rgba(var(--color-secondary), 0.6),
+      rgba(var(--color-secondary), 0.5)
+    );
+    color: $color-secondary;
+    background-color: $color-tertiary;
+    position: absolute;
+    top: 50%;
+    // color: rgb(var(--color-tertiary));
+    font-size: 2.4rem;
+    height: 4rem;
+    width: 4rem;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    &--left {
+      left: 5%;
+    }
+    &--right {
+      right: 5%;
+    }
+    &:hover {
+      background-color: $color-tertiary;
+      background-image: none;
+      transform: scale(1.1);
+    }
+
+    &--dots {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    &--dot {
+      display: inline-block;
+      width: 1rem;
+      height: 1rem;
+      margin: 0.5rem;
+      border-radius: 50%;
+      display: flex;
+      background-color: $color-tertiary;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s;
+      &-selected {
+        background-color: $color-primary;
+        transform: scale(1.2);
+      }
+
+      &:hover {
+        transform: translateY(-2px) scale(1.2);
+      }
+    }
+  }
 }
 
 .project {
   &__card {
-    position: relative;
-    width: 30%;
+    // position: relative;
+    width: 90%;
 
-    height: 52rem;
+    height: 80vh;
+
     margin-bottom: 3rem;
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
@@ -30,6 +96,8 @@
       rgba(var(--color-grey-dark-2), 0.3)
     );
 
+    transition: all 1s;
+
     @include respond(md) {
       width: 45%;
     }
@@ -39,6 +107,14 @@
     }
     @include respond(xs) {
       width: 70%;
+    }
+
+    &--hidden {
+      transform: scale(0.2);
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
   }
 

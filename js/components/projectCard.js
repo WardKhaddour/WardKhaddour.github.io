@@ -1,9 +1,11 @@
 export default (id, imgs, name, description, codeLink, liveLink) => /*html*/ `
-<div class="project__card">
+<div class="project__card ${
+  id !== 1 ? 'project__card--hidden' : ''
+}" data-id='${id}'>
   <div class="project__img-container">
     <img src="${imgs[0]}" alt="" class="project__img" />
     <svg class="project__img--full-screen" data-id='${id}'>
-      <use xlink:href="/assets/icons/sprite.svg#icon-fullscreen"></use>
+      <use href="/assets/icons/sprite.svg#icon-fullscreen"></use>
     </svg>
     <div class="project__img--placeholder"></div>
   </div>
