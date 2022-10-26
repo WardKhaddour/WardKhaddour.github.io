@@ -666,8 +666,8 @@ body {
   height: 100%;
 }
 .project__popup--image {
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   -o-object-position: center;
      object-position: center;
   border-radius: 3px;

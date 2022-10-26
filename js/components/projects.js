@@ -28,8 +28,10 @@ export const projectsHtml =
   /*html*/
   `
 <section class="section-projects" id="#projects">
-  <button class="projects__navigation projects__navigation--left">&larr;</button>
-  <button class="projects__navigation projects__navigation--right">&rarr;</button>
+  <div class="${projectsData.length < 2 ? 'hidden' : ''}">
+    <button class="projects__navigation projects__navigation--left">&larr;</button>
+    <button class="projects__navigation projects__navigation--right">&rarr;</button>
+  </div>
   <div class="projects__title heading-linear">MY PROJECTS</div>
   <div class="projects">
     ${html}
