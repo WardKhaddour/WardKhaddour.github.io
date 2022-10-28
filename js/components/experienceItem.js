@@ -1,4 +1,4 @@
-export default (companyName, companyLink, job, date) => /*html*/ `
+export default (companyName, companyLink, job, date, description) => /*html*/ `
 <li class="experience-list__item">
   <div class="experience-list__item--details">
     <div class="experience-list__item--company">
@@ -15,5 +15,8 @@ export default (companyName, companyLink, job, date) => /*html*/ `
   <h5 class="heading-secondary experience-list__item--date">
     ${date}
   </h5>
+  <ul class="experience-list__item--description">
+      ${description.map(des => `<li>${des}</li>`).join('')}
+    </ul>
 </li>
 `;

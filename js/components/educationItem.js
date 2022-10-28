@@ -1,4 +1,4 @@
-export default (university, study, date) => /*html*/ `
+export default (university, study, date, description) => /*html*/ `
 <div class="education__item">
   <div class="education__item--timeline">
     <svg class="education__item--timeline--icon">
@@ -16,6 +16,9 @@ export default (university, study, date) => /*html*/ `
     <h5 class="heading-secondary education__item--date">
       ${date}
     </h5>
+    <p class="education__item--description">
+      ${description || ''}
+    </p>
   </div>
 </div>
 `;

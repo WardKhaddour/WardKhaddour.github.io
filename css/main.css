@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --color-primary: #ca2529;
   --color-primary-rgb: 202, 37, 41;
@@ -232,6 +233,10 @@ body {
   font-family: "Josefin Sans", sans-serif;
   color: var(--color-tertiary);
   line-height: 1;
+  transition: all 0.2s;
+}
+.heading-primary:hover {
+  transform: skew(-20deg);
 }
 
 .heading-secondary {
@@ -248,6 +253,10 @@ body {
   font-size: 2rem;
   font-style: italic;
   color: var(--color-primary-light-1);
+  transition: all 0.2s;
+}
+.heading-tertiary:hover {
+  transform: skew(20deg);
 }
 
 .paragraph {
@@ -266,9 +275,13 @@ body {
   -webkit-background-clip: text;
   color: transparent;
   letter-spacing: 0.2rem;
-  transition: all 1s;
+  transition: transform 1s, opacity 0.2s;
   transform: translateX(-100rem);
 }
+.heading-linear:hover {
+  opacity: 0.7;
+}
+
 .underline {
   transform: translateX(0);
 }
@@ -980,6 +993,12 @@ body {
 .education__item--date {
   font-size: 2rem;
 }
+.education__item--description {
+  font-size: 2rem;
+  color: var(--color-tertiary);
+  margin-top: 1rem;
+  font-family: "Nunito", sans-serif;
+}
 .education__item--timeline {
   margin-top: -4rem;
   position: relative;
@@ -1016,6 +1035,9 @@ body {
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 5rem;
+}
+.experience-list__item:not(:last-child) {
+  margin-right: 5rem;
 }
 .experience-list__item--company {
   width: 100%;
@@ -1085,6 +1107,24 @@ body {
           clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
   font-size: 1.6rem;
   font-weight: 700;
+}
+.experience-list__item--description {
+  list-style: none;
+  width: 35rem;
+  font-size: 2rem;
+  color: var(--color-tertiary);
+  margin-left: 1rem;
+  margin-top: 1rem;
+  font-style: italic;
+  font-family: "Nunito", sans-serif;
+}
+.experience-list__item--description li::before {
+  content: "•";
+  color: var(--color-primary);
+  display: inline-block;
+  font-size: 2.5rem;
+  width: 2rem;
+  margin-left: -2rem;
 }
 
 .header {
