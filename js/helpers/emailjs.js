@@ -1,6 +1,5 @@
 import notify from './notify.js';
 emailjs.init('sKpMTvWB51yA23Cto');
-
 export default function (e) {
   e.preventDefault();
 
@@ -17,6 +16,7 @@ export default function (e) {
   const subject = document.querySelector('.form__input--subject');
   const content = document.querySelector('.form__input--content');
 
+  const contactForm = document.querySelector('.form');
   const contactFormBtn = contactForm.querySelector('.form__input--btn');
 
   contactFormBtn.textContent = 'Sending..';
