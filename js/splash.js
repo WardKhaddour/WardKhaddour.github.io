@@ -28,7 +28,7 @@ const html = /*html */ `
 
 splashScreen.innerHTML = html;
 
-setTimeout(navigateToHome, 8000);
+setTimeout(navigateToHome, 1);
 
 function navigateToHome() {
   document.querySelector('.splash-screen').classList.add('hidden-animated');

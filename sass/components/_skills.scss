@@ -58,7 +58,12 @@
         left: 0;
         display: block;
         height: 100%;
-        background-image: linear-gradient(var(--color-primary), var(--color-secondary));
+        background-image: linear-gradient(
+          rgba(var(--color-primary-rgb), 0.7),
+          rgba(var(--color-primary-rgb), 0.9),
+          rgba(0, 0, 0, 0.5)
+        );
+        box-shadow: 0rem 0.2rem 1rem rgba(0, 0, 0, 0.5);
         border-radius: inherit;
       }
     }
