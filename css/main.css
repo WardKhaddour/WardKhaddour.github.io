@@ -261,7 +261,7 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
-  background-image: linear-gradient(to right, var(--color-primary-dark-1), var(--color-primary-light-1), var(--color-primary-dark-1));
+  background-image: linear-gradient(to right, var(--color-primary-dark-2), var(--color-primary-light-2), var(--color-primary-dark-2));
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -379,14 +379,24 @@ body {
   transition: all 0.4s;
   cursor: pointer;
 }
-.link:hover, .link:active {
-  outline: none;
-  background-position: 100%;
-  color: var(--color-primary-light-1);
-  transform: translateX(1rem);
+@media only screen and (max-width: 43.75em) {
+  .link:active {
+    outline: none;
+    background-position: 100%;
+    color: var(--color-primary-light-1);
+    transform: translateX(1rem);
+  }
 }
-.link:active {
-  transform: translateX(1rem) translateY(0.5rem);
+@media only screen and (min-width: 38.125em) {
+  .link:hover, .link:active {
+    outline: none;
+    background-position: 100%;
+    color: var(--color-primary-light-1);
+    transform: translateX(1rem);
+  }
+  .link:active {
+    transform: translateX(1rem) translateY(0.5rem);
+  }
 }
 
 .color-theme__selector {
@@ -482,7 +492,7 @@ body {
   all: unset;
   z-index: 100;
   background-image: linear-gradient(to right bottom, rgba(var(--color-secondary-rgb), 0.6), rgba(var(--color-secondary-rgb), 0.5));
-  color: -var(--color-secondary);
+  color: var(--color-secondary);
   background-color: var(--color-tertiary);
   position: absolute;
   top: 50%;
@@ -566,8 +576,6 @@ body {
   transform: scale(0.2);
   opacity: 0;
   position: absolute;
-  top: 0;
-  left: 0;
 }
 .project__img {
   position: absolute;
@@ -741,7 +749,7 @@ body {
 .project__popup--right:hover {
   transform: translateY(-50%) translateX(1rem);
 }
-.project__popup--btn {
+.project__popup--btn, .project__popup--btn:active, .project__popup--btn:focus, .project__popup-btn:target {
   background-image: linear-gradient(to right bottom, rgba(var(--color-secondary-rgb), 0.6), rgba(var(--color-secondary-rgb), 0.5));
   color: var(--color-tertiary);
   font-size: 2.4rem;
@@ -756,11 +764,19 @@ body {
   cursor: pointer;
   transition: all 0.2s;
 }
-.project__popup--btn:hover {
+.project__popup--btn:hover, .project__popup--btn:active:hover, .project__popup--btn:focus:hover, .project__popup-btn:target:hover {
   font-size: 3rem;
   color: var(--color-secondary);
   background-color: var(--color-tertiary);
   padding: 2.5rem;
+}
+@media only screen and (max-width: 62.5em) {
+  .project__popup--btn:hover, .project__popup--btn:active:hover, .project__popup--btn:focus:hover, .project__popup-btn:target:hover {
+    font-size: 2.4rem;
+    background-image: linear-gradient(to right bottom, rgba(var(--color-secondary-rgb), 0.6), rgba(var(--color-secondary-rgb), 0.5));
+    color: var(--color-tertiary);
+    padding: 1.2rem;
+  }
 }
 
 .form {
