@@ -7,17 +7,17 @@ export default /*html*/ `
     <form action="#" class="form">
       <h1 class="heading-secondary">Send me a private message</h1>
       <div class="form__group">
-        <input id="name" type="text" class="form__input form__input--name" required placeholder="Name" />
+        <input autocomplete="off" id="name" type="text" class="form__input form__input--name" required placeholder="Name" />
         <label class="form__label" for="name">Name</label>
       </div>
 
       <div class="form__group">
-        <input id="email" type="email" class="form__input form__input--email" required placeholder="Email" />
+        <input autocomplete="off" id="email" type="email" class="form__input form__input--email" required placeholder="Email" />
         <label class="form__label" for="email">Email</label>
       </div>
 
       <div class="form__group">
-        <input id="subject" type="subject" class="form__input form__input--subject" required placeholder="Subject" />
+        <input autocomplete="off" id="subject" type="subject" class="form__input form__input--subject" required placeholder="Subject" />
         <label class="form__label" for="subject">Subject</label>
       </div>
 

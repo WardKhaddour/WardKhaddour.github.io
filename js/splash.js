@@ -19,7 +19,7 @@ const html = /*html */ `
     </div>
   </foreignObject>
   <text class="splash-screen__text" text-anchor="left">
-    <textPath class="splash-screen__textpath" style="fill-opacity: 1" href="#wavepath" side="left" startOffset="0%" textLength="1175">
+    <textPath class="splash-screen__textpath" style="fill-opacity: 1" href="#wavepath" side="left" startOffset="0%" >
      <animate attributeName="startOffset" from="42%" to="20%" begin="0s" dur="10s" repeatCount="indefinite"></animate>
       ${strHTML}
     </textPath>

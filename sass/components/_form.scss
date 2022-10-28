@@ -40,11 +40,18 @@
         color: var(--color-primary);
       }
     }
-
     &::-moz-placeholder,
-    &::-webkit-input-placeholder,
-    &::placeholder {
-      color: rgba(var(--color-secondary), 0.9);
+    &::placeholder,
+    &::-ms-input-placeholder,
+    &:-ms-input-placeholder {
+      // color: rgba(var(--color-secondary), 0.9);
+      color: var(--color-secondary);
+      opacity: 0.9;
+    }
+    &::-webkit-input-placeholder {
+      // color: rgba(var(--color-secondary), 0.9);
+      color: var(--color-secondary);
+      opacity: 0.9;
     }
 
     &--content {
