@@ -1,5 +1,5 @@
 const splashScreen = document.querySelector('.splash-screen');
-const str = '&lt;Ward&gt; Front End Developer &lt;/Khaddour&gt;';
+const str = '&lt;Ward&gt; Javascript Developer &lt;/Khaddour&gt;';
 const strHTML = str
   .split(' ')
   .map((word, i) => {
@@ -20,7 +20,7 @@ const html = /*html */ `
   </foreignObject>
   <text class="splash-screen__text" text-anchor="left">
     <textPath class="splash-screen__textpath" style="fill-opacity: 1" href="#wavepath" side="left" startOffset="0%" textLength="1175">
-     <animate attributeName="startOffset" from="42%" to="20%" begin="0s" dur="12s" repeatCount="indefinite"></animate>
+     <animate attributeName="startOffset" from="42%" to="20%" begin="0s" dur="10s" repeatCount="indefinite"></animate>
       ${strHTML}
     </textPath>
   </text>
@@ -28,7 +28,7 @@ const html = /*html */ `
 
 splashScreen.innerHTML = html;
 
-setTimeout(navigateToHome, 1);
+setTimeout(navigateToHome, 8000);
 
 function navigateToHome() {
   document.querySelector('.splash-screen').classList.add('hidden-animated');

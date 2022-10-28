@@ -15,7 +15,7 @@ export default (id, imgs, name, description, codeLink, liveLink) => /*html*/ `
       ${description}
     </p>
   </div>
-  <div class="project__links">
+  <div class="project__links ">
     ${
       liveLink
         ? `<a href="${liveLink}" class="project__link"> Live Project &rarr; </a>`
@@ -24,6 +24,11 @@ export default (id, imgs, name, description, codeLink, liveLink) => /*html*/ `
     ${
       codeLink
         ? `<a href="${codeLink}" class="project__link"> Source Code &rarr; </a>`
+        : ''
+    }
+    ${
+      !liveLink && !codeLink
+        ? `<span class="heading-secondary">No links Available</span>`
         : ''
     }
   </div>
