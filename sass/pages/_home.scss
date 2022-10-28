@@ -65,7 +65,8 @@
   background-color: var(--color-secondary);
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
+  width: -webkit-fill-available;
   @include respond(md) {
     padding: 5rem;
   }

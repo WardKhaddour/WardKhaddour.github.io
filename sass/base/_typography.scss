@@ -46,9 +46,9 @@ body {
     display: inline-block;
     background-image: linear-gradient(
         to right,
-        rgb(var(--color-primary-dark-1-rgb)),
-        rgb(var(--color-primary-light-1-rgb)),
-        rgb(var(--color-primary-dark-1-rgb))
+        var(--color-primary-dark-1),
+        var(--color-primary-light-1),
+        var(--color-primary-dark-1)
     );
     background-clip: text;
     -webkit-background-clip: text;
