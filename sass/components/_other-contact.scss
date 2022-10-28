@@ -12,7 +12,7 @@
 
   &__list {
     list-style: none;
-    color: $color-tertiary;
+    color: var(--color-tertiary);
     text-decoration: none;
     font-size: 1.6rem;
     @include respond(md) {
@@ -55,7 +55,7 @@
       &--icon {
         height: 3rem;
         width: 3rem;
-        fill: $color-tertiary;
+        fill: var(--color-tertiary);
         margin-right: 3rem;
       }
 

@@ -38,7 +38,7 @@
         &::after {
           width: 3rem;
           height: 2px;
-          background-color: $color-tertiary;
+          background-color: var(--color-tertiary);
           display: inline-block;
         }
         &::before,
@@ -71,8 +71,8 @@
     }
   }
   &__nav {
-    background-color: $color-secondary;
-    border-bottom: 2px solid $color-tertiary;
+    background-color: var(--color-secondary);
+    border-bottom: 2px solid var(--color-tertiary);
     width: 100%;
     display: block;
 
@@ -116,19 +116,19 @@
 
         transition: all 0.2s;
         font-size: 1.6rem;
-        color: $color-tertiary;
+        color: var(--color-tertiary);
         text-transform: uppercase;
         text-decoration: none;
       }
       &:hover,
       &:active {
         transform: translateY(-2px) scale(1.1);
-        background-color: $color-tertiary;
-        color: $color-secondary;
+        background-color: var(--color-tertiary);
+        color: var(--color-secondary);
       }
 
       &--active {
-        color: $color-primary !important;
+        color: var(--color-primary) !important;
         // font-weight: 700;
       }
 

@@ -4,8 +4,8 @@
   // flex-direction: row;
   // // flex-wrap: wrap;
   justify-content: center;
-  color: $color-tertiary;
-  background-color: $color-secondary;
+  color: var(--color-tertiary);
+  background-color: var(--color-secondary);
   margin-top: 4rem;
 
   @include respond(md) {
@@ -17,11 +17,11 @@
     z-index: 100;
     background-image: linear-gradient(
       to right bottom,
-      rgba(var(--color-secondary), 0.6),
-      rgba(var(--color-secondary), 0.5)
+      rgba(var(--color-secondary-rgb), 0.6),
+      rgba(var(--color-secondary-rgb), 0.5)
     );
-    color: $color-secondary;
-    background-color: $color-tertiary;
+    color: -var(--color-secondary);
+    background-color: var(--color-tertiary);
     position: absolute;
     top: 50%;
     // color: rgb(var(--color-tertiary));
@@ -43,7 +43,7 @@
       right: 5%;
     }
     &:hover {
-      background-color: $color-tertiary;
+      background-color: var(--color-tertiary);
       background-image: none;
       transform: scale(1.1);
     }
@@ -61,12 +61,12 @@
       margin: 0.5rem;
       border-radius: 50%;
       display: flex;
-      background-color: $color-tertiary;
+      background-color: var(--color-tertiary);
       justify-content: center;
       cursor: pointer;
       transition: all 0.2s;
       &-selected {
-        background-color: $color-primary;
+        background-color: var(--color-primary);
         transform: scale(1.2);
       }
 
@@ -92,8 +92,8 @@
     border-radius: 2px;
     background-image: linear-gradient(
       to right bottom,
-      rgba(var(--color-grey-dark-1), 0.3),
-      rgba(var(--color-grey-dark-2), 0.3)
+      rgba(var(--color-grey-dark-1-rgb), 0.3),
+      rgba(var(--color-grey-dark-2-rgb), 0.3)
     );
 
     transition: all 1s;
@@ -140,11 +140,11 @@
     animation: fadeIn 0.2s;
 
     &--placeholder {
-      // background-color: $color-tertiary;
+      // background-color: var(--color-tertiary);
       background-image: linear-gradient(
         to right bottom,
-        rgba(var(--color-tertiary), 0.6),
-        rgba(var(--color-secondary), 0.6)
+        rgba(var(--color-tertiary-rgb), 0.6),
+        rgba(var(--color-secondary-rgb), 0.6)
       );
       position: absolute;
       top: 0;
@@ -156,7 +156,7 @@
     }
 
     &--full-screen {
-      fill: $color-tertiary;
+      fill: var(--color-tertiary);
       width: 2rem;
       height: 2rem;
       position: absolute;
@@ -178,7 +178,7 @@
     &--title {
       text-transform: uppercase;
       font-size: 2.6rem;
-      color: $color-primary;
+      color: var(--color-primary);
       font-weight: 200;
     }
 
@@ -196,8 +196,8 @@
     border-radius: 3px;
     background-image: linear-gradient(
       to right bottom,
-      rgba(var(--color-grey-light-1), 0.3),
-      rgba(var(--color-grey-light-2), 0.3)
+      rgba(var(--color-grey-light-1-rgb), 0.3),
+      rgba(var(--color-grey-light-2-rgb), 0.3)
     );
     width: 100%;
 
@@ -208,7 +208,7 @@
   &__link:link,
   &__link:visited {
     text-decoration: none;
-    color: $color-tertiary;
+    color: var(--color-tertiary);
     font-size: 1.6rem;
     width: fit-content;
     transition: all 0.2s;
@@ -224,9 +224,9 @@
 
     &:hover {
       transform: translateX(0.5rem);
-      // background-color: $color-secondary;
-      // color: $color-tertiary
-      color: $color-primary;
+      // background-color: var(--color-secondary);
+      // color: var(--color-tertiary)
+      color: var(--color-primary);
     }
     &:active {
       transform: translateY(0.5rem) translateX(0.5rem);
@@ -307,10 +307,10 @@
     &--btn {
       background-image: linear-gradient(
         to right bottom,
-        rgba(var(--color-secondary), 0.6),
-        rgba(var(--color-secondary), 0.5)
+        rgba((var(--color-secondary-rgb)), 0.6),
+        rgba((var(--color-secondary-rgb)), 0.5)
       );
-      color: $color-tertiary;
+      color: var(--color-tertiary);
       font-size: 2.4rem;
       height: 4rem;
       width: 4rem;
@@ -325,8 +325,8 @@
 
       &:hover {
         font-size: 3rem;
-        color: $color-secondary;
-        background-color: $color-tertiary;
+        color: var(--color-secondary);
+        background-color: var(--color-tertiary);
         padding: 2.5rem;
       }
     }

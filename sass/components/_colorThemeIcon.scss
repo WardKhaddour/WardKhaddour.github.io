@@ -1,5 +1,5 @@
 .color-theme__selector {
-  fill: $color-tertiary;
+  fill: var(--color-tertiary);
   position: fixed;
   top: 10rem;
   right: 3rem;
@@ -13,8 +13,8 @@
 
   &:hover,
   &:focus {
-    background-color: $color-tertiary;
-    fill: $color-secondary;
+    background-color: var(--color-tertiary);
+    fill: var(--color-secondary);
     padding: 1rem;
   }
 }

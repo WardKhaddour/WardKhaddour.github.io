@@ -8,7 +8,11 @@
   &__job {
     letter-spacing: 1rem;
     transition: all 0.5s;
+    display: inline-block;
 
+    @include respond(xxs) {
+      width: min-content;
+    }
     &::after {
       content: "";
       display: block;
@@ -20,7 +24,7 @@
       display: none;
     }
     margin-bottom: 2rem;
-    // filter: drop-shadow(2rem 0 3rem $color-primary-light-1));
+    // filter: drop-shadow(2rem 0 3rem var(--color-primary)-light-1));
     &-container {
       clip-path: circle(40% at 50% 50%);
       shape-outside: circle(40% at 50% 50%);

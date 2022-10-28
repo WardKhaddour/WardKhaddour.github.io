@@ -31,20 +31,20 @@
     &:focus {
       outline: none;
 
-      border-bottom: 3px solid $color-tertiary;
+      border-bottom: 3px solid var(--color-tertiary);
 
       &:invalid {
-        border-bottom: 3px solid $color-primary;
+        border-bottom: 3px solid var(--color-primary);
       }
       &:invalid + .form__label {
-        color: $color-primary;
+        color: var(--color-primary);
       }
     }
 
     &::-moz-placeholder,
     &::-webkit-input-placeholder,
     &::placeholder {
-      color: $color-grey-light-2;
+      color: rgba(var(--color-secondary), 0.9);
     }
 
     &--content {
@@ -60,7 +60,7 @@
     display: block;
     transition: all 0.3s;
     // transform: translateY(-8.5rem);
-    color: $color-tertiary;
+    color: var(--color-tertiary);
   }
 
   &__input:placeholder-shown + &__label {

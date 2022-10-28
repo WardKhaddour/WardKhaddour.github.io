@@ -1,5 +1,5 @@
 .splash-screen {
-  background-image: linear-gradient(to right bottom, $color-secondary, $color-grey-dark-1);
+  background-image: linear-gradient(to right bottom, var(--color-secondary), var(--color-grey-dark-1));
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -39,7 +39,7 @@
       height: 282px;
       border-radius: 8px;
       background-size: contain;
-      border: 5px solid $color-primary;
+      border: 5px solid var(--color-primary);
       display: inline-block;
     }
   }
@@ -50,10 +50,10 @@
     letter-spacing: 0.5rem;
     font-style: italic;
     font-weight: 700;
-    fill: $color-tertiary;
+    fill: var(--color-tertiary);
 
     &--span {
-      fill: $color-primary;
+      fill: var(--color-primary);
     }
   }
 }
