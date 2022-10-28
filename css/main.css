@@ -1369,6 +1369,20 @@ body {
   width: auto;
   height: auto;
   overflow: visible;
+  width: 401px;
+  height: 401px;
+}
+@media only screen and (max-width: 38.125em) {
+  .splash-screen__svg {
+    width: 275px;
+    height: 275px;
+  }
+}
+@media only screen and (max-width: 18.75em) {
+  .splash-screen__svg {
+    width: 201px;
+    height: 201px;
+  }
 }
 .splash-screen__path {
   fill: transparent;

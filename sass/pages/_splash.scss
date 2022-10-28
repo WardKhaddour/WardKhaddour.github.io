@@ -15,6 +15,16 @@
     width: auto;
     height: auto;
     overflow: visible;
+    width: 401px;
+    height: 401px;
+    @include respond(xs) {
+      width: 275px;
+      height: 275px;
+    }
+    @include respond(xxs) {
+      width: 201px;
+      height: 201px;
+    }
   }
 
   &__path {
