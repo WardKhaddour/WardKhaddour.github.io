@@ -12,7 +12,11 @@
   transition: all 0.2s;
 
   &:hover,
-  &:focus {
+  &:focus,
+  &:focus-visible {
+    outline: 0;
+    border: none;
+    -moz-outline-style: none;
     background-color: var(--color-tertiary);
     fill: var(--color-secondary);
     padding: 1rem;

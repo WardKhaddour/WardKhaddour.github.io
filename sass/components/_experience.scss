@@ -43,13 +43,20 @@
         transform: none;
       }
 
-      a {
+      a,
+      a:visited,
+      a:active {
+        outline: 0;
+        border: none;
+        -moz-outline-style: none;
         text-decoration: none;
         color: inherit;
         transition: all 0.2s;
         border-bottom: 2px solid transparent;
 
-        &:hover {
+        &:hover,
+        &:focus,
+        &:focus-visible {
           transform: translateX(1rem);
           border-bottom: 2px solid currentColor;
           color: var(--color-tertiary);

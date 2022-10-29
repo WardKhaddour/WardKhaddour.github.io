@@ -28,10 +28,13 @@
     }
     &-item {
       margin: 2rem;
-      transition: all 0.2s;
+      transition: transform 0.2s;
       display: block;
       width: fit-content;
       border-bottom: 2px solid transparent;
+      outline: 0;
+      border: none;
+      -moz-outline-style: none;
       padding: 0.5rem 0;
       @include respond(md) {
         margin: 1rem;
@@ -51,6 +54,9 @@
         font-size: inherit;
         display: flex;
         align-items: center;
+        outline: 0;
+        border: none;
+        -moz-outline-style: none;
       }
       &--icon {
         height: 3rem;
@@ -59,13 +65,21 @@
         margin-right: 3rem;
       }
 
+      &:active {
+        transform: translateY(1px);
+      }
+
       &:hover {
         transform: translateX(1rem);
         border-bottom: 2px solid currentColor;
       }
-
-      &:active {
-        transform: translateY(1px);
+      @supports selector(:has(a)) {
+        &:has(> &--link:hover),
+        &:has(> &--link:focus),
+        &:has(> &--link:focus-visible) {
+          transform: translateX(1rem);
+          border-bottom: 2px solid currentColor;
+        }
       }
     }
   }

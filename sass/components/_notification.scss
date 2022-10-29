@@ -2,19 +2,21 @@
   visibility: hidden;
   opacity: 0;
   position: absolute;
-  width: 30rem;
-  height: 10rem;
+  top: 6rem;
+  right: 0;
+  min-width: 30rem;
+  min-height: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: var(--color-primary);
   border-radius: 5px;
-  top: 6rem;
-  right: 0;
+
   transform: translateX(150%);
-  background-color: var(--color-grey-dark-2);
+  background-color: var(--color-tertiary);
 
   transition: all 0.2s;
-  animation: viewNotification 1s ease-in-out forwards;
+
+  animation: viewNotification 0.8s forwards;
 }

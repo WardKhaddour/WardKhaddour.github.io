@@ -389,7 +389,10 @@ body {
   all: unset;
 }
 
-.link, .link:link, .link:visited, .link:focus {
+.link, .link:link, .link:visited {
+  outline: 0;
+  border: none;
+  -moz-outline-style: none;
   font-size: 2rem;
   font-weight: 700;
   text-decoration: none;
@@ -411,7 +414,7 @@ body {
   }
 }
 @media only screen and (min-width: 38.125em) {
-  .link:hover, .link:active {
+  .link:hover, .link:active, .link:focus-visible {
     outline: none;
     background-position: 100%;
     color: var(--color-primary-light-1);
@@ -486,7 +489,10 @@ body {
   cursor: pointer;
   transition: all 0.2s;
 }
-.color-theme__selector:hover, .color-theme__selector:focus {
+.color-theme__selector:hover, .color-theme__selector:focus, .color-theme__selector:focus-visible {
+  outline: 0;
+  border: none;
+  -moz-outline-style: none;
   background-color: var(--color-tertiary);
   fill: var(--color-secondary);
   padding: 1rem;
@@ -714,6 +720,9 @@ body {
           clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
 }
 .project__link, .project__link:link, .project__link:visited {
+  outline: 0;
+  border: none;
+  -moz-outline-style: none;
   text-decoration: none;
   color: var(--color-tertiary);
   font-size: 1.6rem;
@@ -731,7 +740,7 @@ body {
   width: 100%;
   border-bottom: 2px solid currentColor;
 }
-.project__link:hover, .project__link:link:hover, .project__link:visited:hover {
+.project__link:hover, .project__link:focus, .project__link:focus-visible, .project__link:link:hover, .project__link:link:focus, .project__link:link:focus-visible, .project__link:visited:hover, .project__link:visited:focus, .project__link:visited:focus-visible {
   transform: translateX(0.5rem);
   color: var(--color-primary);
 }
@@ -745,12 +754,13 @@ body {
   height: 100vh;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.7);
-  z-index: 3000;
   opacity: 0;
+  z-index: -1;
   visibility: hidden;
   transition: all 0.3s;
 }
 .project__popup--visible {
+  z-index: 3000;
   opacity: 1;
   visibility: visible;
 }
@@ -789,7 +799,7 @@ body {
   top: -4rem;
   right: -4rem;
 }
-.project__popup--close:hover {
+.project__popup--close:hover, .project__popup--close:focus, .project__popup--close:focus-visible {
   height: 4.5rem;
   width: 4.5rem;
 }
@@ -799,7 +809,7 @@ body {
   left: -5rem;
   transform: translateY(-50%);
 }
-.project__popup--left:hover {
+.project__popup--left:hover, .project__popup--left:focus, .project__popup--left:focus-visible {
   transform: translateY(-50%) translateX(-1rem);
 }
 .project__popup--right {
@@ -808,7 +818,7 @@ body {
   right: -5rem;
   transform: translateY(-50%);
 }
-.project__popup--right:hover {
+.project__popup--right:hover, .project__popup--right:focus, .project__popup--right:focus-visible {
   transform: translateY(-50%) translateX(1rem);
 }
 
@@ -855,16 +865,16 @@ body {
   color: var(--color-primary);
 }
 .form__input::-moz-placeholder {
-  color: var(--color-secondary);
-  opacity: 0.9;
+  color: black;
+  opacity: 0.7;
 }
 .form__input::-moz-placeholder, .form__input::placeholder, .form__input::-ms-input-placeholder, .form__input:-ms-input-placeholder {
-  color: var(--color-secondary);
-  opacity: 0.9;
+  color: black;
+  opacity: 0.7;
 }
 .form__input::-webkit-input-placeholder {
-  color: var(--color-secondary);
-  opacity: 0.9;
+  color: black;
+  opacity: 0.7;
 }
 .form__input--content {
   resize: vertical;
@@ -931,12 +941,15 @@ body {
 }
 .other-contact__list-item {
   margin: 2rem;
-  transition: all 0.2s;
+  transition: transform 0.2s;
   display: block;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   border-bottom: 2px solid transparent;
+  outline: 0;
+  border: none;
+  -moz-outline-style: none;
   padding: 0.5rem 0;
 }
 @media only screen and (max-width: 62.5em) {
@@ -958,6 +971,9 @@ body {
   font-size: inherit;
   display: flex;
   align-items: center;
+  outline: 0;
+  border: none;
+  -moz-outline-style: none;
 }
 .other-contact__list-item--icon {
   height: 3rem;
@@ -965,33 +981,39 @@ body {
   fill: var(--color-tertiary);
   margin-right: 3rem;
 }
+.other-contact__list-item:active {
+  transform: translateY(1px);
+}
 .other-contact__list-item:hover {
   transform: translateX(1rem);
   border-bottom: 2px solid currentColor;
 }
-.other-contact__list-item:active {
-  transform: translateY(1px);
+@supports selector(:has(a)) {
+  .other-contact__list-item:has(> .other-contact__list-item--link:hover), .other-contact__list-item:has(> .other-contact__list-item--link:focus), .other-contact__list-item:has(> .other-contact__list-item--link:focus-visible) {
+    transform: translateX(1rem);
+    border-bottom: 2px solid currentColor;
+  }
 }
 
 .notification {
   visibility: hidden;
   opacity: 0;
   position: absolute;
-  width: 30rem;
-  height: 10rem;
+  top: 6rem;
+  right: 0;
+  min-width: 30rem;
+  min-height: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: var(--color-primary);
   border-radius: 5px;
-  top: 6rem;
-  right: 0;
   transform: translateX(150%);
-  background-color: var(--color-grey-dark-2);
+  background-color: var(--color-tertiary);
   transition: all 0.2s;
-  -webkit-animation: viewNotification 1s ease-in-out forwards;
-          animation: viewNotification 1s ease-in-out forwards;
+  -webkit-animation: viewNotification 0.8s forwards;
+          animation: viewNotification 0.8s forwards;
 }
 
 .education__header {
@@ -1073,13 +1095,24 @@ body {
 .experience-list__item--company:hover {
   transform: none;
 }
-.experience-list__item--company a {
+.experience-list__item--company a,
+.experience-list__item--company a:visited,
+.experience-list__item--company a:active {
+  outline: 0;
+  border: none;
+  -moz-outline-style: none;
   text-decoration: none;
   color: inherit;
   transition: all 0.2s;
   border-bottom: 2px solid transparent;
 }
-.experience-list__item--company a:hover {
+.experience-list__item--company a:hover, .experience-list__item--company a:focus, .experience-list__item--company a:focus-visible,
+.experience-list__item--company a:visited:hover,
+.experience-list__item--company a:visited:focus,
+.experience-list__item--company a:visited:focus-visible,
+.experience-list__item--company a:active:hover,
+.experience-list__item--company a:active:focus,
+.experience-list__item--company a:active:focus-visible {
   transform: translateX(1rem);
   border-bottom: 2px solid currentColor;
   color: var(--color-tertiary);
@@ -1257,6 +1290,9 @@ body {
   }
 }
 .header__nav-link:link, .header__nav-link:visited {
+  outline: 0;
+  border: none;
+  -moz-outline-style: none;
   outline: none;
   display: block;
   padding: 1.2rem;
@@ -1266,7 +1302,7 @@ body {
   text-transform: uppercase;
   text-decoration: none;
 }
-.header__nav-link:hover, .header__nav-link:active {
+.header__nav-link:hover, .header__nav-link:active, .header__nav-link:focus, .header__nav-link:focus-visible {
   transform: translateY(-2px) scale(1.1);
   background-color: var(--color-tertiary);
   color: var(--color-secondary);

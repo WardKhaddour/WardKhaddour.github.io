@@ -200,6 +200,7 @@ function setImage(curImg) {
   popupImg.style.opacity = 0;
   popupImg.style.visibility = 'hidden';
   popupImg.style.width = '0';
+  popupImg.src = '';
   popupImg.src = projectImgs[curImg];
   setTimeout(() => {
     popupImg.style.visibility = 'visible';

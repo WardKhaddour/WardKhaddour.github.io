@@ -5,8 +5,10 @@
 .link {
   &,
   &:link,
-  &:visited,
-  &:focus {
+  &:visited {
+    outline: 0;
+    border: none;
+    -moz-outline-style: none;
     font-size: 2rem;
     font-weight: 700;
     text-decoration: none;
@@ -36,7 +38,8 @@
 
   @media only screen and (min-width: 38.125em) {
     &:hover,
-    &:active {
+    &:active,
+    &:focus-visible {
       outline: none;
       background-position: 100%;
       color: var(--color-primary-light-1);
