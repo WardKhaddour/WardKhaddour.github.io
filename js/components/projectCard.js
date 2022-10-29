@@ -18,12 +18,12 @@ export default (id, imgs, name, description, codeLink, liveLink) => /*html*/ `
   <div class="project__links ">
     ${
       liveLink
-        ? `<a href="${liveLink}" class="project__link"> Live Project &rarr; </a>`
+        ? `<a href="${liveLink}" target="_blank" class="project__link"> Live Project &rarr; </a>`
         : ''
     }
     ${
       codeLink
-        ? `<a href="${codeLink}" class="project__link"> Source Code &rarr; </a>`
+        ? `<a href="${codeLink}" target="_blank" class="project__link"> Source Code &rarr; </a>`
         : ''
     }
     ${

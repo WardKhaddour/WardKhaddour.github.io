@@ -24,30 +24,32 @@ const dots = projectsData
   )
   .join('');
 
-export const projectsHtml =
-  /*html*/
-  `
+export const projectsHtml = /*html*/ `
 <section class="section-projects" id="#projects">
   <div class="${projectsData.length < 2 ? 'hidden' : ''}">
-    <button class="projects__navigation projects__navigation--left">&larr;</button>
-    <button class="projects__navigation projects__navigation--right">&rarr;</button>
+    <button class="btn-left btn-navigation projects__navigation projects__navigation--left">&nbsp;</button>
+    <button class="btn-right btn-navigation projects__navigation projects__navigation--right">&nbsp;</button>
   </div>
   <div class="projects__title heading-linear">MY PROJECTS</div>
   <div class="projects">
     ${html}
   </div>
   <div class="project__popup">
-      <div class="project__popup-content">
-        <div class="project__popup--images">
-          <img class="project__popup--image"  />
-        </div>
-        <button  class="project__popup--right project__popup--btn">&rarr;</button>
-        <button class="project__popup--left project__popup--btn">&larr;</button>
-        <button  class="project__popup--close project__popup--btn">&#x2715;</button>
+    <div class="project__popup-content">
+      <div class="project__popup--images">
+        <img class="project__popup--image" />
       </div>
+
+    <div class="project__popup--navigation">
+        <button class="btn-navigation btn-right project__popup--right ">&nbsp;</button>
+        <button class="btn-navigation btn-left project__popup--left">&nbsp;</button>
+    </div>
+
+      <button class="btn-navigation btn-close project__popup--close">&nbsp;</button>
+    </div>
   </div>
   <div class="projects__navigation--dots">
-      ${dots}
+    ${dots}
   </div>
 </section>
 `;
@@ -148,6 +150,7 @@ export function fullScreenImgs(e) {
     return;
   }
   const { id } = e.target.dataset;
+  curImg = 0;
   projectImgs = projectsData.filter(el => el.id.toString() === id.toString())[0]
     .imgs;
 
@@ -155,6 +158,12 @@ export function fullScreenImgs(e) {
 
   const popup = document.querySelector('.project__popup');
   const popupImg = document.querySelector('.project__popup--image');
+  const popupNavigation = document.querySelector('.project__popup--navigation');
+  if (imgsLength < 2) {
+    popupNavigation.classList.add('hidden');
+  } else {
+    popupNavigation.classList.remove('hidden');
+  }
   popupImg.src = projectImgs[curImg];
   popup.classList.add('project__popup--visible');
 }
@@ -189,8 +198,12 @@ export function changeImage(e, dir) {
 function setImage(curImg) {
   const popupImg = document.querySelector('.project__popup--image');
   popupImg.style.opacity = 0;
+  popupImg.style.visibility = 'hidden';
+  popupImg.style.width = '0';
+  popupImg.src = projectImgs[curImg];
   setTimeout(() => {
-    popupImg.src = projectImgs[curImg];
+    popupImg.style.visibility = 'visible';
+    popupImg.style.width = '100%';
     popupImg.style.opacity = 1;
   }, 300);
 }

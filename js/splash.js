@@ -28,9 +28,18 @@ const html = /*html */ `
 
 splashScreen.innerHTML = html;
 
-setTimeout(navigateToHome, 8000);
-
-function navigateToHome() {
+export function navigateToHome() {
   document.querySelector('.splash-screen').classList.add('hidden-animated');
   document.querySelector('.container').classList.remove('hidden');
 }
+
+/**
+ 
+
+    "autoprefixer": "^10.4.12",
+    "node-sass": "^7.0.3",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.17",
+    "postcss-cli": "^10.0.0"
+
+ */
