@@ -35,6 +35,7 @@
       outline: 0;
       border: none;
       -moz-outline-style: none;
+      outline-style: none;
       padding: 0.5rem 0;
       @include respond(md) {
         margin: 1rem;
@@ -57,6 +58,7 @@
         outline: 0;
         border: none;
         -moz-outline-style: none;
+        outline-style: none;
       }
       &--icon {
         height: 3rem;

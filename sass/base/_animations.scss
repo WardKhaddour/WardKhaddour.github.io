@@ -74,3 +74,13 @@
     clip-path: circle(50% at 50% 50%);
   }
 }
+
+@keyframes hideProject {
+  0% {
+    z-index: 1;
+  }
+  
+  100% {
+    z-index: -1;
+  }
+}
