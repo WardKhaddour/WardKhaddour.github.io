@@ -8,13 +8,7 @@ my personal website
 npm install
 ```
 
-## Run in development mode
-
-```bash
-npm start
-```
-
-## Build SCSS Files
+## Build CSS Files
 
 ```bash
 npm run build:css
