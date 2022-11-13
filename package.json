@@ -10,7 +10,7 @@
     "compile:sass": "node-sass sass/main.scss css/style.comp.css",
     "concat:css": "concat -o css/style.concat.css css/icon-font.css css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/main.css -o css/style.prefix.css",
-    "compress:css": "css-minify -f css/style.prefix.css -o css/main.css",
+    "compress:css": "css-minify -f css/style.prefix.css -o css/",
     "build:css": "npm-run-all prefix:css compress:css"
   },
   "author": "Ward Khaddour <wardkhaddot@gmail.com>",
