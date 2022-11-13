@@ -26,7 +26,6 @@ export default [
     name: 'Online Shop',
     description:
       'Convert The online shop app front-end from server side rendering with EJS templates to separate Vue.js App (NOT completed)',
-    liveLink: 'https://tic-tac-toe-22.glitch.me/',
     codeLink: 'https://github.com/WardKhaddour/Online-Shop-frontend',
   },
   {

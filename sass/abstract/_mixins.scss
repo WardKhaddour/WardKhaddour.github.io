@@ -17,7 +17,17 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+@mixin slideTranslate {
+    @for $i from -10 to 10 {
+        .slide-#{$i} {
+            transform: translateX(math.percentage(1.2 * $i));
 
+            @include respond(md) {
+                transform: translateX(math.percentage(1.7 * $i));
+            }
+        }
+    }
+}
 @mixin respond($breakpoint) {
     @if $breakpoint == xxs {
         @media only screen and (max-width: 18.75em) {

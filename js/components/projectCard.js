@@ -1,7 +1,5 @@
 export default (id, imgs, name, description, codeLink, liveLink) => /*html*/ `
-<div class="project__card ${
-  id !== 1 ? 'project__card--hidden' : ''
-}" data-id='${id}'>
+<div class="project__card slide-${id-1}" data-id='${id}'>
   <div class="project__img-container">
     <img src="${imgs[0]}" alt="" class="project__img" />
     <svg class="project__img--full-screen" data-id='${id}'>

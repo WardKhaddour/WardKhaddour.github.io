@@ -54,6 +54,38 @@ export const projectsHtml = /*html*/ `
 </section>
 `;
 
+let curSlide = 0;
+const maxSlides = projectsData.length;
+export function goToRightSlide() {
+  if (curSlide === maxSlides - 1) {
+    curSlide = 0;
+  } else {
+    curSlide++;
+  }
+  changeSlide();
+}
+export function goToLeftSlide() {
+  if (curSlide === 0) {
+    curSlide = maxSlides - 1;
+  } else {
+    curSlide--;
+  }
+
+  changeSlide();
+}
+export function changeSlide() {
+  const slides = document.querySelectorAll('.project__card');
+
+  slides.forEach((slide, idx) => {
+    slide.classList.forEach(cl => {
+      if (cl.split('-')[0] === 'slide') {
+        slide.classList.remove(cl);
+      }
+    });
+    slide.classList.add(`slide-${idx - curSlide}`);
+  });
+}
+
 export function handleNavigation(e) {
   if (
     e.target.tagName !== 'BUTTON' &&
@@ -67,78 +99,37 @@ export function handleNavigation(e) {
 
   if (e.target.tagName === 'BUTTON') {
     if (e.target.classList.contains('projects__navigation--left')) {
-      navigateToProject('left');
+      goToLeftSlide();
     } else if (e.target.classList.contains('projects__navigation--right')) {
-      navigateToProject('right');
+      goToRightSlide();
     }
-
+    dotSelection();
     return;
   }
 
-  navigateToProject('dot', e.target.dataset.id);
+  dotsHandler(e.target.dataset.id);
 }
-
-function navigateToProject(mode, id) {
-  const { curProjectId, len } = getProjectsComponentData();
-
-  if (mode === 'left') {
-    if (curProjectId === 1) {
-      displayProject(len);
-    } else {
-      displayProject(curProjectId - 1);
-    }
-    return;
-  }
-  if (mode === 'right') {
-    if (curProjectId === len) {
-      displayProject(1);
-    } else {
-      displayProject(curProjectId + 1);
-    }
-    return;
-  }
-
-  displayProject(id);
-}
-
-function displayProject(id) {
-  const { projects, curProjectId, projectsContainer, dots, dotsContainer } =
-    getProjectsComponentData();
-
-  [...projects].forEach(proj => proj.classList.add('project__card--hidden'));
-
-  const project = projectsContainer.querySelector(`[data-id="${id}"]`);
-  project.classList.remove('project__card--hidden');
-
+function dotSelection() {
+  const dotsContainer = document.querySelector('.projects__navigation--dots');
+  const dots = document.querySelectorAll('.projects__navigation--dot');
   [...dots].forEach(dot =>
     dot.classList.remove('projects__navigation--dot-selected')
   );
 
-  const dot = dotsContainer.querySelector(`[data-id="${id}"]`);
+  const dot = dotsContainer.querySelector(`[data-id="${curSlide + 1}"]`);
   dot.classList.add('projects__navigation--dot-selected');
 }
 
-function getProjectsComponentData() {
-  const dotsContainer = document.querySelector('.projects__navigation--dots');
-  const dots = document.querySelectorAll('.projects__navigation--dot');
-  const projectsContainer = document.querySelector('.projects');
-  const projects = document.querySelectorAll(`.project__card`);
-  const curProject = [...projects].filter(
-    proj => !proj.classList.contains('project__card--hidden')
-  )[0];
-
-  const curProjectId = +curProject.dataset.id;
-  const len = projects.length;
-
-  return {
-    dots,
-    dotsContainer,
-    projectsContainer,
-    projects,
-    curProject,
-    curProjectId,
-    len,
-  };
+function dotsHandler(id) {
+  id--;
+  while (curSlide != id) {
+    if (id < curSlide) {
+      goToLeftSlide();
+    } else if (curSlide < id) {
+      goToRightSlide();
+    }
+  }
+  dotSelection();
 }
 
 //POPUP
