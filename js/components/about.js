@@ -11,10 +11,10 @@ export default /*html*/ `
     </p>
     <a href="assets/pdf/Ward_Khaddour's_Resume.pdf" download class="link about__link">My Resume</a>
   </div>
-  <div class="about__img">
+  <!--<div class="about__img">
     <figure class="about__img-container">
       <img src=${data.img} alt="Ward Khaddour Photo" class="about__img-img" />
     </figure>
-  </div>
+  </div>-->
 </section>
       `;

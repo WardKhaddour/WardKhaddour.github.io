@@ -19,28 +19,28 @@
       animation: drawLine 1s forwards;
     }
   }
-  &__img {
-    @include respond(md) {
-      display: none;
-    }
-    margin-bottom: 2rem;
-    // filter: drop-shadow(2rem 0 3rem var(--color-primary)-light-1));
-    &-container {
-      clip-path: circle(40% at 50% 50%);
-      shape-outside: circle(40% at 50% 50%);
-      width: 40rem;
-      height: 30rem;
-      transform: translateY(-300%);
-      transition: all 0.2s;
-      animation: displayImg 1s forwards;
-    }
-    &-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-  }
+  // &__img {
+  //   @include respond(md) {
+  //     display: none;
+  //   }
+  //   margin-bottom: 2rem;
+  //   // filter: drop-shadow(2rem 0 3rem var(--color-primary)-light-1));
+  //   &-container {
+  //     clip-path: circle(40% at 50% 50%);
+  //     shape-outside: circle(40% at 50% 50%);
+  //     width: 40rem;
+  //     height: 30rem;
+  //     transform: translateY(-300%);
+  //     transition: all 0.2s;
+  //     animation: displayImg 1s forwards;
+  //   }
+  //   &-img {
+  //     width: 100%;
+  //     height: 100%;
+  //     object-fit: cover;
+  //     display: block;
+  //   }
+  // }
   &__paragraph {
     display: inline-block;
     width: fit-content;
