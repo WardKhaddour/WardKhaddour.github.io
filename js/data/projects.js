@@ -30,6 +30,16 @@ export default [
   },
   {
     id: 4,
+    imgs: [`/assets/img/8-1.png`, `/assets/img/8-2.png`],
+    name: 'Simple landing page',
+    description: `Created a simple landing page with about, products, contact and docs sections. 
+    Built with: Vue.js, SCSS, Typescript
+    `,
+    codeLink: 'https://github.com/WardKhaddour/Landing-Page',
+    liveLink: 'https://wardkhaddour.github.io/Landing-Page/',
+  },
+  {
+    id: 5,
     imgs: [`/assets/img/5-1.png`],
     name: 'Natours',
     description:
@@ -38,7 +48,7 @@ export default [
       'https://github.com/WardKhaddour/Learning-node-js/tree/main/Natours',
   },
   {
-    id: 5,
+    id: 6,
     imgs: [`/assets/img/2-1.png`, '/assets/img/2-2.png'],
     name: 'Landing page for Natours',
     description: `Built with Advanced CSS and SASS.
@@ -47,7 +57,7 @@ export default [
     codeLink: 'https://github.com/WardKhaddour/NATOURS-Advanced-CSS-Course',
   },
   {
-    id: 6,
+    id: 7,
     imgs: [`/assets/img/3-1.png`],
     name: 'Nexter',
     description: `Built with Advanced CSS and SASS.
@@ -56,7 +66,7 @@ export default [
     codeLink: 'https://github.com/WardKhaddour/NEXTER-Advanced-CSS-Course',
   },
   {
-    id: 7,
+    id: 8,
     imgs: [`/assets/img/4-1.png`],
     name: 'Trillo',
     description: `Built with Advanced CSS and SASS.
