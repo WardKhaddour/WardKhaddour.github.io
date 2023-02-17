@@ -1,4 +1,5 @@
 //Init the website
+import '../sass/main.scss';
 import { initTheme } from './components/themeSelector.js';
 import { navigateToHome } from './splash.js';
 import submitHandler from './helpers/emailjs.js';

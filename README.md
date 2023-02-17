@@ -11,11 +11,11 @@ npm install
 ## Run in development mode
 
 ```bash
-npm start
+npm run dev
 ```
 
-## Build SCSS Files
+## Build Files
 
 ```bash
-npm run build:css
+npm run build
 ```

@@ -19,11 +19,11 @@
   }
   @include respond(md) {
     flex-direction: column-reverse;
-    background-image: linear-gradient(
-      to right bottom,
-      rgba(var(--color-secondary-rgb), 0.9),
-      rgba(var(--color-secondary-rgb), 0.9)
-    );
+    // background-image: linear-gradient(
+    //   to right bottom,
+    //   rgba(var(--color-secondary-rgb), 0.9),
+    //   rgba(var(--color-secondary-rgb), 0.9)
+    // );
     // url("../assets/img/Ward_Khaddour's_photo.jpg")
     background-repeat: no-repeat;
     background-size: cover;
