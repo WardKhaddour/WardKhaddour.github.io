@@ -7,5 +7,5 @@ export default {
   <br />
    I am Currently learning Back-End development with Node.js and Express.
   `,
-  img: `assets/img/Ward_Khaddour's_photo.jpg`,
+  img: `/img/Ward_Khaddour's_photo.jpg`,
 };

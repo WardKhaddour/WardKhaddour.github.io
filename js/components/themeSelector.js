@@ -38,7 +38,7 @@ export function initTheme() {
     rootEl.style.setProperty('--color-secondary', colorTertiary);
     themeSelector.children[0].setAttribute(
       'xlink:href',
-      '/assets/icons/sprite.svg#icon-Light'
+      '/sprite.svg#icon-Light'
     );
   } else {
     rootEl.style.setProperty('--color-grey-light-1', colorGreyL1);
@@ -49,7 +49,7 @@ export function initTheme() {
     rootEl.style.setProperty('--color-tertiary', colorTertiary);
     themeSelector.children[0].setAttribute(
       'xlink:href',
-      '/assets/icons/sprite.svg#icon-Dark'
+      '/sprite.svg#icon-Dark'
     );
   }
 }

@@ -14,7 +14,7 @@ const html = /*html */ `
 
   <foreignObject x="6" y="6" width="300px" height="300px">
     <div class="splash-screen__image--container" >
-      <!--<img class="splash-screen__image" src="/assets/img/Ward_Khaddour's_photo.jpg" clip-path="url(#svgwave)" />-->
+      <!--<img class="splash-screen__image" src="/public/img/Ward_Khaddour's_photo.jpg" clip-path="url(#svgwave)" />-->
       <div class="splash-screen__image"></div>
     </div>
   </foreignObject>

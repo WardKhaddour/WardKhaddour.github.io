@@ -2,7 +2,7 @@ export default (university, study, date, description) => /*html*/ `
 <div class="education__item">
   <div class="education__item--timeline">
     <svg class="education__item--timeline--icon">
-      <use xlink:href="/assets/icons/sprite.svg#icon-calendar"></use>
+      <use xlink:href="/sprite.svg#icon-calendar"></use>
     </svg>
     <div class="education__item--timeline--line"></div>
   </div>

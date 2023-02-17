@@ -1,19 +1,14 @@
 export default [
   {
     id: 1,
-    imgs: [
-      `/assets/img/7-1.png`,
-      '/assets/img/7-2.png',
-      '/assets/img/7-3.png',
-      '/assets/img/7-4.png',
-    ],
+    imgs: [`/img/7-1.png`, '/img/7-2.png', '/img/7-3.png', '/img/7-4.png'],
     name: 'Learning System',
     description:
       'Learning System Landing page with complete Authentication System, Built with Vue.js & Quasar (NOT completed)',
   },
   {
     id: 2,
-    imgs: [`/assets/img/1-1.png`, '/assets/img/1-2.png'],
+    imgs: [`/img/1-1.png`, '/img/1-2.png'],
     name: 'Tic Tac Toe',
     description:
       'Online Tic Tac Toe game, with private chat between each two player. All in real time',
@@ -22,7 +17,7 @@ export default [
   },
   {
     id: 3,
-    imgs: [`/assets/img/6-1.png`],
+    imgs: [`/img/6-1.png`],
     name: 'Online Shop',
     description:
       'Convert The online shop app front-end from server side rendering with EJS templates to separate Vue.js App (NOT completed)',
@@ -30,7 +25,7 @@ export default [
   },
   {
     id: 4,
-    imgs: [`/assets/img/8-1.png`, `/assets/img/8-2.png`],
+    imgs: [`/img/8-1.png`, `/img/8-2.png`],
     name: 'Simple landing page',
     description: `Created a simple landing page with about, products, contact and docs sections. 
     Built with: Vue.js, SCSS, Typescript
@@ -40,7 +35,7 @@ export default [
   },
   {
     id: 5,
-    imgs: [`/assets/img/5-1.png`],
+    imgs: [`/img/5-1.png`],
     name: 'Natours',
     description:
       'Built with Node.js & Express course, Using Node.js, Express, MongoDB and pug templates',
@@ -49,7 +44,7 @@ export default [
   },
   {
     id: 6,
-    imgs: [`/assets/img/2-1.png`, '/assets/img/2-2.png'],
+    imgs: [`/img/2-1.png`, '/img/2-2.png'],
     name: 'Landing page for Natours',
     description: `Built with Advanced CSS and SASS.
       `,
@@ -58,7 +53,7 @@ export default [
   },
   {
     id: 7,
-    imgs: [`/assets/img/3-1.png`],
+    imgs: [`/img/3-1.png`],
     name: 'Nexter',
     description: `Built with Advanced CSS and SASS.
       `,
@@ -67,7 +62,7 @@ export default [
   },
   {
     id: 8,
-    imgs: [`/assets/img/4-1.png`],
+    imgs: [`/img/4-1.png`],
     name: 'Trillo',
     description: `Built with Advanced CSS and SASS.
       `,
