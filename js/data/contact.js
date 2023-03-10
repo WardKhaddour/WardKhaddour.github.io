@@ -26,7 +26,7 @@ export default [
   },
   {
     name: 'Whatsapp',
-    link: 'https://api.whatsapp.com/send?phone=00963933141787',
+    link: 'https://api.whatsapp.com/send?phone=963933141787',
     icon: 'whatsapp',
   },
   {
