@@ -1,3 +1,4 @@
+import emailjs from '@emailjs/browser';
 import notify from './notify.js';
 emailjs.init('sKpMTvWB51yA23Cto');
 export default function (e) {

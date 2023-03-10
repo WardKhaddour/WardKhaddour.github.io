@@ -13,5 +13,8 @@
   "devDependencies": {
     "sass": "^1.58.2",
     "vite": "^4.1.1"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^3.10.0"
   }
 }
