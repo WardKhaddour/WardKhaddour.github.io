@@ -4,7 +4,7 @@ import { initTheme } from './components/themeSelector.js';
 import { navigateToHome } from './splash.js';
 import submitHandler from './helpers/emailjs.js';
 initTheme();
-setTimeout(navigateToHome, 8000);
+setTimeout(navigateToHome, 1);
 
 //IMPORTS
 import about from './components/about.js';
