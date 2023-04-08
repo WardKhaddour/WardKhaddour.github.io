@@ -1,13 +1,13 @@
 <h1 align="center">Hi 👋, I'm Ward Khaddour</h1>
 <h3 align="center">Junior Javascript developer</h3>
 
-- 🌱 I’m currently learning **Back-End development with Node.js And Express**
+- 🌱 I’m currently practicing **MERN Stack**
 
 - 👨‍💻 All of my projects are available at [https://wardkhaddour.github.io/](https://wardkhaddour.github.io/)
 
-- 💬 Ask me about **Vue.js**
+- 💬 Ask me about **Javascript and Web Development**
 
-- 📫 How to reach me **wardkhaddout@gmail.com**
+- 📫 My Email: **wardkhaddout@gmail.com**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
