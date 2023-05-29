@@ -5,7 +5,7 @@ export default [
     job: 'Front-End Intern',
     date: '03-2021 / 11-2021',
     description: [
-      'Learned about Web development and started to work with HTML, CSS, Javascript, Vue.js and Quasar.',
+      'Learned about Web development and started to work with HTML, CSS, Javascript',
     ],
   },
 
