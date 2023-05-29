@@ -1,6 +1,6 @@
 export default {
   name: 'Ward Khaddour',
-  job: 'Javascript developer',
+  job: 'React developer',
   summary: `
   Software Engineering Student with 1 year of experience in web development.
   <br/>
