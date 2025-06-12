@@ -1,13 +1,13 @@
-"use client";
+'use client'
 
-import { motion, MotionProps } from "framer-motion";
-import React, { JSX } from "react";
+import { motion, MotionProps } from 'framer-motion'
+import React, { JSX } from 'react'
 
 interface CustomMotionProps<Tag extends keyof JSX.IntrinsicElements>
   extends MotionProps {
-  type?: Tag;
-  children: React.ReactNode;
-  className: string | undefined | null;
+  type?: Tag
+  children: React.ReactNode
+  className: string | undefined | null
 }
 
 export const Motion = <Tag extends keyof JSX.IntrinsicElements>({
@@ -16,10 +16,13 @@ export const Motion = <Tag extends keyof JSX.IntrinsicElements>({
   className,
   ...props
 }: CustomMotionProps<Tag>) => {
-  const Component = type ? (motion as any)[type] : motion.div;
+  const Component = type ? (motion as any)[type] : motion.div
   return (
-    <Component className={className} {...props}>
+    <Component
+      className={`js-dependent ${className}`}
+      {...props}
+    >
       {children}
     </Component>
-  );
-};
+  )
+}

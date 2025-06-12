@@ -1,67 +1,81 @@
-"use client";
+'use client'
 
-import React, { useRef, useState } from "react";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import useEmblaCarousel from 'embla-carousel-react'
+import React, { useCallback, useEffect, useState } from 'react'
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 
 type Props<T> = {
-  slides: T[];
-  children: React.ReactNode;
-};
+  slides: T[]
+  children: React.ReactNode
+}
 
 export default function Slider<T>({ slides, children }: Props<T>) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const sliderRef = useRef<HTMLDivElement>(null);
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
+  const [selectedIndex, setSelectedIndex] = useState(0)
 
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-  };
+  const scrollTo = useCallback(
+    (index: number) => emblaApi?.scrollTo(index),
+    [emblaApi]
+  )
 
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
-  };
+  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi])
+  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi])
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return
+    setSelectedIndex(emblaApi.selectedScrollSnap())
+  }, [emblaApi])
+
+  useEffect(() => {
+    if (!emblaApi) return
+    onSelect()
+    emblaApi.on('select', onSelect)
+  }, [emblaApi, onSelect])
 
   return (
-    <div className="container mx-auto ">
-      <div className="relative">
-        <div ref={sliderRef} className="overflow-hidden">
-          <div
-            className="flex transition-transform duration-300 ease-in-out "
-            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-          >
-            {children}
-          </div>
+    <div className='container mx-auto'>
+      <div className='relative'>
+        <div
+          className='overflow-hidden'
+          ref={emblaRef}
+        >
+          <div className='flex'>{children}</div>
         </div>
 
+        {/* Prev Button */}
         <button
-          onClick={prevSlide}
-          className="absolute -left-2 md:-left-5 top-1/2 -translate-y-1/2 -translate-x-4 cursor-pointer bg-white dark:bg-gray-800 p-2 rounded-full shadow-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors hidden sm:block"
-          aria-label="Previous "
+          onClick={scrollPrev}
+          className='absolute -left-2 md:-left-5 top-1/2 -translate-y-1/2 -translate-x-4 cursor-pointer bg-white dark:bg-gray-800 p-2 rounded-full shadow-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors hidden sm:block z-10'
+          aria-label='Previous'
         >
-          <FaChevronLeft className="text-gray-800 dark:text-white" />
+          <FaChevronLeft className='text-gray-800 dark:text-white' />
         </button>
+
+        {/* Next Button */}
         <button
-          onClick={nextSlide}
-          className="absolute -right-2 md:-right-5 top-1/2 -translate-y-1/2 translate-x-4 cursor-pointer bg-white dark:bg-gray-800 p-2 rounded-full shadow-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors hidden sm:block"
-          aria-label="Next "
+          onClick={scrollNext}
+          className='absolute -right-2 md:-right-5 top-1/2 -translate-y-1/2 translate-x-4 cursor-pointer bg-white dark:bg-gray-800 p-2 rounded-full shadow-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors hidden sm:block z-10'
+          aria-label='Next'
         >
-          <FaChevronRight className="text-gray-800 dark:text-white" />
+          <FaChevronRight className='text-gray-800 dark:text-white' />
         </button>
       </div>
 
-      <div className="flex justify-center mt-8 gap-2">
+      {/* Dots */}
+      <div className='flex justify-center mt-8 gap-2'>
         {slides.map((_, index) => (
           <button
             key={index}
-            onClick={() => setCurrentIndex(index)}
+            onClick={() => scrollTo(index)}
             className={`w-3 h-3 rounded-full cursor-pointer ${
-              currentIndex === index
-                ? "bg-red-600"
-                : "bg-gray-300 dark:bg-gray-600"
+              selectedIndex === index
+                ? 'bg-red-600'
+                : 'bg-gray-300 dark:bg-gray-600'
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
       </div>
     </div>
-  );
+  )
 }
