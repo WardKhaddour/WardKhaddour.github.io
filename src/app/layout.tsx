@@ -49,7 +49,7 @@ export default function RootLayout({
     >
       <body className={openSans.className}>
         <ThemeProvider>
-          <div className='bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-300 min-h-screen flex flex-col scroll-smooth overflow-y-auto h-screen'>
+          <div className='bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-300 min-h-screen flex flex-col scroll-smooth '>
             <Header />
             {children}
             <Footer />
