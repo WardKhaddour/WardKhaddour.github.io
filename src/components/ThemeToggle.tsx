@@ -1,22 +1,22 @@
-"use client";
+'use client'
 
-import { useTheme } from "@/store/theme-provider";
-import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
+import { useTheme } from '@/store/theme-provider'
+import { MoonIcon, SunIcon } from '@heroicons/react/24/solid'
 
 export default function ThemeToggle() {
-  const { theme, toggleTheme } = useTheme();
+  const { theme, toggleTheme } = useTheme()
 
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200"
-      aria-label={`Toggle ${theme === "dark" ? "light" : "dark"} mode`}
+      className='p-2 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 cursor-pointer hover:bg-gray-100 hover:dark:bg-gray-700 transition-all'
+      aria-label={`Toggle ${theme === 'dark' ? 'light' : 'dark'} mode`}
     >
-      {theme === "dark" ? (
-        <SunIcon className="h-5 w-5" />
+      {theme === 'dark' ? (
+        <SunIcon className='h-5 w-5' />
       ) : (
-        <MoonIcon className="h-5 w-5" />
+        <MoonIcon className='h-5 w-5' />
       )}
     </button>
-  );
+  )
 }
