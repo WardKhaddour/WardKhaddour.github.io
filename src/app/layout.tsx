@@ -11,13 +11,18 @@ const openSans = Open_Sans({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Ward khaddour',
   description: 'Full stack web developer, Next.Js, Nest.Js, React.Js',
+
   icons: {
     icon: [
       { url: '/favicons/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
       { url: '/favicons/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
       { url: '/favicons/favicon.ico', sizes: 'any', type: 'image/x-icon' },
+      { url: '/favicons/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicons/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicons/favicon.ico', sizes: 'any', type: 'image/x-icon' },
     ],
     apple: [{ url: '/favicons/apple-touch-icon.png', type: 'image/png' }],
+
     other: [
       {
         rel: 'android-chrome-192x192',
@@ -44,7 +49,7 @@ export default function RootLayout({
     >
       <body className={openSans.className}>
         <ThemeProvider>
-          <div className='bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-300 min-h-screen flex flex-col scroll-smooth '>
+          <div className='bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-300 min-h-screen flex flex-col scroll-smooth overflow-y-auto h-screen'>
             <Header />
             {children}
             <Footer />
