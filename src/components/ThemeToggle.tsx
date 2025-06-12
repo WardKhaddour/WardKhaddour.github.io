@@ -1,7 +1,7 @@
 'use client'
 
 import { useTheme } from '@/store/theme-provider'
-import { MoonIcon, SunIcon } from '@heroicons/react/24/solid'
+import { FaMoon, FaSun } from 'react-icons/fa6'
 
 export default function ThemeToggle() {
   const { theme, toggleTheme } = useTheme()
@@ -13,9 +13,9 @@ export default function ThemeToggle() {
       aria-label={`Toggle ${theme === 'dark' ? 'light' : 'dark'} mode`}
     >
       {theme === 'dark' ? (
-        <SunIcon className='h-5 w-5' />
+        <FaSun className='h-5 w-5' />
       ) : (
-        <MoonIcon className='h-5 w-5' />
+        <FaMoon className='h-5 w-5' />
       )}
     </button>
   )
