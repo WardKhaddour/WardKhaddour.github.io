@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://ward-khaddour.vercel.app/
+
+# Sitemaps
+Sitemap: https://ward-khaddour.vercel.app/sitemap.xml
