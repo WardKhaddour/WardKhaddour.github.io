@@ -80,6 +80,7 @@ export default function RootLayout({
     <html
       lang='en'
       suppressHydrationWarning
+      className='no-js dark'
     >
       <head>
         <Script
@@ -122,6 +123,19 @@ export default function RootLayout({
                 addressLocality: 'Latakia',
               },
             }),
+          }}
+        />
+        <noscript>
+          <style>{`
+            .no-js .js-dependent  {
+              opacity: 1 !important;
+              transform: none !important;
+            }
+          `}</style>
+        </noscript>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `document.documentElement.classList.remove('no-js');`,
           }}
         />
       </head>
