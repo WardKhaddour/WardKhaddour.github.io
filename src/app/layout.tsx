@@ -1,6 +1,7 @@
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import ScrollToTop from '@/components/ScrollToTop'
+import { Analytics } from '@vercel/analytics/next'
 import type { Metadata } from 'next'
 import { Open_Sans } from 'next/font/google'
 import Script from 'next/script'
@@ -148,6 +149,7 @@ export default function RootLayout({
           </div>
         </ThemeProvider>
         <ScrollToTop />
+        <Analytics />
       </body>
     </html>
   )
