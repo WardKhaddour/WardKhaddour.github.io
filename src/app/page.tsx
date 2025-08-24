@@ -1,21 +1,49 @@
-import BlogSection from "@/components/Blog";
-import Contact from "@/components/Contact";
-import ExperienceEducation from "@/components/ExperienceEducation";
-import Hero from "@/components/Hero";
-import OpenSource from "@/components/OpenSource";
-import Projects from "@/components/Projects";
-import Skills from "@/components/Skills";
+import { layoutPadding } from '@/constants/class-names'
+import { cn } from '@/utils/cn'
+import {
+  AboutMe,
+  BlogSection,
+  CertificationsSection,
+  ExperienceEducation,
+  Hero,
+  OpenSource,
+  Projects,
+  Skills,
+} from '@/views'
+import Contact from '@/views/contact'
 
-export default function Home() {
+export default function HomePage() {
   return (
     <main>
-      <Hero className="px-8 sm:px-14" />
-      <Projects className="px-8 sm:px-14" />
-      <Skills className="px-8 sm:px-14" />
-      <ExperienceEducation className="px-8 sm:px-14" />
-      <OpenSource className="px-8 sm:px-14" />
-      <BlogSection className="px-8 sm:px-14" />
-      <Contact className="px-8 sm:px-14" />
+      <Hero className={layoutPadding} />
+      <AboutMe
+        className={cn(
+          layoutPadding,
+          'bg-background-secondary dark:bg-dark-background-secondary',
+        )}
+      />
+      <Projects className={layoutPadding} />
+      <Skills
+        className={cn(
+          layoutPadding,
+          'bg-background-secondary dark:bg-dark-background-secondary',
+        )}
+      />
+      <ExperienceEducation className={layoutPadding} />
+      <OpenSource
+        className={cn(
+          layoutPadding,
+          'bg-background-secondary dark:bg-dark-background-secondary',
+        )}
+      />
+      <CertificationsSection className={layoutPadding} />
+      <BlogSection
+        className={cn(
+          layoutPadding,
+          'bg-background-secondary dark:bg-dark-background-secondary',
+        )}
+      />
+      <Contact className={layoutPadding} />
     </main>
-  );
+  )
 }

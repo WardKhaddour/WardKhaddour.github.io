@@ -1,12 +1,12 @@
-import Footer from '@/components/Footer'
-import Header from '@/components/Header'
-import ScrollToTop from '@/components/ScrollToTop'
+import { ScrollToTop } from '@/components/scroll-to-top'
+import { ThemeProvider } from '@/store/theme-provider'
+import '@/styles/globals.css'
+import { Header } from '@/views'
+import Footer from '@/views/footer'
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata } from 'next'
 import { Open_Sans } from 'next/font/google'
 import Script from 'next/script'
-import { ThemeProvider } from '../store/theme-provider'
-import './globals.css'
 
 const openSans = Open_Sans({ subsets: ['latin'] })
 
@@ -31,19 +31,23 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicons/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicons/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicons/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
       { url: '/favicons/favicon.ico', sizes: 'any', type: 'image/x-icon' },
+      { url: '/favicons/favicon.svg', sizes: 'any', type: 'image/svg+xml' },
     ],
     apple: [{ url: '/favicons/apple-touch-icon.png', type: 'image/png' }],
     other: [
       {
-        rel: 'android-chrome-192x192',
-        url: '/favicons/android-chrome-192x192.png',
+        rel: 'icon',
+        url: '/favicons/web-app-manifest-192x192.png',
+        sizes: '192x192',
+        type: 'image/png',
       },
       {
-        rel: 'android-chrome-512x512',
-        url: '/favicons/android-chrome-512x512.png',
+        rel: 'icon',
+        url: '/favicons/web-app-manifest-512x512.png',
+        sizes: '512x512',
+        type: 'image/png',
       },
     ],
   },
@@ -78,11 +82,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html
-      lang='en'
-      suppressHydrationWarning
-      className='no-js dark'
-    >
+    <html lang='en' suppressHydrationWarning className='no-js dark'>
       <head>
         <Script
           id='ld-json'
@@ -142,7 +142,7 @@ export default function RootLayout({
       </head>
       <body className={openSans.className}>
         <ThemeProvider>
-          <div className='bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-300 min-h-screen flex flex-col scroll-smooth '>
+          <div className='bg-background dark:bg-dark-background text-text dark:text-dark-text flex min-h-screen flex-col scroll-smooth transition-colors duration-300'>
             <Header />
             {children}
             <Footer />
