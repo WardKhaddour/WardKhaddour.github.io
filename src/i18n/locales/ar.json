@@ -1,26 +1,236 @@
 {
   "meta": {
-    "title": "ورد خضور | مطوّر ويب متكامل - Next.js، React، Nest.js",
-    "description": "ورد خضور مطوّر جافاسكربت متكامل، متخصص في React و Next.js و Nest.js وتقنيات الويب الحديثة. معرض أعمال، مشاريع، ومعلومات التواصل.",
-    "keywords": "ورد خضور,مطوّر ويب متكامل,Next.js,React,Nest.js,TypeScript,JavaScript,معرض أعمال,تطوير الويب",
+    "title": "ورد خضور | مطور ويب متكامل - Next.js, React, Nest.js",
+    "description": "ورد خضور مطور جافاسكربت متكامل متخصص في React و Next.js و Nest.js والتقنيات الحديثة. معرض أعمالي، مشاريعي ومعلومات التواصل.",
+    "keywords": "ورد خضور, مطور ويب, Full Stack, Next.js, React, Nest.js, TypeScript, JavaScript, معرض أعمال, تطوير ويب",
     "openGraph": {
-      "title": "ورد خضور | مطوّر جافاسكربت متكامل",
-      "description": "اكتشف المشاريع والمهارات في React و Next.js و Nest.js.",
+      "title": "ورد خضور | مطور جافاسكربت متكامل",
+      "description": "استعرض المشاريع والمهارات في React و Next.js و Nest.js.",
       "siteName": "معرض أعمال ورد خضور",
       "imageAlt": "معرض أعمال ورد خضور"
     },
     "twitter": {
-      "title": "ورد خضور | مطوّر ويب متكامل",
-      "description": "تعرّف على أعمالي في تطوير الويب الحديث.",
+      "title": "ورد خضور | مطور ويب متكامل",
+      "description": "اكتشف أعمالي في تطوير الويب الحديث.",
       "creator": "@WardKhaddour"
     }
   },
-
   "ld": {
-    "jobTitle": "مطوّر ويب متكامل",
-    "worksFor": "عمل حر / عن بُعد",
+    "jobTitle": "مطور ويب متكامل",
+    "worksFor": "عمل حر / عن بعد",
     "knowsAbout": "JavaScript,TypeScript,React,Next.js,Nest.js,Node.js,PostgreSQL,Tailwind CSS",
     "alumniOf": "جامعة تشرين",
     "addressLocality": "اللاذقية"
+  },
+  "header": {
+    "about": "من أنا",
+    "projects": "المشاريع",
+    "skills": "المهارات",
+    "work": "الخبرة",
+    "contact": "تواصل"
+  },
+  "hero": {
+    "greeting": "مرحباً، أنا",
+    "viewWork": "عرض أعمالي",
+    "altImage": "رسم توضيحي لمطور",
+    "downloadResume": "تحميل السيرة الذاتية",
+    "downloading": "جارٍ التحميل..."
+  },
+  "about": {
+    "name": "ورد خضور",
+    "header": "من أنا",
+    "role": "مطور ويب متكامل",
+    "summary": "مطور شغوف يتمتع بخبرة في بناء تطبيقات ويب حديثة. أحب إنشاء برمجيات قابلة للتطوير والصيانة، استكشاف تقنيات جديدة، وحل التحديات الصعبة.",
+    "stats": {
+      "years": "سنوات الخبرة",
+      "tech": "التقنيات",
+      "languages": "اللغات",
+      "degree": "الشهادة"
+    }
+  },
+  "projects": {
+    "header": "مشاريع مختارة",
+    "description": "عرض لأحدث أعمالي ومشاريع التطوير",
+    "keyFeatures": "الميزات الرئيسية",
+    "items": {
+      "flatlane": {
+        "title": "Flatlane",
+        "shortDescription": "منصة تنقل شاملة مع تتبع لحظي",
+        "details": [
+          "بناء تطبيق ويب للعملاء مع تتبع لحظي للرحلات، حجز رحلات، دردشة آمنة، ونظام تقييم السائقين.",
+          "دمج Stripe و PayPal للمدفوعات الآمنة والسلسة.",
+          "تطبيق أنماط التصميم (Adapter, Observer) لبنية مرنة وسهلة الصيانة.",
+          "تطوير لوحة تحكم إدارية لمتابعة الرحلات وإدارة السائقين والعملاء."
+        ],
+        "tags": ["تاكسي", "PayPal", "Stripe"]
+      },
+      "syrianlancer": {
+        "title": "Syrianlancer",
+        "shortDescription": "منصة عمل حر بين مقدمي الخدمات والمستقلين",
+        "details": [
+          "إنشاء منصة بخدمات مفصلة، خيارات بحث وتصنيف، ومعاملات آمنة.",
+          "بناء نظام تقييم لزيادة الموثوقية.",
+          "دمج بوابة دفع ونظام تسليم آمن لحماية الطرفين.",
+          "إضافة دردشة فورية للتواصل السلس.",
+          "تطوير لوحة تحكم للإدارة وحل النزاعات وتتبع التحليلات."
+        ],
+        "tags": ["React", "عمل حر"]
+      },
+      "edulive": {
+        "title": "Edulive",
+        "shortDescription": "منصة صفوف ودورات تعليمية مباشرة",
+        "details": [
+          "تصميم منصة بصفوف مباشرة (WebRTC) وبث مسجل (HLS/DASH).",
+          "تنفيذ Nest.js, GraphQL, Socket.io, PostgreSQL, و React لحل متكامل.",
+          "بناء إشارات لحظية للفيديو واستعلامات فعالة للبيانات.",
+          "حصل المشروع على 96% كمشروع تخرج."
+        ],
+        "tags": ["React", "Nest.js", "WebRTC", "GraphQL", "PostgreSQL"]
+      },
+      "observerKit": {
+        "title": "React Intersection Observer Kit",
+        "shortDescription": "مكتبة هوكس مخصصة لتتبع العناصر في العرض",
+        "details": [
+          "تطوير مكتبة خفيفة بـ TypeScript لاستخدام Intersection Observer في React.",
+          "توفير هوكس لكشف دخول/خروج العناصر من الشاشة وتتبعها لحظياً.",
+          "تحسين الأداء لتقليل إعادة التصيير."
+        ],
+        "tags": ["React", "TypeScript", "NPM"]
+      }
+    }
+  },
+  "skills": {
+    "header": "التقنيات التي أعمل بها",
+    "description": "أدواتي لبناء تجارب رقمية رائعة",
+    "items": {
+      "typescript": "TypeScript",
+      "cplusplus": "C++",
+      "react": "React",
+      "nextjs": "Next.js",
+      "reactRouter": "React Router",
+      "reactQuery": "React Query",
+      "redux": "Redux",
+      "tailwind": "Tailwind CSS",
+      "node": "Node.js",
+      "express": "Express.js",
+      "nestjs": "Nest.js",
+      "mongodb": "MongoDB",
+      "postgresql": "PostgreSQL",
+      "typeorm": "TypeORM",
+      "graphql": "GraphQL",
+      "restapi": "REST API",
+      "socketio": "Socket.IO",
+      "webrtc": "WebRTC",
+      "docker": "Docker",
+      "git": "Git"
+    }
+  },
+  "experienceEducation": {
+    "work": "الخبرة العملية",
+    "education": "التعليم",
+    "experienceList": [
+      {
+        "role": "مطور واجهات أمامية",
+        "company": "Code Horizon",
+        "period": "نوفمبر 2023 - الآن",
+        "description": "بناء وتحسين تطبيقات ويب لمجالات مختلفة. قيادة تطوير ميزات لحظية، تدريب المتدربين، وتحسين لوحات التحكم."
+      },
+      {
+        "role": "مطور واجهات أمامية",
+        "company": "TasQment",
+        "period": "ديسمبر 2021 - أبريل 2022",
+        "description": "المساهمة في نظام إدارة مشاريع ودورات. التعاون مع فرق UI/UX ودمج واجهات برمجية."
+      },
+      {
+        "role": "متدرب تطوير واجهات أمامية",
+        "company": "TasQment",
+        "period": "مارس 2021 - نوفمبر 2021",
+        "description": "خبرة عملية في HTML وCSS وJavaScript والمساهمة في مشاريع أولية."
+      }
+    ],
+    "educationList": [
+      {
+        "degree": "بكالوريوس هندسة برمجيات",
+        "institution": "جامعة تشرين | اللاذقية، سوريا",
+        "period": "2019 - الآن",
+        "description": "منهاج شامل يغطي مبادئ هندسة البرمجيات، أنماط التصميم، البرمجة الكائنية، قواعد البيانات والخوارزميات."
+      }
+    ]
+  },
+  "openSource": {
+    "title": "المساهمات مفتوحة المصدر",
+    "description": "مشاريع ساهمت في تطويرها وتحسينها",
+    "viewOnGithub": "عرض على GitHub",
+    "collaborations": [
+      {
+        "name": "Validator.js",
+        "description": "إضافة تحقق من أرقام هواتف قطر",
+        "stars": "2.3K نجمة",
+        "url": "https://github.com/validatorjs/validator.js"
+      }
+    ]
+  },
+  "certifications": {
+    "title": "الشهادات والرخص",
+    "description": "اعتمادات مهنية وتدريبات متخصصة أنجزتها",
+    "verify": "تحقق من الشهادة",
+    "credentialId": "معرّف الشهادة",
+    "list": [
+      {
+        "name": "تخصص مطور واجهات أمامية من Meta",
+        "from": "Coursera",
+        "credentialId": "KROPJ1K1YHYC",
+        "date": "أغسطس 2025",
+        "link": "https://coursera.org/verify/professional-cert/KROPJ1K1YHYC"
+      },
+      {
+        "name": "مقدمة في Next.js",
+        "from": "Coursera",
+        "credentialId": "EXK8GP41LE02",
+        "date": "أغسطس 2025",
+        "link": "https://coursera.org/verify/EXK8GP41LE02"
+      },
+      {
+        "name": "مقدمة في Docker",
+        "from": "Coursera",
+        "credentialId": "U3WGUTQ0S6JQ",
+        "date": "فبراير 2025",
+        "link": "https://coursera.org/verify/U3WGUTQ0S6JQ"
+      }
+    ]
+  },
+  "blog": {
+    "title": "أحدث المقالات",
+    "description": "مقالات، شروحات وأفكار حول تطوير الويب الحديث",
+    "readArticle": "اقرأ المقال",
+    "list": [
+      {
+        "id": 1,
+        "title": "المسارات المحمية في React و React Router V6",
+        "excerpt": "تعلم تقنيات متقدمة لجعل تطبيقات React أسرع.",
+        "date": "أبريل 2023",
+        "readTime": "7 دقائق قراءة",
+        "tags": ["React", "React Router", "مسارات محمية"],
+        "link": "https://medium.com/@wardkhaddot/protected-routes-with-react-and-react-router-v6-50bc50b4159c"
+      }
+    ]
+  },
+  "contact": {
+    "header": "تواصل معي",
+    "summary": "هل لديك مشروع أو ترغب بمناقشة فرصة عمل؟\nتواصل معي عبر النموذج أو مباشرة."
+  },
+  "contactInfo": {
+    "info": "معلومات التواصل",
+    "follow": "تابعني"
+  },
+  "contactForm": {
+    "name": "اسمك",
+    "email": "بريدك الإلكتروني",
+    "subject": "الموضوع",
+    "message": "الرسالة",
+    "send": "إرسال",
+    "sending": "جارٍ الإرسال...",
+    "success": "تم إرسال الرسالة بنجاح!",
+    "error": "فشل في إرسال الرسالة. حاول لاحقاً."
   }
 }

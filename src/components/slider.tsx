@@ -39,6 +39,11 @@ export const Slider: React.FC<Props> = ({
 
   const [selectedIndex, setSelectedIndex] = useState(0)
   const [visibleSlides, setVisibleSlides] = useState(slidesPerView)
+  const [slideDir, setSlideDir] = useState('ltr')
+
+  useEffect(() => {
+    setSlideDir(document.dir)
+  }, [])
 
   const updateSlidesPerView = useCallback(() => {
     const width = window.innerWidth
@@ -77,12 +82,13 @@ export const Slider: React.FC<Props> = ({
   const scrollTo = (index: number) => emblaApi?.scrollTo(index)
 
   return (
-    <div className={cn('relative h-fit w-full', className)}>
+    <div className={cn('relative h-fit w-full', className)} dir='ltr'>
       <div className={cn('h-full cursor-grab overflow-hidden')} ref={emblaRef}>
         <div className='flex' style={{ gap: '1rem' }}>
           {slides.map((slide, idx) => (
             <div
               key={idx}
+              dir={slideDir}
               className={cn(
                 'flex-[0_0_auto]',
                 idx === slides.length - 1 && 'pe-4',

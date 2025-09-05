@@ -1,11 +1,12 @@
 'use client'
 
 import { cn } from '@/utils/cn'
+import { useTranslations } from 'next-intl'
 import { useState } from 'react'
 
 export default function DownloadResume() {
   const [isLoading, setIsLoading] = useState(false)
-
+  const t = useTranslations()
   const handleDownload = async () => {
     setIsLoading(true)
     try {
@@ -34,7 +35,7 @@ export default function DownloadResume() {
         'dark:border-dark-border dark:text-dark-text',
       )}
     >
-      {isLoading ? 'Downloading...' : 'My Resume'}
+      {isLoading ? t('hero.downloading') : t('hero.downloadResume')}
     </button>
   )
 }

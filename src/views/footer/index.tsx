@@ -1,11 +1,12 @@
 import { layoutPadding } from '@/constants/class-names'
 import { about } from '@/data/about'
 import { cn } from '@/utils/cn'
+import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
-
+  const t = useTranslations()
   return (
     <footer
       className={cn(
@@ -20,7 +21,7 @@ export default function Footer() {
             href='#home'
             className='text-primary dark:text-dark-primary text-xl font-bold sm:text-2xl'
           >
-            {about.name}
+            {t(about.nameKey)}
           </Link>
           <p className='text-text dark:text-dark-text mt-2 text-sm'>
             ©{currentYear}

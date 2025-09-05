@@ -21,5 +21,217 @@
     "knowsAbout": "JavaScript,TypeScript,React,Next.js,Nest.js,Node.js,PostgreSQL,Tailwind CSS",
     "alumniOf": "Tishreen University",
     "addressLocality": "Latakia"
+  },
+  "header": {
+    "about": "About Me",
+    "projects": "Projects",
+    "skills": "Skills",
+    "work": "Experience",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "viewWork": "View My Work",
+    "altImage": "Developer illustration",
+    "downloadResume": "Download Resume",
+    "downloading": "Downloading..."
+  },
+  "about": {
+    "name": "Ward Khaddour",
+    "header": "About Me",
+    "role": "Full Stack Developer",
+    "summary": "A passionate full-stack developer with experience in building modern web applications. I love creating scalable and maintainable software, exploring new technologies, and solving challenging problems.",
+    "stats": {
+      "years": "Years of Experience",
+      "tech": "Tech Stack",
+      "languages": "Languages",
+      "degree": "Degree"
+    }
+  },
+  "projects": {
+    "header": "Featured Projects",
+    "description": "A showcase of my recent work and development projects",
+    "keyFeatures": "Key Features",
+    "items": {
+      "flatlane": {
+        "title": "Flatlane",
+        "shortDescription": "Comprehensive ride-hailing platform with real-time tracking",
+        "details": [
+          "Built a customer-facing web app with real-time trip tracking, ride booking, secure in-app chat, and a driver rating system.",
+          "Integrated Stripe and PayPal for secure payments, ensuring smooth and safe transactions.",
+          "Applied design patterns (Adapter, Observer) for modular, maintainable architecture",
+          "Developed an admin dashboard to monitor trips, manage drivers/customers, and track engagement metrics."
+        ],
+        "tags": ["Taxis", "PayPal", "Stripe"]
+      },
+      "syrianlancer": {
+        "title": "Syrianlancer",
+        "shortDescription": "Freelancing platform for service seekers and freelancers",
+        "details": [
+          "Created a platform for service seekers and freelancers with detailed service listings, search/filter options, and secure transactions.",
+          "Built a rating system to enhance trust and credibility.",
+          "Integrated secure payment gateway and delivery system to protect both parties.",
+          "Added real-time in-app chat for seamless communication.",
+          "Developed an admin dashboard for service/user management, dispute resolution, and analytics tracking."
+        ],
+        "tags": ["React", "Freelancing"]
+      },
+      "edulive": {
+        "title": "Edulive",
+        "shortDescription": "Real-time online classroom and course platform",
+        "details": [
+          "Designed a platform with live classrooms (via WebRTC), recorded streaming (HLS/DASH), and adaptive playback for varied networks/devices.",
+          "Implemented Nest.js, GraphQL APIs, Socket.io, PostgreSQL, and React for a full-stack solution.",
+          "Built real-time signaling for video sessions and efficient querying for course data.",
+          "Earned 96% as a graduation project"
+        ],
+        "tags": ["React", "Nest.js", "WebRTC", "GraphQL", "PostgreSQL"]
+      },
+      "observerKit": {
+        "title": "React Intersection Observer Kit",
+        "shortDescription": "Custom React hooks for viewport tracking",
+        "details": [
+          "Developed a lightweight, TypeScript-based library for using the Intersection Observer API in React.",
+          "Provided hooks for viewport entry/exit detection, real-time tracking, and custom visibility conditions.",
+          "Optimized performance to minimize re-renders."
+        ],
+        "tags": ["React", "TypeScript", "NPM"]
+      }
+    }
+  },
+  "skills": {
+    "header": "Technologies I Work With",
+    "description": "My toolkit for building amazing digital experiences",
+    "items": {
+      "typescript": "TypeScript",
+      "cplusplus": "C++",
+      "react": "React",
+      "nextjs": "Next.js",
+      "reactRouter": "React Router",
+      "reactQuery": "React Query",
+      "redux": "Redux",
+      "tailwind": "Tailwind CSS",
+      "node": "Node.js",
+      "express": "Express.js",
+      "nestjs": "Nest.js",
+      "mongodb": "MongoDB",
+      "postgresql": "PostgreSQL",
+      "typeorm": "TypeORM",
+      "graphql": "GraphQL",
+      "restapi": "RestAPI",
+      "socketio": "Socket.IO",
+      "webrtc": "WebRTC",
+      "docker": "Docker",
+      "git": "Git"
+    }
+  },
+  "experienceEducation": {
+    "work": "Work Experience",
+    "education": "Education",
+    "experienceList": [
+      {
+        "role": "Front-End Developer",
+        "company": "Code Horizon",
+        "period": "November 2023 - Present",
+        "description": "Built and enhanced web applications for freelancing, ride-hailing, and medical platforms. Led real-time feature development, mentored interns, and optimized dashboards for usability and performance."
+      },
+      {
+        "role": "Front-End Developer",
+        "company": "TasQment",
+        "period": "December 2021 - April 2022",
+        "description": "Contributed to an Agile project management system and course platform. Collaborated with UI/UX teams, integrated APIs, and was recognized as Employee of the Month."
+      },
+      {
+        "role": "Front-End Intern",
+        "company": "TasQment",
+        "period": "March 2021 - November 2021",
+        "description": "Gained hands-on experience with HTML, CSS, JavaScript, and contributed to early-stage web projects under professional guidance."
+      }
+    ],
+    "educationList": [
+      {
+        "degree": "B.Sc. Software Engineering",
+        "institution": "Tishreen University | Latakia, Syria",
+        "period": "2019 - Present",
+        "description": "Completed a comprehensive curriculum focused on software engineering principles, design patterns, object-oriented programming, databases, algorithms, and data structures."
+      }
+    ]
+  },
+  "openSource": {
+    "title": "Open Source Contributions",
+    "description": "Projects I've contributed to and helped improve",
+    "viewOnGithub": "View on GitHub",
+    "collaborations": [
+      {
+        "name": "Validator.js",
+        "description": "Added Qatar phone number validation",
+        "stars": "2.3K stars",
+        "url": "https://github.com/validatorjs/validator.js"
+      }
+    ]
+  },
+
+  "certifications": {
+    "title": "Licenses & Certifications",
+    "description": "Professional credentials and specialized training I've completed",
+    "verify": "Verify credential",
+    "credentialId": "Credential ID",
+    "list": [
+      {
+        "name": "Meta Front-End Developer Specialization",
+        "from": "Coursera",
+        "credentialId": "KROPJ1K1YHYC",
+        "date": "August 2025",
+        "link": "https://coursera.org/verify/professional-cert/KROPJ1K1YHYC"
+      },
+      {
+        "name": "Introduction to Next.js",
+        "from": "Coursera",
+        "credentialId": "EXK8GP41LE02",
+        "date": "August 2025",
+        "link": "https://coursera.org/verify/EXK8GP41LE02"
+      },
+      {
+        "name": "Introduction to Docker",
+        "from": "Coursera",
+        "credentialId": "U3WGUTQ0S6JQ",
+        "date": "February 2025",
+        "link": "https://coursera.org/verify/U3WGUTQ0S6JQ"
+      }
+    ]
+  },
+  "blog": {
+    "title": "Latest Articles",
+    "description": "Thoughts, tutorials and insights about modern web development",
+    "readArticle": "Read Article",
+    "list": [
+      {
+        "id": 1,
+        "title": "Protected Routes With React And React Router V6",
+        "excerpt": "Learn advanced techniques to make your React applications blazing fast.",
+        "date": "April 2023",
+        "readTime": "7 min read",
+        "tags": ["React", "React Router", "Protected Routes"],
+        "link": "https://medium.com/@wardkhaddot/protected-routes-with-react-and-react-router-v6-50bc50b4159c"
+      }
+    ]
+  },
+  "contact": {
+    "header": "Get In Touch",
+    "summary": " Have a project in mind or want to discuss potential opportunities?\nReach out through the form or connect with me directly."
+  },
+  "contactInfo": {
+    "info": "Contact Information",
+    "follow": " Follow Me"
+  },
+  "contactForm": {
+    "name": "Your Name",
+    "email": "Your Email",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent successfully!",
+    "error": "Failed to send message. Please try again later."
   }
 }

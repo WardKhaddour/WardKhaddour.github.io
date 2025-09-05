@@ -1,5 +1,6 @@
 import { about } from '@/data/about'
 import { cn } from '@/utils/cn'
+import { useTranslations } from 'next-intl'
 import {
   FaEnvelope,
   FaGithub,
@@ -9,9 +10,10 @@ import {
 } from 'react-icons/fa'
 
 export function ContactInfo() {
+  const t = useTranslations('contactInfo')
   const iconClasses = 'text-red-600 text-xl'
   const linkClasses = cn(
-    'transition-colors text-ellipsis overflow-hidden text-nowrap',
+    'transition-colors text-ellipsis overflow-hidden whitespace-nowrap',
     'text-gray-700 dark:text-gray-300 hover:text-red-600 dark:hover:text-red-500',
   )
 
@@ -25,7 +27,7 @@ export function ContactInfo() {
   return (
     <>
       <h3 className='mb-6 text-xl font-semibold text-gray-900 dark:text-white'>
-        Contact Information
+        {t('info')}
       </h3>
 
       <div className='flex flex-col gap-4'>
@@ -48,7 +50,7 @@ export function ContactInfo() {
       </div>
 
       <h4 className='mt-8 mb-4 text-lg font-medium text-gray-900 dark:text-white'>
-        Follow Me
+        {t('follow')}
       </h4>
 
       <div className='flex gap-4'>
@@ -61,7 +63,6 @@ export function ContactInfo() {
         >
           <FaGithub className={socialIconClasses} />
         </a>
-
         <a
           href={about.linkedinLink}
           target='_blank'
@@ -71,7 +72,6 @@ export function ContactInfo() {
         >
           <FaLinkedin className={socialIconClasses} />
         </a>
-
         <a
           href={about.mediumLink}
           target='_blank'

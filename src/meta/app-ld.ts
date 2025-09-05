@@ -6,7 +6,7 @@ export async function GET_APP_LD() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    name: 'Ward Khaddour',
+    name: ['Ward Khaddour', 'ورد خضور'],
     url: 'https://ward-khaddour.vercel.app',
     image: 'https://ward-khaddour.vercel.app/og-image.png',
     jobTitle: t('jobTitle'),

@@ -1,7 +1,7 @@
 import { SectionHeader } from '@/components/section-header'
 import { SectionDescription } from '@/components/setion-description'
-import { collaborations } from '@/data/collaborations'
 import { cn } from '@/utils/cn'
+import { useTranslations } from 'next-intl'
 import { FaGithub, FaStar } from 'react-icons/fa'
 
 type Props = {
@@ -9,75 +9,60 @@ type Props = {
 }
 
 export function OpenSource({ className = '' }: Props) {
+  const t = useTranslations('openSource')
+  const collaborations = t.raw('collaborations') as {
+    id?: number
+    name: string
+    description: string
+    url: string
+    stars: string
+  }[]
+
   return (
     <section id='open-source' className={cn('py-20', className)}>
       <div className='container mx-auto'>
         <div className='mb-16 text-center'>
-          <SectionHeader>Open Source Contributions</SectionHeader>
-          <SectionDescription>
-            Projects I&apos;ve contributed to and helped improve
-          </SectionDescription>
+          <SectionHeader>{t('title')}</SectionHeader>
+          <SectionDescription>{t('description')}</SectionDescription>
         </div>
 
-        <div className='grid grid-cols-1 gap-8 md:grid-cols-3'>
-          {collaborations.map(collab => (
+        <div className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3'>
+          {collaborations.map((collab, index) => (
             <div
-              key={collab.id}
+              key={collab.id ?? index}
               className={cn(
                 'rounded-xl p-6 shadow-lg transition-shadow hover:shadow-xl',
                 'bg-surface dark:bg-dark-surface',
               )}
             >
               <div className='mb-4 flex items-center gap-4'>
-                <div className={cn('rounded-full p-3')}>
-                  <FaGithub
-                    className={cn('text-2xl', 'text-icon dark:text-dark-icon')}
-                  />
+                <div className='rounded-full p-3'>
+                  <FaGithub className='text-icon dark:text-dark-icon text-2xl' />
                 </div>
                 <div>
-                  <h3
-                    className={cn(
-                      'text-lg font-bold',
-                      'text-text dark:text-dark-text',
-                    )}
-                  >
+                  <h3 className='text-text dark:text-dark-text text-lg font-bold'>
                     {collab.name}
                   </h3>
-                  <div
-                    className={cn('flex items-center gap-1', 'text-yellow-500')}
-                  >
+                  <div className='flex items-center gap-1 text-yellow-500'>
                     <FaStar />
-                    <span
-                      className={cn(
-                        'text-sm',
-                        'text-text-secondary dark:text-dark-text-muted',
-                      )}
-                    >
-                      {collab.stars} stars
+                    <span className='text-text-secondary dark:text-dark-text-muted text-sm'>
+                      {collab.stars}
                     </span>
                   </div>
                 </div>
               </div>
-              <p
-                className={cn(
-                  'mb-4',
-                  'text-text-secondary dark:text-dark-text-muted',
-                )}
-              >
+              <p className='text-text-secondary dark:text-dark-text-muted mb-4'>
                 {collab.description}
               </p>
               <a
                 href={collab.url}
                 target='_blank'
                 rel='noopener noreferrer'
-                className={cn(
-                  'inline-flex items-center hover:underline',
-                  'text-primary dark:text-dark-primary',
-                )}
+                className='text-primary dark:text-dark-primary inline-flex items-center hover:underline'
               >
-                View on GitHub
+                {t('viewOnGithub')}
                 <svg
-                  className='ml-1 h-4 w-4'
+                  className='ml-1 h-4 w-4 rtl:-scale-x-100'
                   fill='currentColor'
                   viewBox='0 0 20 20'
                 >

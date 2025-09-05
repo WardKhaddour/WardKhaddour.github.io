@@ -19,120 +19,109 @@ import {
   SiTypeorm,
   SiTypescript,
   SiWebrtc,
-} from "react-icons/si";
+} from 'react-icons/si'
 
 export const skills = [
-  // Programming Languages
   {
-    name: "TypeScript",
-    icon: <SiTypescript className="w-full h-full" />,
-    category: "language",
+    id: 'typescript',
+    icon: <SiTypescript className='h-full w-full' />,
+    category: 'language',
   },
   {
-    name: "C++",
-    icon: <SiCplusplus className="w-full h-full" />,
-    category: "language",
-  },
-
-  // Frontend
-  {
-    name: "React",
-    icon: <SiReact className="w-full h-full" />,
-    category: "frontend",
-  },
-  {
-    name: "Next.js",
-    icon: <SiNextdotjs className="w-full h-full" />,
-    category: "frontend",
-  },
-  {
-    name: "React Router",
-    icon: <SiReactrouter className="w-full h-full" />,
-    category: "frontend",
-  },
-  {
-    name: "React Query",
-    icon: <SiReactquery className="w-full h-full" />,
-    category: "frontend",
-  },
-  {
-    name: "Redux",
-    icon: <SiRedux className="w-full h-full" />,
-    category: "frontend",
-  },
-  {
-    name: "Tailwind CSS",
-    icon: <SiTailwindcss className="w-full h-full" />,
-    category: "frontend",
+    id: 'cplusplus',
+    icon: <SiCplusplus className='h-full w-full' />,
+    category: 'language',
   },
 
-  // Backend
   {
-    name: "Node.js",
-    icon: <SiNodedotjs className="w-full h-full" />,
-    category: "backend",
+    id: 'react',
+    icon: <SiReact className='h-full w-full' />,
+    category: 'frontend',
   },
   {
-    name: "Express.js",
-    icon: <SiExpress className="w-full h-full" />,
-    category: "backend",
+    id: 'nextjs',
+    icon: <SiNextdotjs className='h-full w-full' />,
+    category: 'frontend',
   },
   {
-    name: "Nest.js",
-    icon: <SiNestjs className="w-full h-full" />,
-    category: "backend",
-  },
-
-  // Databases
-  {
-    name: "MongoDB",
-    icon: <SiMongodb className="w-full h-full" />,
-    category: "database",
+    id: 'reactRouter',
+    icon: <SiReactrouter className='h-full w-full' />,
+    category: 'frontend',
   },
   {
-    name: "PostgreSQL",
-    icon: <SiPostgresql className="w-full h-full" />,
-    category: "database",
+    id: 'reactQuery',
+    icon: <SiReactquery className='h-full w-full' />,
+    category: 'frontend',
   },
   {
-    name: "TypeORM",
-    icon: <SiTypeorm className="w-full h-full" />,
-    category: "database",
+    id: 'redux',
+    icon: <SiRedux className='h-full w-full' />,
+    category: 'frontend',
+  },
+  {
+    id: 'tailwind',
+    icon: <SiTailwindcss className='h-full w-full' />,
+    category: 'frontend',
   },
 
-  // APIs
   {
-    name: "GraphQL",
-    icon: <SiGraphql className="w-full h-full" />,
-    category: "api",
+    id: 'node',
+    icon: <SiNodedotjs className='h-full w-full' />,
+    category: 'backend',
   },
   {
-    name: "RestAPI",
-    icon: <SiApifox className="w-full h-full" />,
-    category: "api",
-  },
-
-  // Real-time
-  {
-    name: "Socket.IO",
-    icon: <SiSocketdotio className="w-full h-full" />,
-    category: "realtime",
+    id: 'express',
+    icon: <SiExpress className='h-full w-full' />,
+    category: 'backend',
   },
   {
-    name: "WebRTC",
-    icon: <SiWebrtc className="w-full h-full" />,
-    category: "realtime",
+    id: 'nestjs',
+    icon: <SiNestjs className='h-full w-full' />,
+    category: 'backend',
   },
 
-  // DevOps
   {
-    name: "Docker",
-    icon: <SiDocker className="w-full h-full" />,
-    category: "devops",
+    id: 'mongodb',
+    icon: <SiMongodb className='h-full w-full' />,
+    category: 'database',
   },
   {
-    name: "Git",
-    icon: <SiGit className="w-full h-full" />,
-    category: "devops",
+    id: 'postgresql',
+    icon: <SiPostgresql className='h-full w-full' />,
+    category: 'database',
   },
-];
+  {
+    id: 'typeorm',
+    icon: <SiTypeorm className='h-full w-full' />,
+    category: 'database',
+  },
+
+  {
+    id: 'graphql',
+    icon: <SiGraphql className='h-full w-full' />,
+    category: 'api',
+  },
+  {
+    id: 'restapi',
+    icon: <SiApifox className='h-full w-full' />,
+    category: 'api',
+  },
+
+  {
+    id: 'socketio',
+    icon: <SiSocketdotio className='h-full w-full' />,
+    category: 'realtime',
+  },
+  {
+    id: 'webrtc',
+    icon: <SiWebrtc className='h-full w-full' />,
+    category: 'realtime',
+  },
+
+  {
+    id: 'docker',
+    icon: <SiDocker className='h-full w-full' />,
+    category: 'devops',
+  },
+  { id: 'git', icon: <SiGit className='h-full w-full' />, category: 'devops' },
+] as const

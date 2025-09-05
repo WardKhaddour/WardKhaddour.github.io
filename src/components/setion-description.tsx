@@ -9,7 +9,7 @@ export function SectionDescription({
     <p
       className={cn(
         'mx-auto max-w-2xl',
-        'text-text-secondary dark:text-dark-text-muted',
+        'text-text-secondary dark:text-dark-text-muted whitespace-pre-line',
       )}
     >
       {children}

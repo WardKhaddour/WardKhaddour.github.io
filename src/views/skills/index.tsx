@@ -3,12 +3,14 @@ import { SectionHeader } from '@/components/section-header'
 import { SectionDescription } from '@/components/setion-description'
 import { skills } from '@/data/skills'
 import { cn } from '@/utils/cn'
+import { useTranslations } from 'next-intl'
 
 type Props = {
   className?: string
 }
 
 export function Skills({ className = '' }: Props) {
+  const t = useTranslations('skills')
   return (
     <section id='skills' className={cn('py-20', className)}>
       <div className='container mx-auto'>
@@ -18,17 +20,15 @@ export function Skills({ className = '' }: Props) {
           viewport={{ once: true }}
           className='mb-16 text-center'
         >
-          <SectionHeader>Technologies I Work With</SectionHeader>
+          <SectionHeader>{t('header')}</SectionHeader>
 
-          <SectionDescription>
-            My toolkit for building amazing digital experiences
-          </SectionDescription>
+          <SectionDescription>{t('description')} </SectionDescription>
         </Motion>
 
         <div className='grid grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-4'>
           {skills.map((skill, index) => (
             <Motion
-              key={skill.name}
+              key={skill.id}
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -39,7 +39,7 @@ export function Skills({ className = '' }: Props) {
                 {skill.icon}
               </div>
               <h3 className='text-text dark:text-dark-text mb-1 text-lg font-medium'>
-                {skill.name}
+                {t(`items.${skill.id}`)}
               </h3>
             </Motion>
           ))}

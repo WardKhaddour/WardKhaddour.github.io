@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "title": "Ward Khaddour | Full Stack Webentwickler - Next.js, React, Nest.js",
+    "description": "Ward Khaddour ist ein Full-Stack-JavaScript-Entwickler, spezialisiert auf React, Next.js, Nest.js und moderne Webtechnologien. Portfolio, Projekte und Kontaktinformationen.",
+    "keywords": "Ward Khaddour, Full Stack Entwickler, Next.js, React, Nest.js, TypeScript, JavaScript, Portfolio, Webentwicklung",
+    "openGraph": {
+      "title": "Ward Khaddour | Full Stack JavaScript Entwickler",
+      "description": "Entdecke Projekte und Fähigkeiten in React, Next.js und Nest.js.",
+      "siteName": "Ward Khaddour Portfolio",
+      "imageAlt": "Ward Khaddour Portfolio"
+    },
+    "twitter": {
+      "title": "Ward Khaddour | Full Stack Entwickler",
+      "description": "Entdecke meine Arbeit in der modernen Webentwicklung.",
+      "creator": "@WardKhaddour"
+    }
+  },
+  "ld": {
+    "jobTitle": "Full Stack Webentwickler",
+    "worksFor": "Freelance / Remote",
+    "knowsAbout": "JavaScript,TypeScript,React,Next.js,Nest.js,Node.js,PostgreSQL,Tailwind CSS",
+    "alumniOf": "Tishreen Universität",
+    "addressLocality": "Latakia"
+  },
+  "header": {
+    "about": "Über mich",
+    "projects": "Projekte",
+    "skills": "Fähigkeiten",
+    "work": "Erfahrung",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "greeting": "Hallo, ich bin",
+    "viewWork": "Meine Arbeiten ansehen",
+    "altImage": "Entwickler Illustration",
+    "downloadResume": "Lebenslauf herunterladen",
+    "downloading": "Wird heruntergeladen..."
+  },
+  "about": {
+    "name": "Ward Khaddour",
+    "header": "Über mich",
+    "role": "Full Stack Entwickler",
+    "summary": "Leidenschaftlicher Full-Stack-Entwickler mit Erfahrung im Aufbau moderner Webanwendungen. Ich liebe es, skalierbare und wartbare Software zu erstellen, neue Technologien zu erkunden und komplexe Probleme zu lösen.",
+    "stats": {
+      "years": "Jahre Erfahrung",
+      "tech": "Technologien",
+      "languages": "Sprachen",
+      "degree": "Abschluss"
+    }
+  },
+  "projects": {
+    "header": "Ausgewählte Projekte",
+    "description": "Eine Auswahl meiner neuesten Arbeiten und Entwicklungsprojekte",
+    "keyFeatures": "Hauptfunktionen",
+    "items": {
+      "flatlane": {
+        "title": "Flatlane",
+        "shortDescription": "Umfassende Ride-Hailing-Plattform mit Echtzeit-Tracking",
+        "details": [
+          "Entwicklung einer Kundenanwendung mit Echtzeit-Fahrtenverfolgung, Buchung, sicherem In-App-Chat und Fahrerbewertung.",
+          "Integration von Stripe und PayPal für sichere und reibungslose Zahlungen.",
+          "Verwendung von Design-Patterns (Adapter, Observer) für modulare und wartbare Architektur.",
+          "Entwicklung eines Admin-Dashboards zur Überwachung von Fahrten und Verwaltung von Fahrern/Kunden."
+        ],
+        "tags": ["Taxi", "PayPal", "Stripe"]
+      },
+      "syrianlancer": {
+        "title": "Syrianlancer",
+        "shortDescription": "Freelancing-Plattform für Auftraggeber und Freelancer",
+        "details": [
+          "Plattform für Auftraggeber und Freelancer mit detaillierten Dienstleistungen, Such- und Filteroptionen sowie sicheren Transaktionen.",
+          "Bewertungssystem zur Stärkung von Vertrauen und Glaubwürdigkeit.",
+          "Integration eines sicheren Zahlungssystems und Lieferservices.",
+          "Echtzeit-In-App-Chat für nahtlose Kommunikation.",
+          "Entwicklung eines Admin-Dashboards für Benutzerverwaltung, Konfliktlösung und Analysen."
+        ],
+        "tags": ["React", "Freelancing"]
+      },
+      "edulive": {
+        "title": "Edulive",
+        "shortDescription": "Plattform für Live-Kurse und Online-Klassenzimmer",
+        "details": [
+          "Entwicklung einer Plattform mit Live-Klassenzimmern (WebRTC), aufgezeichnetem Streaming (HLS/DASH) und adaptiver Wiedergabe.",
+          "Implementierung von Nest.js, GraphQL, Socket.io, PostgreSQL und React als Full-Stack-Lösung.",
+          "Echtzeit-Signalisierung für Video-Sessions und effiziente Datenabfragen.",
+          "Graduierungsprojekt mit 96% Bewertung."
+        ],
+        "tags": ["React", "Nest.js", "WebRTC", "GraphQL", "PostgreSQL"]
+      },
+      "observerKit": {
+        "title": "React Intersection Observer Kit",
+        "shortDescription": "Individuelle React Hooks für Viewport-Tracking",
+        "details": [
+          "Leichtgewichtige, TypeScript-basierte Bibliothek für Intersection Observer in React.",
+          "Hooks für Eintritt-/Austrittserkennung, Echtzeit-Tracking und benutzerdefinierte Bedingungen.",
+          "Performanceoptimierung zur Minimierung von Re-Renders."
+        ],
+        "tags": ["React", "TypeScript", "NPM"]
+      }
+    }
+  },
+  "skills": {
+    "header": "Technologien, mit denen ich arbeite",
+    "description": "Mein Werkzeugkasten für großartige digitale Erlebnisse",
+    "items": {
+      "typescript": "TypeScript",
+      "cplusplus": "C++",
+      "react": "React",
+      "nextjs": "Next.js",
+      "reactRouter": "React Router",
+      "reactQuery": "React Query",
+      "redux": "Redux",
+      "tailwind": "Tailwind CSS",
+      "node": "Node.js",
+      "express": "Express.js",
+      "nestjs": "Nest.js",
+      "mongodb": "MongoDB",
+      "postgresql": "PostgreSQL",
+      "typeorm": "TypeORM",
+      "graphql": "GraphQL",
+      "restapi": "REST API",
+      "socketio": "Socket.IO",
+      "webrtc": "WebRTC",
+      "docker": "Docker",
+      "git": "Git"
+    }
+  },
+  "experienceEducation": {
+    "work": "Berufserfahrung",
+    "education": "Ausbildung",
+    "experienceList": [
+      {
+        "role": "Frontend Entwickler",
+        "company": "Code Horizon",
+        "period": "November 2023 - Gegenwart",
+        "description": "Entwicklung und Verbesserung von Webanwendungen für verschiedene Plattformen. Leitung von Echtzeit-Features, Mentoring von Praktikanten und Optimierung von Dashboards."
+      },
+      {
+        "role": "Frontend Entwickler",
+        "company": "TasQment",
+        "period": "Dezember 2021 - April 2022",
+        "description": "Beitrag zu einem agilen Projektmanagementsystem und einer Kursplattform. Zusammenarbeit mit UI/UX-Teams und API-Integration."
+      },
+      {
+        "role": "Frontend Praktikant",
+        "company": "TasQment",
+        "period": "März 2021 - November 2021",
+        "description": "Praktische Erfahrung mit HTML, CSS und JavaScript. Mitarbeit an frühen Projekten."
+      }
+    ],
+    "educationList": [
+      {
+        "degree": "B.Sc. Softwaretechnik",
+        "institution": "Tishreen Universität | Latakia, Syrien",
+        "period": "2019 - Gegenwart",
+        "description": "Umfassendes Studium mit Fokus auf Software-Engineering-Prinzipien, Design Patterns, objektorientierte Programmierung, Datenbanken und Algorithmen."
+      }
+    ]
+  },
+  "openSource": {
+    "title": "Open-Source-Beiträge",
+    "description": "Projekte, zu denen ich beigetragen habe",
+    "viewOnGithub": "Auf GitHub ansehen",
+    "collaborations": [
+      {
+        "name": "Validator.js",
+        "description": "Hinzufügen der Validierung für katarische Telefonnummern",
+        "stars": "2.3K Sterne",
+        "url": "https://github.com/validatorjs/validator.js"
+      }
+    ]
+  },
+  "certifications": {
+    "title": "Lizenzen & Zertifikate",
+    "description": "Fachliche Qualifikationen und spezialisierte Schulungen",
+    "verify": "Zertifikat überprüfen",
+    "credentialId": "Zertifikats-ID",
+    "list": [
+      {
+        "name": "Meta Front-End Entwickler Spezialisierung",
+        "from": "Coursera",
+        "credentialId": "KROPJ1K1YHYC",
+        "date": "August 2025",
+        "link": "https://coursera.org/verify/professional-cert/KROPJ1K1YHYC"
+      },
+      {
+        "name": "Einführung in Next.js",
+        "from": "Coursera",
+        "credentialId": "EXK8GP41LE02",
+        "date": "August 2025",
+        "link": "https://coursera.org/verify/EXK8GP41LE02"
+      },
+      {
+        "name": "Einführung in Docker",
+        "from": "Coursera",
+        "credentialId": "U3WGUTQ0S6JQ",
+        "date": "Februar 2025",
+        "link": "https://coursera.org/verify/U3WGUTQ0S6JQ"
+      }
+    ]
+  },
+  "blog": {
+    "title": "Neueste Artikel",
+    "description": "Gedanken, Tutorials und Einblicke in moderne Webentwicklung",
+    "readArticle": "Artikel lesen",
+    "list": [
+      {
+        "id": 1,
+        "title": "Geschützte Routen mit React und React Router V6",
+        "excerpt": "Lerne fortgeschrittene Techniken, um React-Anwendungen schneller zu machen.",
+        "date": "April 2023",
+        "readTime": "7 Min. Lesezeit",
+        "tags": ["React", "React Router", "Geschützte Routen"],
+        "link": "https://medium.com/@wardkhaddot/protected-routes-with-react-and-react-router-v6-50bc50b4159c"
+      }
+    ]
+  },
+  "contact": {
+    "header": "Kontakt aufnehmen",
+    "summary": "Haben Sie ein Projekt im Kopf oder möchten Sie über Möglichkeiten sprechen?\nKontaktieren Sie mich über das Formular oder direkt."
+  },
+  "contactInfo": {
+    "info": "Kontaktinformationen",
+    "follow": "Folgen Sie mir"
+  },
+  "contactForm": {
+    "name": "Ihr Name",
+    "email": "Ihre E-Mail",
+    "subject": "Betreff",
+    "message": "Nachricht",
+    "send": "Nachricht senden",
+    "sending": "Wird gesendet...",
+    "success": "Nachricht erfolgreich gesendet!",
+    "error": "Fehler beim Senden. Bitte später erneut versuchen."
+  }
+}

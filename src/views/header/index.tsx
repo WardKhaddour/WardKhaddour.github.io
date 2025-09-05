@@ -3,19 +3,22 @@
 import { ThemeToggle } from '@/components/theme-toggle'
 import { layoutPadding } from '@/constants/class-names'
 import { cn } from '@/utils/cn'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 import { FiMenu, FiX } from 'react-icons/fi'
+import { LocaleSwitcher } from './locale-switcher'
 
 export function Header() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
+  const t = useTranslations('header')
   const navItems = [
-    { name: 'About Me', href: '/#about-me' },
-    { name: 'Projects', href: '/#projects' },
-    { name: 'Skills', href: '/#skills' },
-    { name: 'Work', href: '/#experience' },
-    { name: 'Contact', href: '/#contact' },
+    { name: t('about'), href: '/#about-me' },
+    { name: t('projects'), href: '/#projects' },
+    { name: t('skills'), href: '/#skills' },
+    { name: t('work'), href: '/#experience' },
+    { name: t('contact'), href: '/#contact' },
   ]
 
   const toggleSidebar = () => {
@@ -42,7 +45,7 @@ export function Header() {
               />
             </Link>
 
-            <nav className='hidden items-center justify-between gap-8 md:flex'>
+            <nav className='hidden items-center justify-between gap-8 lg:flex'>
               {navItems.map(item => (
                 <Link
                   key={item.name}
@@ -52,10 +55,12 @@ export function Header() {
                   {item.name}
                 </Link>
               ))}
+              <LocaleSwitcher />
               <ThemeToggle />
             </nav>
 
-            <div className='flex items-center space-x-4 md:hidden'>
+            <div className='flex items-center space-x-4 lg:hidden'>
+              <LocaleSwitcher />
               <ThemeToggle />
               <button
                 onClick={toggleSidebar}
@@ -71,7 +76,7 @@ export function Header() {
 
       {/* Mobile Sidebar */}
       <div
-        className={`fixed inset-0 z-30 transition-all duration-300 ease-in-out md:hidden ${
+        className={`fixed inset-0 z-30 transition-all duration-300 ease-in-out lg:hidden ${
           isSidebarOpen
             ? 'visible opacity-100'
             : 'pointer-events-none invisible opacity-0'

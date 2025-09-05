@@ -3,7 +3,6 @@ import { getTranslations } from 'next-intl/server'
 
 export async function GET_APP_META_DATA(): Promise<Metadata> {
   const t = await getTranslations('meta')
-  console.log(t('keywords'))
 
   return {
     title: t('title'),
