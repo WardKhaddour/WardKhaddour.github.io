@@ -1,0 +1,26 @@
+{
+  "meta": {
+    "title": "ورد خضور | مطوّر ويب متكامل - Next.js، React، Nest.js",
+    "description": "ورد خضور مطوّر جافاسكربت متكامل، متخصص في React و Next.js و Nest.js وتقنيات الويب الحديثة. معرض أعمال، مشاريع، ومعلومات التواصل.",
+    "keywords": "ورد خضور,مطوّر ويب متكامل,Next.js,React,Nest.js,TypeScript,JavaScript,معرض أعمال,تطوير الويب",
+    "openGraph": {
+      "title": "ورد خضور | مطوّر جافاسكربت متكامل",
+      "description": "اكتشف المشاريع والمهارات في React و Next.js و Nest.js.",
+      "siteName": "معرض أعمال ورد خضور",
+      "imageAlt": "معرض أعمال ورد خضور"
+    },
+    "twitter": {
+      "title": "ورد خضور | مطوّر ويب متكامل",
+      "description": "تعرّف على أعمالي في تطوير الويب الحديث.",
+      "creator": "@WardKhaddour"
+    }
+  },
+
+  "ld": {
+    "jobTitle": "مطوّر ويب متكامل",
+    "worksFor": "عمل حر / عن بُعد",
+    "knowsAbout": "JavaScript,TypeScript,React,Next.js,Nest.js,Node.js,PostgreSQL,Tailwind CSS",
+    "alumniOf": "جامعة تشرين",
+    "addressLocality": "اللاذقية"
+  }
+}

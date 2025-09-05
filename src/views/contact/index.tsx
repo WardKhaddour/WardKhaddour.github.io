@@ -9,7 +9,7 @@ type Props = {
   className?: string
 }
 
-export default function Contact({ className = '' }: Props) {
+export function Contact({ className = '' }: Props) {
   return (
     <section id='contact' className={cn('py-20', className)}>
       <div className='container mx-auto'>

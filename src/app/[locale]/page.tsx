@@ -4,13 +4,13 @@ import {
   AboutMe,
   BlogSection,
   CertificationsSection,
+  Contact,
   ExperienceEducation,
   Hero,
   OpenSource,
   Projects,
   Skills,
 } from '@/views'
-import Contact from '@/views/contact'
 
 export default function HomePage() {
   return (

@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "title": "Ward Khaddour | Full Stack Web Developer - Next.js, React, Nest.js",
+    "description": "Ward Khaddour is a full stack JavaScript developer specializing in React, Next.js, Nest.js, and modern web technologies. Portfolio, projects, and contact info.",
+    "keywords": "Ward Khaddour,Full Stack Developer,Next.js,React,Nest.js,TypeScript,JavaScript,Portfolio,Web Development",
+    "openGraph": {
+      "title": "Ward Khaddour | Full Stack JavaScript Developer",
+      "description": "Explore projects and skills in React, Next.js, and Nest.js.",
+      "siteName": "Ward Khaddour Portfolio",
+      "imageAlt": "Ward Khaddour Portfolio"
+    },
+    "twitter": {
+      "title": "Ward Khaddour | Full Stack Developer",
+      "description": "Explore my work in modern web development.",
+      "creator": "@WardKhaddour"
+    }
+  },
+  "ld": {
+    "jobTitle": "Full Stack Web Developer",
+    "worksFor": "Freelance / Remote",
+    "knowsAbout": "JavaScript,TypeScript,React,Next.js,Nest.js,Node.js,PostgreSQL,Tailwind CSS",
+    "alumniOf": "Tishreen University",
+    "addressLocality": "Latakia"
+  }
+}
