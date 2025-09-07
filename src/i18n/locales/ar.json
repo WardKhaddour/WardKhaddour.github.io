@@ -103,6 +103,7 @@
     "header": "التقنيات التي أعمل بها",
     "description": "أدواتي لبناء تجارب رقمية رائعة",
     "items": {
+      "javascript": "JavaScript",
       "typescript": "TypeScript",
       "cplusplus": "C++",
       "react": "React",

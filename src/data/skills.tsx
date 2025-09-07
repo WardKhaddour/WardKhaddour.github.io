@@ -5,6 +5,7 @@ import {
   SiExpress,
   SiGit,
   SiGraphql,
+  SiJavascript,
   SiMongodb,
   SiNestjs,
   SiNextdotjs,
@@ -22,6 +23,11 @@ import {
 } from 'react-icons/si'
 
 export const skills = [
+  {
+    id: 'javascript',
+    icon: <SiJavascript className='h-full w-full' />,
+    category: 'language',
+  },
   {
     id: 'typescript',
     icon: <SiTypescript className='h-full w-full' />,

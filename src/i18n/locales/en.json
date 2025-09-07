@@ -103,6 +103,7 @@
     "header": "Technologies I Work With",
     "description": "My toolkit for building amazing digital experiences",
     "items": {
+      "javascript": "JavaScript",
       "typescript": "TypeScript",
       "cplusplus": "C++",
       "react": "React",
