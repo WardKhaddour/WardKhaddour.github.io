@@ -1,3 +1,5 @@
+'use client'
+
 import { SectionHeader } from '@/components/section-header'
 import { SectionDescription } from '@/components/setion-description'
 import { Slider } from '@/components/slider'

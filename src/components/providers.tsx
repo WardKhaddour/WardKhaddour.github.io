@@ -13,9 +13,15 @@ export function Providers({
   locale: Locale
   messages: Record<string, string>
 }) {
+  const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone
+
   return (
     <ThemeProvider>
-      <NextIntlClientProvider locale={locale} messages={messages}>
+      <NextIntlClientProvider
+        locale={locale}
+        messages={messages}
+        timeZone={timeZone}
+      >
         {children}
       </NextIntlClientProvider>
       <Analytics />

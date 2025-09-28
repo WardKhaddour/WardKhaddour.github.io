@@ -1,3 +1,5 @@
+'use client'
+
 import { layoutPadding } from '@/constants/class-names'
 import { about } from '@/data/about'
 import { cn } from '@/utils/cn'
@@ -6,7 +8,7 @@ import Link from 'next/link'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
-  const t = useTranslations()
+  const t = useTranslations('about')
   return (
     <footer
       className={cn(

@@ -1,7 +1,8 @@
+import { Locale } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
 
-export async function GET_APP_LD() {
-  const t = await getTranslations('ld')
+export async function GET_APP_LD(locale: Locale) {
+  const t = await getTranslations({ locale, namespace: 'ld' })
 
   return {
     '@context': 'https://schema.org',

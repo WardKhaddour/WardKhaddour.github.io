@@ -1,3 +1,5 @@
+'use client'
+
 import { Motion } from '@/components/motion'
 import { SectionHeader } from '@/components/section-header'
 import { about } from '@/data/about'
@@ -11,14 +13,14 @@ type Props = {
 }
 
 const statIcons: Record<string, React.FC<{ className: string }>> = {
-  'about.stats.years': FiBriefcase,
-  'about.stats.tech': FiCpu,
-  'about.stats.languages': FaLanguage,
-  'about.stats.degree': FaGraduationCap,
+  'stats.years': FiBriefcase,
+  'stats.tech': FiCpu,
+  'stats.languages': FaLanguage,
+  'stats.degree': FaGraduationCap,
 }
 
 export function AboutMe({ className = '' }: Props) {
-  const t = useTranslations()
+  const t = useTranslations('about')
 
   return (
     <section id='about-me' className={cn('py-24', className)}>
@@ -30,7 +32,7 @@ export function AboutMe({ className = '' }: Props) {
           transition={{ duration: 0.6 }}
           className='mb-16 text-center'
         >
-          <SectionHeader>{t('about.header')}</SectionHeader>
+          <SectionHeader>{t('header')}</SectionHeader>
           <p
             className={cn(
               'text-text-secondary dark:text-dark-text-muted mx-auto max-w-3xl text-lg leading-relaxed md:text-xl',
