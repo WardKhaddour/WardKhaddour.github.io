@@ -1,8 +1,19 @@
+import { routing } from '@/i18n/routing'
 import { Metadata } from 'next'
+import { hasLocale } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
 
-export async function GET_APP_META_DATA(): Promise<Metadata> {
-  const t = await getTranslations('meta')
+export async function GET_APP_META_DATA({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+
+  const t = await getTranslations({
+    locale: hasLocale(routing.locales, locale) ? locale : 'en',
+    namespace: 'meta',
+  })
 
   return {
     title: t('title'),
@@ -13,7 +24,13 @@ export async function GET_APP_META_DATA(): Promise<Metadata> {
     keywords: t('keywords').split(','),
     alternates: {
       canonical: 'https://ward-khaddour.vercel.app/',
+      languages: {
+        ar: 'https://ward-khaddour.vercel.app/ar',
+        en: 'https://ward-khaddour.vercel.app/en',
+        de: 'https://ward-khaddour.vercel.app/de',
+      },
     },
+
     icons: {
       icon: [
         {

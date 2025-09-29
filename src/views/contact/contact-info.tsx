@@ -1,3 +1,5 @@
+'use client'
+
 import { about } from '@/data/about'
 import { cn } from '@/utils/cn'
 import { useTranslations } from 'next-intl'

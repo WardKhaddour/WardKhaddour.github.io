@@ -1,12 +1,12 @@
 'use client'
 
-import { sendEmail } from '@/actions/send-email-action'
 import { cn } from '@/utils/cn'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useTranslations } from 'next-intl'
-import { useState, useTransition } from 'react'
+import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import * as z from 'zod'
+import { sendEmail } from './send-email'
 
 export const sendEmailSchema = z.object({
   name: z.string().min(1),
@@ -20,9 +20,8 @@ type FormData = z.infer<typeof sendEmailSchema>
 export function ContactForm() {
   const t = useTranslations('contactForm')
   const [submitStatus, setSubmitStatus] = useState<
-    'idle' | 'success' | 'error'
+    'idle' | 'success' | 'error' | 'pending'
   >('idle')
-  const [isPending, startTransition] = useTransition()
 
   const {
     register,
@@ -34,22 +33,21 @@ export function ContactForm() {
     mode: 'onBlur',
   })
 
-  const onSubmit = (data: FormData) => {
-    startTransition(async () => {
-      try {
-        const response = await sendEmail(data)
-        if (response.success) {
-          setSubmitStatus('success')
-          reset()
-        } else {
-          setSubmitStatus('error')
-        }
-      } catch {
+  const onSubmit = async (data: FormData) => {
+    try {
+      setSubmitStatus('pending')
+      const response = await sendEmail(data)
+      if (response.success) {
+        setSubmitStatus('success')
+        reset()
+      } else {
         setSubmitStatus('error')
-      } finally {
-        setTimeout(() => setSubmitStatus('idle'), 5000)
       }
-    })
+    } catch {
+      setSubmitStatus('error')
+    } finally {
+      setTimeout(() => setSubmitStatus('idle'), 5000)
+    }
   }
 
   const inputClass = (hasError?: boolean) =>
@@ -156,13 +154,13 @@ export function ContactForm() {
 
       <button
         type='submit'
-        disabled={isPending}
+        disabled={submitStatus === 'pending'}
         className={cn(
           'w-full rounded-lg px-6 py-3 font-medium transition-colors focus:outline-0',
           'bg-primary hover:bg-primary-hover dark:bg-dark-primary dark:hover:bg-dark-primary-hover text-white disabled:cursor-not-allowed disabled:opacity-50',
         )}
       >
-        {isPending ? t('sending') : t('send')}
+        {submitStatus === 'pending' ? t('sending') : t('send')}
       </button>
     </form>
   )

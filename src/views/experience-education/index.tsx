@@ -1,3 +1,5 @@
+'use client'
+
 import { cn } from '@/utils/cn'
 import { useTranslations } from 'next-intl'
 import { FaBriefcase, FaGraduationCap } from 'react-icons/fa'

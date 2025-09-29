@@ -1,3 +1,5 @@
+'use client'
+
 import { Motion } from '@/components/motion'
 import { SectionHeader } from '@/components/section-header'
 import { SectionDescription } from '@/components/setion-description'

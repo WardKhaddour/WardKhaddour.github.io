@@ -12,12 +12,6 @@ export const projects = [
     githubUrl: '',
   },
   {
-    id: 'edulive',
-    image: '/project-edulive.svg',
-    liveUrl: '',
-    githubUrl: '',
-  },
-  {
     id: 'observerKit',
     image: '/project-observer-kit.svg',
     githubUrl:

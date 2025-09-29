@@ -7,27 +7,37 @@ import '@/styles/globals.css'
 import { Header } from '@/views'
 import Footer from '@/views/footer'
 import { hasLocale } from 'next-intl'
+import { setRequestLocale } from 'next-intl/server'
 import { Open_Sans } from 'next/font/google'
 import { notFound } from 'next/navigation'
 import Script from 'next/script'
 
 const openSans = Open_Sans({ subsets: ['latin'] })
 
-export const metadata = GET_APP_META_DATA
+export const generateMetadata = GET_APP_META_DATA
 
-export default async function RootLayout({
+export const dynamic = 'force-static'
+export const generateStaticParams = () => {
+  return routing.locales.map(locale => ({ locale }))
+}
+
+export default async function LocaleLayout({
   children,
   params,
 }: {
   children: React.ReactNode
   params: Promise<{ locale: string }>
 }) {
-  const APP_LD = await GET_APP_LD()
   const { locale } = await params
   const messages = (await import(`@/i18n/locales/${locale}.json`)).default
   if (!hasLocale(routing.locales, locale)) {
     notFound()
   }
+
+  const APP_LD = await GET_APP_LD(locale)
+
+  setRequestLocale(locale)
+
   return (
     <html
       lang={locale}
@@ -36,26 +46,6 @@ export default async function RootLayout({
       className='no-js dark'
     >
       <head>
-        <link
-          rel='alternate'
-          href='https://ward-khaddour.vercel.app/en'
-          hrefLang='en'
-        />
-        <link
-          rel='alternate'
-          href='https://ward-khaddour.vercel.app/ar'
-          hrefLang='ar'
-        />
-        <link
-          rel='alternate'
-          href='https://ward-khaddour.vercel.app/de'
-          hrefLang='de'
-        />
-        <link
-          rel='alternate'
-          href='https://ward-khaddour.vercel.app'
-          hrefLang='x-default'
-        />
         <Script
           id='ld-json'
           type='application/ld+json'

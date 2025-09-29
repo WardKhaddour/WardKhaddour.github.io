@@ -1,3 +1,5 @@
+'use client'
+
 import { Motion } from '@/components/motion'
 import { about } from '@/data/about'
 import { useTranslations } from 'next-intl'
@@ -9,7 +11,8 @@ type Props = {
 }
 
 export function Hero({ className = '' }: Props) {
-  const t = useTranslations()
+  const tHero = useTranslations('hero')
+  const tAbout = useTranslations('about')
 
   return (
     <section
@@ -26,25 +29,25 @@ export function Hero({ className = '' }: Props) {
           >
             <div className='space-y-6'>
               <p className='text-text dark:text-dark-text my-0 text-xl font-medium tracking-wide'>
-                {t('hero.greeting')}
+                {tHero('greeting')}
               </p>
               <div>
                 <h1 className='text-primary dark:text-dark-primary text-5xl leading-tight font-bold lg:text-7xl'>
-                  {t(about.nameKey)}
+                  {tAbout(about.nameKey)}
                 </h1>
                 <h2 className='text-text-secondary dark:text-dark-text-muted mt-2 text-2xl font-semibold lg:text-3xl'>
-                  {t(about.roleKey)}
+                  {tAbout(about.roleKey)}
                 </h2>
               </div>
               <p className='text-text-secondary dark:text-dark-text-muted max-w-lg text-lg leading-relaxed lg:text-xl'>
-                {t(about.summaryKey)}
+                {tAbout(about.summaryKey)}
               </p>
               <div className='xs:flex-row flex flex-col gap-4 pt-4'>
                 <a
                   href='#projects'
                   className='bg-primary hover:bg-primary/90 dark:bg-dark-primary dark:hover:bg-dark-primary/90 transform rounded-lg px-8 py-4 text-center font-medium text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl'
                 >
-                  {t('hero.viewWork')}
+                  {tHero('viewWork')}
                 </a>
                 <DownloadResume />
               </div>
@@ -62,7 +65,7 @@ export function Hero({ className = '' }: Props) {
                 <div className='from-primary/10 to-primary/5 dark:from-dark-primary/10 dark:to-dark-primary/5 absolute -inset-4 rounded-full bg-gradient-to-r blur-md'></div>
                 <Image
                   src='/developer-illustration.png'
-                  alt={t('hero.altImage')}
+                  alt={tHero('altImage')}
                   width={500}
                   height={500}
                   className='relative object-contain drop-shadow-xl ltr:-scale-x-100'
